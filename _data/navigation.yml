@@ -1,4 +1,3 @@
-# main links
 main:
   - title: "PS"
     url: /PS/
@@ -10,11 +9,3 @@ main:
     url: /categories/
   - title: "All tags"
     url: /tags/
-  - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
