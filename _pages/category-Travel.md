@@ -1,6 +1,7 @@
 ---
 title: "Travel"
 layout: category
-permalink: /Travel/
+permalink: /categories/Travel/
+taxonomy: Travel
 author_profile: True
 ---

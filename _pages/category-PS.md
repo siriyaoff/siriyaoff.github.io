@@ -1,6 +1,7 @@
 ---
 title: "PS"
 layout: category
-permalink: /PS/
+permalink: /categories/PS/
+taxonomy: PS
 author_profile: True
 ---

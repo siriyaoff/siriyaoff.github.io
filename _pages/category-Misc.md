@@ -1,6 +1,7 @@
 ---
-title: "Misc"
+title: "Miscellaneous"
 layout: category
-permalink: /Misc/
+permalink: /categories/Misc/
+taxonomy: Miscellaneous
 author_profile: True
 ---

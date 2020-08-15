@@ -1,10 +1,10 @@
 main:
   - title: "PS"
-    url: /PS/
+    url: /categories/PS/
   - title: "Travel"
-    url: /Travel/
+    url: /categories/Travel/
   - title: "Misc."
-    url: /Misc/
+    url: /categories/Misc/
   - title: "All posts"
     url: /categories/
   - title: "All tags"
