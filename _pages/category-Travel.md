@@ -1,6 +1,6 @@
 ---
-title: "category-Travel"
-layout: archive
+title: "Travel"
+layout: category
 permalink: /Travel/
 author_profile: True
 ---

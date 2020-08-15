@@ -1,6 +1,6 @@
 ---
-title: "category-PS"
-layout: archive
+title: "PS"
+layout: category
 permalink: /PS/
 author_profile: True
 ---
