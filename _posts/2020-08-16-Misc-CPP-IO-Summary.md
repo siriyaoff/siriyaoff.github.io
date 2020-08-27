@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "C++ I/O 함수 헷갈리는 내용 정리"
+title: "C++ I/O 헷갈리는 내용 정리"
 categories:
   - Miscellaneous
 tags:
