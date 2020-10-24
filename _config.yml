@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Siriyaoff's blog"
+title                    : "^^"
 title_separator          : "-"
 subtitle                 : "OwOn_yang_hy~"
 name                     : "Siriyaoff"
@@ -88,9 +88,8 @@ analytics:
 author:
   name             : "Siriyaoff"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "↑고양이 귀엽죠?"
   location         : "Korea"
-  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
