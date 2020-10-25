@@ -25,7 +25,7 @@ ex) csv파일의 경우 `"%d,%d"`등으로 받으면 편함
 - Ex.의 `cin.getline(s, 100, ' ')`에서
   * `streamsize n`은 n-1개의 문자를 입력받고 맨마지막에 `'\0'`를 추가해서 길이가 n인 문자열을 s에 저장
   * 만약 입력받는 버퍼에 저장된 문자열이 n보다 작을경우 버퍼에 저장된 것 까지만 읽고 에러 없이 종료
-- `<istream>`의 `getline()`과 `<cstdio>`의 `fgets(char * str, int num, FILE * stream)`은 모두 개행문자까지 입력으로 받고 맨뒤에 `'\0'` 추가
+- ~~`<istream>`의 `getline()`과 `<cstdio>`의 `fgets(char * str, int num, FILE * stream)`은 모두 개행문자까지 입력으로 받고 맨뒤에 `'\0'` 추가~~ delim이 나올 때까지 모든 입력을 하나의 `string`으로 합친다. delim이 입력되면 delim전까지의 문자열과 널문자를 반환한다. + 널문자 때문에 100글자를 입력받아야하면 n=101이다. length()하면 널문자는 개수에 포함되지 않는다.(20.10.25 수정)
 
 ## File I/O in C++
 1. 필요에 따라서 `<ifstream>`, `<ofstream>`, `<fstream>`을 골라 쓰면됨
