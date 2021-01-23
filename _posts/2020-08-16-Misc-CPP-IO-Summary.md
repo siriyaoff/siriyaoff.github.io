@@ -6,7 +6,7 @@ categories:
 tags:
   - C++
 ---
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 
 ## 헷갈리는 I/O 함수들
 1. scanf의 포맷에서 delimeter를 직접 지정할 수 있다.  

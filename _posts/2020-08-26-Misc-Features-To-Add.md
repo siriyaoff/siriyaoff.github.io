@@ -6,7 +6,7 @@ categories:
 tags:
   - Blogging
 ---
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 ## 추가해야 할 기능들
 1. 검색(제목, 본문 포함)
 	- 상단 카테고리 바 옆에 검색 기능 붙일 수 있던데 찾아봐야겠다.

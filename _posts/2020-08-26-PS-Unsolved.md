@@ -6,7 +6,7 @@ categories:
 tags:
   - Unsolved
 ---
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 
 ## 목록
 [Codeforces Round #665 Div.2 D](http://codeforces.com/contest/1401/problem/D){: target="_blank"}

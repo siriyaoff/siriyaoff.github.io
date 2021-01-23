@@ -8,7 +8,7 @@ tags:
   - Implementation
 ---
 
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 ## 두 구현 방법의 차이
 · DFS는 자식 노드 중 방문하지 않은 노드가 있으면 현재 노드에서의 탐색을 멈추고 자식 노드로 옮겨가서 DFS를 완료한 후에 다시 돌아오는 구조이다. 이것을 보기 좋게 함수로 구현한 것이 recursive하게 구현하는 방법이고, stack을 이용해 main안에 한 번에 구현하는 것이 Iterative하게 구현하는 방법이다.  
 아래 두 문제는 모두 트리의 지름을 구하는 문제이다. 트리의 지름은 문제를 읽어보면 쉽게 이해할 수 있다.

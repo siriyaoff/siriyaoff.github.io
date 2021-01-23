@@ -8,7 +8,7 @@ tags:
   - Git
 ---
 
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 
 · 처음 mmistakes를 `fork`해서 블로그를 만든 뒤 fetch를 하지않고 있다가 오늘 한꺼번에 모두 받았다. mmistakes의 master를 upstream으로 설정하고 다 받았는데 처음에 `_config.yml`이 다른 곳에 생겨서 위치가 바뀌었나 싶었다. 근데 예시를 보여주기 위해 docs안에 추가한 것이었다. 이외에 글자 크기 같은 버그 수정이나 docs를 추가한 것 같다.
 

@@ -6,7 +6,7 @@ categories:
 tags:
   - Blogging
 ---
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 
 [추가하고 싶었던 것들](https://siriyaoff.github.io/miscellaneous/Misc-Features-To-Add/){: target="_blank"}
 이 있었는데 어쩌다보니 다 추가했다!!!!

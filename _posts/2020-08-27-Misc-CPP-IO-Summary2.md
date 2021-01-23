@@ -6,7 +6,7 @@ categories:
 tags:
   - C++
 ---
-<div markdown="1" style="font-size:18px;font-family:'Consolas', 맑은 고딕;">
+<div markdown="1" style="font-size:18px;font-family:Consolas, '맑은 고딕';">
 원래는 문제별로 적으려 했는데 한번에 정리해놓고 보는게 좋을 것 같다.
 
 - [`long int strtol (const char* str, char** endptr, int base)`](http://www.cplusplus.com/reference/cstdlib/strtol/){: target="_blank"}
