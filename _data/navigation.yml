@@ -1,6 +1,8 @@
 main:
   - title: "PS"
     url: /categories/PS/
+  - title: "Dev"
+    url: /categories/Dev/
   - title: "Travel"
     url: /categories/Travel/
   - title: "Misc."
