@@ -42,7 +42,7 @@ tags:
 				href="https://ko.wikipedia.org/wiki/%EC%A7%84%EC%8B%A4">
 		</map>
 		```
-		- `<map>`은 하나 이상의 <area>를 가짐, <area>가 버튼과 같은 역할
+		- `<map>`은 하나 이상의 `<area>`를 가짐, `<area>`가 버튼과 같은 역할
 
 - `<figure>`, `<figcaption>` : Annotating images
 	- provide a semantic container for figures  

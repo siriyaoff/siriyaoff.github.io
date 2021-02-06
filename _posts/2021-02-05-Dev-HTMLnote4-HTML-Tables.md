@@ -33,7 +33,7 @@ tags:
 - Providing common styling to columns
 	- an entire column에 대해 스타일을 지정하려면 CSS의 `:nth-child`를 사용하거나 `<td>`, `<th>`에서 일일히 지정해줘야했음 -> `<col>`, `<colgroup>` to define styling information for a column
 	- limited to a few properties: `border`, `background`, `width`, `visibility` for other properties, style every `<td>` or `<th>`, or use complex selector  
-	- 모든 column이 있어야함, 스타일링이 필요하지 않은 col의 개수가 많을 경우 span을 이용해 한번에 처리 가능(`<col span="2">` 이런 식으로)  
+	- 모든 column이 있어야함, 스타일링이 필요하지 않은 col의 개수가 많을 경우 span을 이용해 생략 가능(`<col span="2">` 이런 식으로)  
 		```html
 		<table>
 			<colgroup>

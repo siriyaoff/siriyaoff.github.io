@@ -195,23 +195,23 @@ term2
 	- Blockquotes
 		- `<blockquote>` 이용
 		- `cite` attribute로 출처 남길 수 있음
-		- will be rendered as indednted paragraph by browser default styling  
-
-			```html
-			<p>Here below is a blockquote...</p>
-			<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-				<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or 
-				<em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
-			</blockquote>
-			```
-
+		- will be rendered as indednted paragraph by browser default styling
 	- Inline quotations
 		- `<q>` 이용
 		- will be rendered as normal text put in quotes by browser default styling
 	- Citations
 		- `<cite>` 이용
-		- italicize 이외의 기능은 없음 -> 인용문에는 quotation elements with `cite` attribute, 출처에는 `<a>`, `<cite>` elements 이용해서 표시해줘야함  
-		`<p>According to the <q><a href="#blockquote"><cite>MDN blockquote page</cite></a></q>:</p>`
+		- italicize 이외의 기능은 없음 -> 인용문에는 quotation elements with `cite` attribute, 출처에는 `<a>`, `<cite>` elements 이용해서 표시해줘야함
+
+```html
+<p>Here below is a blockquote...</p>
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+	<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or 
+	<em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+<!-- Inline quotation and citation -->
+<p>According to the <q><a href="#blockquote"><cite>MDN blockquote page</cite></a></q>:</p>
+```
 
 - Abbreviations
 	- `<abbr>` 이용
