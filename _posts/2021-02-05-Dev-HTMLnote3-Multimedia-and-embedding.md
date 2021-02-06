@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "HTMLnote3: Multimedia and embedding"
+classes: wide
 categories:
   - Dev
 tags:
