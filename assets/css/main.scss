@@ -11,13 +11,13 @@
 // https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
 $sans-serif: 'Noto Sans KR';
 $monospace: 'Ubuntu Mono';
-// $type-size-5-6: 0.9em !default; // Ubuntu Mono is a bit small
+$type-size-5-6: 0.9em !default; // Ubuntu Mono is a bit small
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR|Ubuntu+Mono);
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
-  font-size: 12px; // change to whatever
+  font-size: 16px; // change to whatever
   
   @include breakpoint($medium) {
     font-size: 16px; // change to whatever
