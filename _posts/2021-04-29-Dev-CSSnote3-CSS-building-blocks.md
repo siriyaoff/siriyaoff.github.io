@@ -1544,7 +1544,7 @@ HTML:
 |![css-tables-before](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-before.PNG?raw=true)|![css-tables-after](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-after.PNG?raw=true)|
 
 - `th, td`에 padding을 줘서 셀 넓힐 수 있음
-- `:nth-child(n)`는 혼자 쓰이면 부모 노드에서 n번째 자식,<br>`td:nth-child(n)`과 같이 쓰이면 부모노드에서 td인 자식 중 n번째를 선택
+- `:nth-child(n)` : element 상관없이 세었을 때 n번째 자식들<br>`td:nth-child(n)` : element 상관없이 세었을 때 n번째 자식이면서 `td`인 element들<br>`:nth-of-type(n)` : element type별로 세었을 때 n번째 자식들<br>`td:nth-of-type(n)` : element type별로 세었을 때 n번째 자식이면서 `td`인 element들
 - `vertical-align` property를 사용해서 box에서 text의 세로 위치를 결정할 수 있음(`top`, `middle`, `bottom`)
 
 # Debuging CSS

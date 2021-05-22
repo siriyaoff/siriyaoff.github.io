@@ -808,6 +808,7 @@ button:first-child {
 - 값이 클수록 우선순위가 떨어짐
 - 값이 같다면 source order를 따름
 - 값에 `-1`를 넣을 수도 있음(=> default인 `0`보다 작으므로 가장 먼저 나타남)
+- `order`를 사용하면 `nth-child`, `nth-of-type`등의 properties에도 영향을 줌!!!
 
 ## Nested flex boxes
 Flex boxes를 nesting하는 것도 가능함  
