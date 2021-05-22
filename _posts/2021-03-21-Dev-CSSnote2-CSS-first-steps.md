@@ -93,7 +93,12 @@ a:visited {
 	font-style: normal;
 }
 ```
+
+- 2010.03부터 `:visited`에서 사용 가능한 property가 제한됨(`color`, `background-color`, `border-*-color`, `outline-color` 등만 가능)<br>추가로 `:visited + span`과 같이 selector를 정의하면 link가 unvisited일 때도 적용됨<br>개인정보 관련된 이유임([여기](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) 참고)<br>- 2021.05.22
+
 `:`는 combinator가 아닌가?(정의?) : pseudo-class임!
+
+***************************
 
 # How CSS is structured
 ## Applying CSS to HTML
