@@ -16,6 +16,8 @@ tags:
   - Arrow function
   
 ---
+
+JavaScript Fundamentals
 # Hello, world!
 `alert`는 browser-specific command임  
 Node.js와 같은 서버 환경에서는 `node my.js`와 같은 command로 script 실행 가능

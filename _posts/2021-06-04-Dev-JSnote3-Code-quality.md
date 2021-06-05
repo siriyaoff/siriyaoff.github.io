@@ -16,6 +16,7 @@ tags:
   - assertion
   - polyfill
 ---
+
 Code quality
 # Debugging in Chrome
 Debugging : process of finding and fixing errors within a script
