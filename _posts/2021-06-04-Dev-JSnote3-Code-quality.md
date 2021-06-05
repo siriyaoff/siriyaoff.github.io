@@ -12,7 +12,7 @@ tags:
   - Mocha
   - chai
   - BDD
-  - `describe`
+  - describe
   - assertion
   - polyfill
 ---
