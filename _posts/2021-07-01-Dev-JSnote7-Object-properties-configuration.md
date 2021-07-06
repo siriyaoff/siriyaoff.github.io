@@ -343,7 +343,7 @@ alert( john.birthday ); // birthday is available
 alert( john.age );      // ...as well as the age
 ```
 - `age`를 accessor property로 만들어서 getter를 이용해 `birthday`를 계산해서 출력할 수 있음  
-	=> 이전의 `age` proeprty를 사용하는 코드에서 사용할 수 있도록 `user`를 구현 가능
+	=> 이전의 `age` property를 사용하는 코드에서 사용할 수 있도록 `user`를 구현 가능
 
 ## Summary
 - getter `get`와 setter `set`를 사용해서 accessor property를 만들 수 있음  

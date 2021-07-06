@@ -67,7 +67,7 @@ JS 엔진은 추가적인 객체를 생성하지 않을 만큼 최적화되어 �
 
 > ※ `null/undefined`는 method가 없음  
 > 위 type들은 wrapper object가 없음  
-> `alert(null.test);`와 같이 proeprty에 접근하려 하면 에러가 발생함
+> `alert(null.test);`와 같이 property에 접근하려 하면 에러가 발생함
 
 ## Summary
 - primitive를 다룰 때 유용한 기능들이 각각의 primitive 안에 있음
