@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "^^"
-title_separator          : "-"
+title                    : "siriyaoff"
+title_separator          : "::"
 subtitle                 : "OwOn_yang_hy~"
-name                     : "Siriyaoff"
+name                     : "양효원"
 description              : ""
 url                      : "https://siriyaoff.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -87,9 +87,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Siriyaoff"
+  name             : "양효원"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "↑고양이 귀엽죠?"
+  bio              : "20% 확률로 놀고 있습니다"
   location         : "Korea"
   links:
     - label: "Email"
@@ -268,7 +268,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      show_date: true
       comments: true
       share: true
       related: true
