@@ -669,7 +669,7 @@ result = value1 && value2 && value3;
 - 위의 코드에서 `&&`는 위의 `||`와 반대로 작동함
 	- 왼쪽에서 오른쪽 순서로 operand를 계산
 	- 순서대로 계산하면서 결과가 `false`이면 그 operand의 원래 값을 반환
-	- 만약 모든 operand가 계산되면(모든 결과가 `ture`면), 마지막 operand를 반환
+	- 만약 모든 operand가 계산되면(모든 결과가 `true`면), 마지막 operand를 반환
 - 마찬가지로 논리연산자로 사용 가능(애초에 falsy가 반환되면 조건문 실행이 안됨)
 
 #### Example
@@ -912,7 +912,7 @@ let func = sayHi;    // (2) copy
 func(); // Hello     // (3) run the copy (it works)!
 sayHi(); // Hello    //     this still works too (why wouldn't it)
 ```
-- `func==sayHi`는 `ture`임
+- `func==sayHi`는 `true`임
 	(∵ sayHi의 코드를 다 복사하기 때문에 같음)
 
 ## Callback functions

@@ -163,7 +163,7 @@ alert( 123456..toString(36) ); // 2n9c
 > ※ 부동소수점 덕분에 두 개의 0이 존재함(`0`, `-0`)
 
 ## Tests: isFinite and isNaN
-`isNaN(value)`는 `value`가 `NaN`이면 `ture`를 리턴함:  
+`isNaN(value)`는 `value`가 `NaN`이면 `true`를 리턴함:  
 ```javascript
 alert( isNaN(NaN) ); // true
 alert( isNaN("str") ); // true
@@ -600,7 +600,7 @@ alert('0' == [] ); // false, (4)
 ```
 - `(1), (2)`는 operand가 양쪽 다 객체이기 때문에 객체끼리 비교
 - `(3), (4)`는 `[]`가 내장 `toString`에 의해 `''`로 변환된 다음 알맞은 type으로 다시 변환됨  
-	`(3)`에서는 숫자로 변환되는데 `''`가 `0`으로 변환되기 때문에 `ture`  
+	`(3)`에서는 숫자로 변환되는데 `''`가 `0`으로 변환되기 때문에 `true`  
 	`(4)`에서는 `'0'`과 `''`를 비교하기 때문에 `false`
 
 > ※ `===`는 type이 다르면 바로 `false`, 같으면 `==`와 동일하게 비교!!
@@ -986,7 +986,7 @@ alert(soldiers[1].age); // 23
 |`arr.reduce(function(accumulator, item, index, array) { ... }, [initial])`|`arr`의 원소들을 함수에 넣으면서 `accumulator`에 결과를 저장하고 반환<br>`initial`은 `accumulator`의 초기값|
 |`arr.reduceRight(function(accumulator, item, index, array) { ... }, [initial])`|`arr.reduce`와 같은 기능이지만 원소들을 역순으로 처리함|
 |`Array.isArray(value)`|`value`가 `Array` type인지 판별|
-|`arr.some(function(item, index, array) { ... })`<br>`arr.every(function(item, index, array) { ... })`|`arr` 안에 함수를 `true`로 만드는 원소가 있는지 판별<br>모든 원소가 함수를 `ture`로 만드는지 판별|
+|`arr.some(function(item, index, array) { ... })`<br>`arr.every(function(item, index, array) { ... })`|`arr` 안에 함수를 `true`로 만드는 원소가 있는지 판별<br>모든 원소가 함수를 `true`로 만드는지 판별|
 |`arr.fill(value[, start[, end]])`|`arr`의 `[start, end)`를 `value`로 채우고 리턴<br>`arr`도 변화함|
 |`arr.copyWithin(target[, start[, end]])`|`arr`의 `[start, end)`를 `target` 번째부터 시작해서 붙여넣고 리턴<br>`arr`도 변화함|
 |`arr.flat([depth])`|`arr`의 원소들을 `depth`만큼 차원을 낮춘 결과를 리턴<br>`depth`를 `Infinity`로 설정할 수 있음|
@@ -1372,7 +1372,7 @@ set.forEach((value, valueAgain, set) => {
 |`new Map([entries])`|`entries`로 초기화된 map 리턴|
 |`map.set(key, value)`|`key`와 `value`를 저장하고 `map` 리턴|
 |`map.get(key)`|`key`에 해당하는 값(존재하지 않으면 `undefined`) 리턴|
-|`map.has(key)`|`key`가 존재하면 `ture`, 아니면 `false` 리턴|
+|`map.has(key)`|`key`가 존재하면 `true`, 아니면 `false` 리턴|
 |`map.delete(key)`|`key`, `value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴|
 |`map.clear()`|`map`을 비움|
 |`map.size`|`map`의 현재 원소 수를 리턴|
