@@ -66,8 +66,9 @@ google:
 # SEO Related
 google_site_verification : 1yHmTwYmPsBIJzFicFamxuMHtfHPOnKU59J9Xx_QX0M
 bing_site_verification   :
-yandex_site_verification :
 naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
 
 # Social Sharing
 twitter:
