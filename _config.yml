@@ -11,7 +11,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "siriyaoff"
 title_separator          : "::"
-subtitle                 : "OwOn_yang_hy~"
+subtitle                 : "OwOn_HY~"
 name                     : "양효원"
 description              : ""
 url                      : "https://siriyaoff.github.io"
@@ -57,7 +57,8 @@ search_full_content      : true # true, false (default)
 search_provider          : algolia # lunr (default), algolia, google
 algolia:
   application_id         : 97QP1VO4IL # YOUR_APPLICATION_ID
-  index_name             : blog_siriyaoff # YOUR_INDEX_NAME
+  index_name             : blog_siriyaoff
+  # YOUR_INDEX_NAME
   search_only_api_key    : c8fc9db5033bb067bf88ec2c14b78d2e # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
@@ -97,7 +98,7 @@ analytics:
 author:
   name             : "양효원"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "20% 확률로 놀고 있습니다"
+  bio              : "Express.js, MariaDB 공부 중이고 PS, 애자일 방법론, 배드민턴 관심 많습니다."
   location         : "Korea"
   links:
     - label: "Email"
@@ -220,6 +221,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-algolia
 
 # mimic GitHub Pages with --safe
 whitelist:
