@@ -11,7 +11,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale: "en-US"
 title: "siriyaoff"
 title_separator: "::"
-subtitle: "OwOn_HY~"
+subtitle: "hy_OwOn"
 name: "양효원"
 description: ""
 url: "https://siriyaoff.github.io"
@@ -99,7 +99,7 @@ analytics:
 author:
   name: "양효원"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "Express.js, MariaDB 공부 중이고 PS, 애자일 방법론, 배드민턴 관심 많습니다."
+  bio: "🏸"
   location: "Korea"
   links:
     - label: "Email"
