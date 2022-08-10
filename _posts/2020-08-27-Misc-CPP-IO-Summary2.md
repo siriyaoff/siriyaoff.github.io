@@ -5,18 +5,21 @@ categories:
   - Miscellaneous
 tags:
   - C++
+  - Radix conversion
 ---
+
 원래는 문제별로 적으려 했는데 한번에 정리해놓고 보는게 좋을 것 같다.
 
-- [`long int strtol (const char* str, char** endptr, int base)`](http://www.cplusplus.com/reference/cstdlib/strtol/){: target="_blank"}
-	* `<cstdlib>`에 정의되어 있다.
-	* base진법의 수 str이 들어오면 10진법으로 바꾼 값을 리턴해준다.
-	* str이 여러 개의 수로 이루어져있다면 첫 번째 수만 바꾸고 두 번재 수가 시작하는 위치를 endptr에 저장해주기 때문에 endptr을 이용해서 여러 개의 수를 한 번에 입력받아 바꿀 수 있다.
+- [`long int strtol (const char* str, char** endptr, int base)`](http://www.cplusplus.com/reference/cstdlib/strtol/){: target="\_blank"}
+  - `<cstdlib>`에 정의되어 있다.
+  - base진법의 수 str이 들어오면 10진법으로 바꾼 값을 리턴해준다.
+  - str이 여러 개의 수로 이루어져있다면 첫 번째 수만 바꾸고 두 번재 수가 시작하는 위치를 endptr에 저장해주기 때문에 endptr을 이용해서 여러 개의 수를 한 번에 입력받아 바꿀 수 있다.
 
 <details markdown="1">
 <summary>예시</summary>
 
-**[BOJ 2745](https://www.acmicpc.net/problem/2745){: target="_blank"}**  
+**[BOJ 2745](https://www.acmicpc.net/problem/2745){: target="\_blank"}**
+
 - B(B<=36)진법 수 N이 들어오면 10진수로 바꿔 출력하는 문제이다.
 
 ```cpp
@@ -54,6 +57,7 @@ int main()
 // 	printf("%d", n);
 // }
 ```
+
 - `string`은 pop_back()으로 마지막 문자를 지우는게 편하다.
 </details>
 
@@ -62,7 +66,8 @@ int main()
 <details markdown="1">
 <summary>BOJ 1373을 풀면서 알게 되었다.</summary>
 
-**[BOJ 1373](https://www.acmicpc.net/problem/1373){: target="_blank"}**  
+**[BOJ 1373](https://www.acmicpc.net/problem/1373){: target="\_blank"}**
+
 - 2진수 N이 들어오면 8진수로 바꿔 출력하는 문제이다.
 
 ```cpp
@@ -92,7 +97,8 @@ int main()
 <details markdown="1">
 <summary>BOJ 1212</summary>
 
-**[BOJ 1212](https://www.acmicpc.net/problem/1212){: target="_blank"}**  
+**[BOJ 1212](https://www.acmicpc.net/problem/1212){: target="\_blank"}**
+
 - 8진수를 2진수로 변환하는 문제이다.
 
 ```cpp
