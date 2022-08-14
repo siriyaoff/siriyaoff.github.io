@@ -8,7 +8,7 @@ group :jekyll_plugins do
 	gem "jekyll-archives"
 	gem "jekyll-algolia"
 end
-gem "tzinfo", "~> 2.0"
+gem "tzinfo", "~> 1.2"
 
 gem "tzinfo-data", "~> 1.2021"
 
