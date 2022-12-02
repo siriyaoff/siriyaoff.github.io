@@ -53,3 +53,29 @@ tags:
   - CUDA 버전이 10 이하면 [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/) 참조
 - tiny-cuda-nn
   [https://github.com/NVlabs/tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn)
+
+## Hair segmentation 모델 테스트
+
+github repo가 공개된 논문 + github에서 hair segmentation 키워드로 검색한 레포들 중 실행 가능한 것들만 테스트함
+
+- [pytorch-hair-segmentation](https://github.com/YBIGTA/pytorch-hair-segmentation)
+  - 사람 머리카락과 비슷하게 머릿결이 표현된 경우 인식되지만, 단색으로 칠해졌을 때는 인식이 아예 안됨
+  - 데이터를 넣어줄 때 마스크도 같이 넣어줘야 함  
+    Anime-face-detector의 예시 사진으로 테스트한 결과  
+    ![hair segmentation1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/hair-segmentation1.png)
+- [fm.PyTorch](https://github.com/ash11sh/fm.PyTorch)
+  - 사람 얼굴 넣으면 readme에 나오는 정도로 결과가 나오지만 컨셉아트나 애니메이션 이미지 넣으면 no face detected 뜨면서 아예 인식이 안됨
+- Two-stage human hair segmentation in the wild using deep shape prior
+  - 깃헙 없음
+- Hair Segmentation on Time-of-Flight RGBD Images
+  - ToF라는 특수한 데이터 기반으로 진행됨
+- [Hair-Detection](https://github.com/Papich23691/Hair-Detection)
+  - requirements.txt 설치할 때 버전 에러
+- [https://downloads.hindawi.com/journals/tswj/2014/748634.pdf](https://downloads.hindawi.com/journals/tswj/2014/748634.pdf)
+  - 사람 머리카락 → caricature용 머리
+  - 알고리즘(머신러닝 x)
+- [hair-segmentation](https://github.com/thangtran480/hair-segmentation)
+  - fm.PyTorch와 마찬가지로 face detect 과정 포함
+  - face detection 과정 없애고 진행하도록 수정하면 결과가 pytorch-hair-segmentation과 비슷한 수준으로 나옴  
+    Anime-face-detector의 예시 사진으로 테스트한 결과  
+    ![hair segmentation2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/hair-segmentation2.png)
