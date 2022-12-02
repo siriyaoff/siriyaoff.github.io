@@ -5,8 +5,8 @@ categories:
   - Miscellaneous
 tags:
   - CUDA
-  - tensorflow
-  - torch
+  - Tensorflow
+  - PyTorch
 ---
 
 - CUDA, cuDNN, 가상환경, ML framework 순으로 설치

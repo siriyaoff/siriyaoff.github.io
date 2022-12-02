@@ -4,10 +4,11 @@ title: "Anaconda on EC2"
 categories:
   - Dev
 tags:
-  - AWS EC2
+  - AWS
+  - EC2
   - Anaconda
   - AMI
-  - pyTorch
+  - PyTorch
 ---
 
 ## 리눅스 AMI에서 설치
