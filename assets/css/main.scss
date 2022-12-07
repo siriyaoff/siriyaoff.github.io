@@ -34,13 +34,5 @@ html {
 
 .highlight {
   // cascades, lower specificity than '.highlight table' in _sass/minimal-mistakes/_syntax.scss
-  font-family: $monospace;
   font-size: $type-size-4-5;
-}
-
-.language-plaintext {
-  // overwritten by ':not(pre) > code' in _sass/minimal-mistakes/_page.scss
-  font-family: $monospace;
-  font-size: $type-size-5;
-  background: #dbdbdb;
 }
