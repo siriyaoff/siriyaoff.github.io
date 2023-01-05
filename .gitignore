@@ -29,3 +29,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# my templates
+_posts/9999*
