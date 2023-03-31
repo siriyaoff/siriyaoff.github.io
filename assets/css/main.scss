@@ -8,18 +8,17 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-
 // https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
-$sans-serif: 'Noto Sans KR';
-$monospace: 'Ubuntu Mono';
-$type-size-4-5: 14px !default; // Ubuntu Mono is a bit small
+$sans-serif: "Noto Sans KR";
+$monospace: "Ubuntu Mono";
+$type-size-4-5: 1.12em !default; // Ubuntu Mono is a bit small
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR|Ubuntu+Mono);
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
   font-size: 16px; // change to whatever
-  
+
   @include breakpoint($medium) {
     font-size: 16px; // change to whatever
   }
@@ -34,12 +33,6 @@ html {
 }
 
 .highlight {
-  font-family: $monospace;
+  // cascades, lower specificity than '.highlight table' in _sass/minimal-mistakes/_syntax.scss
   font-size: $type-size-4-5;
-}
-
-.language-plaintext {
-  font-family: $monospace;
-  font-size: $type-size-5;
-  background: #dbdbdb;
 }

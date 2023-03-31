@@ -32,3 +32,6 @@ _site
 
 # algolia key
 _algolia_api_key
+
+# my templates
+_posts/9999*
