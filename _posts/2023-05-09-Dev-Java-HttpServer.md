@@ -45,6 +45,8 @@ public static void main(String[] args){
 
 # `HttpServer` 와 관련된 자세한 클래스 관계 및 다이어그램
 
+![class diagram](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Java-HttpServer-Classdiagram.svg)
+
 ## `InetSocketAddress`
 
 - `SocketAddress` 클래스를 상속받음
