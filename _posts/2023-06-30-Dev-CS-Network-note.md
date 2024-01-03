@@ -125,12 +125,12 @@ tags:
 
 - 송신자, 수신자를 연결하는 통신 서비스 제공(TCP, UDP, QUIC)
 - TCP
-  - 가상회선 패킷 교환 방식 사용
+  - 가상회선 패킷 교환 방식 사용  
     ![virtual-circuit-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/virtual-circuit-packet-transportation.png)
     - 가상회선 : 송신자, 수신자 사이에 임의로 정한 하나의 경로
     - 각 패킷에 가상회선 식별자가 포함되어 모든 패킷은 가상회선으로만 전송됨
     - 패킷 사이 순서 보장
-  - 3-way Handshake
+  - 3-way Handshake  
     ![3-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/3-way-handshake.png)
     - TCB(TCP Control Block) : connection state, sequece 번호 등의 연결에 필요한 정보를 가진 구조체
     1. client에서 `SYN`(client ISN) 보냄
@@ -142,7 +142,7 @@ tags:
     3. client에서 `SYN`+`ACK` 받고 `ACK`(server ISN +1) 보냄
        - client : `ESTABLISHED`
        - server : `ACK` 받은 후 `ESTABLISHED`
-  - 4-way Handshake
+  - 4-way Handshake  
     ![4-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/4-way-handshake.png)
     1. client에서 `FIN` 보냄
        - client : `FIN_WAIT_1`
@@ -161,7 +161,7 @@ tags:
       - passive close의 `FIN`에 대한 `ACK`를 보내고 passive close가 닫혔는지 확인 후 종료하기 위함(`TIME_WAIT`이 없으면 `FIN`을 받자마자 `CLOSED`가 되기 때문에 `ACK`를 passive close로 보내지 못함)
       - Ubuntu는 1분, Windows는 4분
 - UDP
-  - 데이터그램 패킷 교환 방식 사용
+  - 데이터그램 패킷 교환 방식 사용  
     ![datagram-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/datagram-packet-transportation.png)
     - 각 패킷들이 독립적으로 이동함
     - 패킷 사이 순서 보장되지 않음
@@ -179,7 +179,7 @@ tags:
   - IEEE802.3 : 유선 LAN에서 사용하는 프로토콜, 전이중화 통신 사용
     - 전이중화 통신 : 송신, 수신로를 나눠 동시에 송수신 가능
   - CSMA/CD : 이전에 사용하던 반이중화 통신(충돌이 발생하면 일정 시간 후 재전송)
-  - 이더넷 프레임
+  - 이더넷 프레임  
     ![ethernet-frame.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/ethernet-frame.png)
     - Preamble : 프레임의 시작을 알림(0, 1 반복)
     - SFD(Start Frame Delimiter) : 다음 바이트부터 DA가 시작됨을 알림(`10101011`)

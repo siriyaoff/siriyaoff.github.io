@@ -73,9 +73,9 @@ tags:
   - UDP : HTTP/3
     - IP와 거의 비슷하지만, 포트, 체크섬이 추가됨
     - 앱에서 추가 처리 필요
-- 프로토콜 분석
+- 프로토콜 분석  
   ![HTTP-Protocol.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Protocol.png)
-- TCP/IP 패킷
+- TCP/IP 패킷  
   ![HTTP-TCP-IP-Packet.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-TCP-IP-Packet.png)
   - 연결지향(3-way handshake)
   - 데이터 전달 보증
@@ -142,7 +142,7 @@ tags:
 
 # HTTP 메시지
 
-- 메시지 구조
+- 메시지 구조  
   ![HTTP-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Message.png)
   - start-line : request-line 또는 status-line
   - header : `field-name ":" OWS field-value OWS`
@@ -178,49 +178,45 @@ tags:
 - HTTP 전송에 필요한 모든 부가정보가 들어감
   - 압축, 인증, 클라이언트, 서버 정보, 메시지 바디의 내용, 크기, …
 - RFC2616 : 과거 헤더 분류
-- RC7230 - 7235 : Entity → Representation으로 변화
+- RC7230 - 7235 : Entity → Representation으로 변화  
   ![HTTP-Header.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Header.png)
   - Representation : Representation Metadata + Representation Data
   - message body : payload라고도 함
 
 ### 자주 사용하는 헤더들
 
-| 분류                                                    | 헤더                                                  | 기능                                                                         | 예시                                                                            | 부가 설명                                                              |
-| ------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Representation                                          | Content-Type                                          | 표현 데이터의 type                                                           | text/html;charset=UTF-8                                                         | Representation 헤더들은 요청, 응답 모두에서 사용 가능                  |
-|                                                         | Content-Encoding                                      | 표현 데이터의 압축 방식                                                      | gzip                                                                            |                                                                        |
-|                                                         | Content-Language                                      | 표현 데이터의 자연 언어                                                      | de-DE, en-CA                                                                    |                                                                        |
-|                                                         | Content-Length                                        | 표현 데이터의 길이(Byte 단위)                                                | 123                                                                             |                                                                        |
-|                                                         | Content-Range                                         | 전송하는 표현 데이터의 부분 정보                                             | bytes 1001-2000 / 2000                                                          |                                                                        |
-|                                                         | Transfer-Encoding                                     |                                                                              | chunked                                                                         |                                                                        |
-| 협상                                                    | Accept                                                | client가 선호하는 media type                                                 | text/_, text/plain, text/plain;format=flowed, _/\*                              |                                                                        |
-|                                                         | Accept-Charset                                        | client가 선호하는 charset                                                    | 사용 x                                                                          | 현재 모든 브라우저에서 지원 x                                          |
-|                                                         | Accept-Encoding                                       | client가 선호하는 encoding                                                   | gzip                                                                            |                                                                        |
-|                                                         | Accept-Language                                       | client가 선호하는 자연 언어                                                  | ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7                                             | 협상 헤더들은 요청시에 사용                                            |
-| 일반 정보                                               | From                                                  | user agent의 이메일 정보                                                     | hwy16016@gmail.com                                                              | 요청시에 사용(잘 사용하지 않음)                                        |
-|                                                         | Referer                                               | 이전 웹 페이지의 주소                                                        | www.google.com                                                                  | 요청시에 사용                                                          |
-| 유입 경로 분석할 때 사용                                |
-|                                                         | User-Agent                                            | user agent의 앱(웹 브라우저 등) 정보                                         | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion | 요청시에 사용                                                          |
-| 어떤 종류의 브라우저에서 장애가 발생하는지 분석         |
-|                                                         | Server                                                | 요청을 처리하는 ORIGIN 서버의 SW 정보                                        | Apache/2.2.22 (Debian)                                                          | 응답시에 사용                                                          |
-|                                                         | Date                                                  | 메시지가 발생한 날짜, 시간                                                   | Mon, 1 Jan 2017 00:00:00 GMT                                                    | 응답시에 사용                                                          |
-| 요청 관련 정보                                          | Host                                                  | 요청한 host 정보                                                             | developer.mozilla.org                                                           | - 요청에서 사용(필수)                                                  |
-| - 하나의 서버, IP에 여러 도메인이 적용되어 있을 때 사용 |
-|                                                         | Location                                              | 페이지 리다이렉션 주소                                                       | /index.html                                                                     | 201에서 Location 헤더의 값은 요청에 의해 생성된 리소스의 URI임         |
-|                                                         | Allow                                                 | 허용 가능한 HTTP 메서드                                                      | GET, HEAD, PUT                                                                  | 405 (Method Not Allowed) 응답에 포함해야 함                            |
-|                                                         | Retry-After                                           | user agent가 다음 요청을 하기까지 기다려야 하는 시간(초 단위)                | Mon, 1 Jan 2017 00:00:00 GMT                                                    |
-| 120                                                     | • 날짜는 주로 503 (Service Unavailable) 응답에 포함됨 |
-| 인증                                                    | Authorization                                         | client 인증 정보를 전달                                                      | Basic YWxhZGRpbjpvcGVuc2VzYW1l                                                  |                                                                        |
-|                                                         | WWW-Authenticate                                      | 리소스 접근시 필요한 인증 방법 정의                                          | Newauth realm="apps", type=1, title="Login to \"apps\"", Basic realm="simple"   | 401 (Unauthorized) 응답에 포함해야 함                                  |
-| 쿠키                                                    | Set-Cookie                                            | 아래 참고                                                                    | 아래 참고                                                                       | 응답시에 사용                                                          |
-| 캐시                                                    | Cache-Control                                         | 아래 참고                                                                    | 아래 참고                                                                       |                                                                        |
-|                                                         | Pragma                                                | HTTP 1.0 하위 호환의 캐시 무효화를 위해 사용                                 | no-cache                                                                        |                                                                        |
-|                                                         | Expires                                               | 캐시 만료 시간                                                               | Mon, 01 Jan 1900 00:00:00 GMT                                                   | HTTP 1.0부터 사용되지만, Cache-Control: max-age와 함께 사용되면 무시됨 |
-| 프록시 캐시                                             | Age                                                   | orgin 서버에서 응답 후 프록시 캐시에 머문 시간                               | Age: 60                                                                         |                                                                        |
-| 검증                                                    | Last-Modified                                         | 리소스의 마지막 수정 시간 정보                                               | Mon, 01 Jan 1900 00:00:00 GMT                                                   | 1초 미만 단위로 캐시 조정 불가능                                       |
-|                                                         | ETag                                                  | Entity Tag(캐시 유효성 검증용 해시)                                          | "33ad42a148795d9f25f89d4"                                                       |                                                                        |
-| 조건부 요청                                             | If-Modified-Since                                     | 값으로 들어간 날짜보다 서버의 Last-Modified가 최신이면 다시 요청(아니면 304) | If-Unmodified-Since                                                             | 요청시에 사용                                                          |
-|                                                         | If-None-Match                                         | 값으로 들어간 해시가 서버의 ETag와 다르면 다시 요청(아니면 304)              | If-Match                                                                        | 요청시에 사용                                                          |
+| 분류           | 헤더                | 기능                                                                         | 예시                                                                              | 부가 설명                                                                    |
+| -------------- | ------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Representation | `Content-Type`      | 표현 데이터의 type                                                           | `text/html;charset=UTF-8`                                                         | Representation 헤더들은 요청, 응답 모두에서 사용 가능                        |
+|                | `Content-Encoding`  | 표현 데이터의 압축 방식                                                      | `gzip`                                                                            |                                                                              |
+|                | `Content-Language`  | 표현 데이터의 자연 언어                                                      | `de-DE, en-CA`                                                                    |                                                                              |
+|                | `Content-Length`    | 표현 데이터의 길이(Byte 단위)                                                | `123`                                                                             |                                                                              |
+|                | `Content-Range`     | 전송하는 표현 데이터의 부분 정보                                             | `bytes 1001-2000 / 2000`                                                          |                                                                              |
+|                | `Transfer-Encoding` |                                                                              | `chunked`                                                                         |                                                                              |
+| 협상           | `Accept`            | client가 선호하는 media type                                                 | `text/*, text/plain, text/plain;format=flowed, */*`                               |                                                                              |
+|                | `Accept-Charset`    | client가 선호하는 charset                                                    | 사용 x                                                                            | 현재 모든 브라우저에서 지원 x                                                |
+|                | `Accept-Encoding`   | client가 선호하는 encoding                                                   | `gzip`                                                                            |                                                                              |
+|                | `Accept-Language`   | client가 선호하는 자연 언어                                                  | `ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7`                                             | 협상 헤더들은 요청시에 사용                                                  |
+| 일반 정보      | `From`              | user agent의 이메일 정보                                                     | `hwy16016@gmail.com`                                                              | 요청시에 사용(잘 사용하지 않음)                                              |
+|                | `Referer`           | 이전 웹 페이지의 주소                                                        | `www.google.com`                                                                  | 요청시에 사용<br>유입 경로 분석할 때 사용                                    |
+|                | `User-Agent`        | user agent의 앱(웹 브라우저 등) 정보                                         | `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion` | 요청시에 사용<br>어떤 종류의 브라우저에서 장애가 발생하는지 분석             |
+|                | `Server`            | 요청을 처리하는 ORIGIN 서버의 SW 정보                                        | `Apache/2.2.22 (Debian)`                                                          | 응답시에 사용                                                                |
+|                | `Date`              | 메시지가 발생한 날짜, 시간                                                   | `Mon, 1 Jan 2017 00:00:00 GMT`                                                    | 응답시에 사용                                                                |
+| 요청 관련 정보 | `Host`              | 요청한 host 정보                                                             | `developer.mozilla.org`                                                           | 요청에서 사용(필수)<br>하나의 서버, IP에 여러 도메인이 적용되어 있을 때 사용 |
+|                | `Location`          | 페이지 리다이렉션 주소                                                       | `/index.html`                                                                     | 201에서 Location 헤더의 값은 요청에 의해 생성된 리소스의 URI임               |
+|                | `Allow`             | 허용 가능한 HTTP 메서드                                                      | `GET, HEAD, PUT`                                                                  | 405 (Method Not Allowed) 응답에 포함해야 함                                  |
+|                | `Retry-After`       | user agent가 다음 요청을 하기까지 기다려야 하는 시간(초 단위)                | `Mon, 1 Jan 2017 00:00:00 GMT`<br>`120`                                           | 날짜는 주로 503 (Service Unavailable) 응답에 포함됨                          |
+| 인증           | `Authorization`     | client 인증 정보를 전달                                                      | `Basic YWxhZGRpbjpvcGVuc2VzYW1l`                                                  |                                                                              |
+|                | `WWW-Authenticate`  | 리소스 접근시 필요한 인증 방법 정의                                          | `Newauth realm="apps", type=1, title="Login to \"apps\"", Basic realm="simple"`   | 401 (Unauthorized) 응답에 포함해야 함                                        |
+| 쿠키           | `Set-Cookie`        | 아래 참고                                                                    | 아래 참고                                                                         | 응답시에 사용                                                                |
+| 캐시           | `Cache-Control`     | 아래 참고                                                                    | 아래 참고                                                                         |                                                                              |
+|                | `Pragma`            | HTTP 1.0 하위 호환의 캐시 무효화를 위해 사용                                 | `no-cache`                                                                        |                                                                              |
+|                | `Expires`           | 캐시 만료 시간                                                               | `Mon, 01 Jan 1900 00:00:00 GMT`                                                   | HTTP 1.0부터 사용되지만, Cache-Control: max-age와 함께 사용되면 무시됨       |
+| 프록시 캐시    | `Age`               | orgin 서버에서 응답 후 프록시 캐시에 머문 시간                               | `Age: 60`                                                                         |                                                                              |
+| 검증           | `Last-Modified`     | 리소스의 마지막 수정 시간 정보                                               | `Mon, 01 Jan 1900 00:00:00 GMT`                                                   | 1초 미만 단위로 캐시 조정 불가능                                             |
+|                | `ETag`              | Entity Tag(캐시 유효성 검증용 해시)                                          | `"33ad42a148795d9f25f89d4"`                                                       |                                                                              |
+| 조건부 요청    | `If-Modified-Since` | 값으로 들어간 날짜보다 서버의 Last-Modified가 최신이면 다시 요청(아니면 304) | `If-Unmodified-Since`                                                             | 요청시에 사용                                                                |
+|                | `If-None-Match`     | 값으로 들어간 해시가 서버의 ETag와 다르면 다시 요청(아니면 304)              | `If-Match`                                                                        | 요청시에 사용                                                                |
 
 ### 협상(Content negotiation)
 
@@ -277,7 +273,7 @@ tags:
   - 캐시가 만료되었어도 데이터가 변경되지 않은 경우가 있음
     - 검증 헤더 `Last-Modified`, 조건부 요청 헤더 `If-Modified-Since`를 통해 데이터 재사용성을 높일 수 있음
       - 검증 결과 재사용 가능한 데이터일 경우 `304` (Not Modified) 응답을 보냄(http body가 없음)
-- 프록시 캐시(CDN)
+- 프록시 캐시(CDN)  
   ![HTTP-CDN.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-CDN.png)
 - field-value
   - `max-age` : 캐시 유효 시간, 초 단위
@@ -466,7 +462,7 @@ tags:
   - 검색 엔진 등에서도 변경을 인지함
 - Temporary Redirection : 일시적인 변경(e.g. 주문 완료 후 주문 내역 화면으로 이동)
   - `302`, `307`, `303`
-  - PRG : Post/Redirect/Get
+  - PRG : Post/Redirect/Get  
     ![HTTP-PRG.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-PRG.png)
     - `POST`로 주문 후에 주문 결과 화면을 `GET`으로 리다이렉트
     - 새로고침해도 결과 화면 `GET` 요청이 다시 전송됨
