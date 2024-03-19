@@ -98,7 +98,7 @@ analytics:
 # Site Author
 author:
   name: "양효원"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/img/bio-photo.jpg"
   bio: "🏸"
   location: "Korea"
   links:
@@ -117,6 +117,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/siriyaoff"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/hyowon-yang-011632241"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
