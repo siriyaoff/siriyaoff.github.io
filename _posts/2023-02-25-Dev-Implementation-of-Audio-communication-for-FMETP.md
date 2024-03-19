@@ -63,16 +63,16 @@ tags:
   -64,93,0,0,1,0,0,0,-6,-1,-7,-1,-7,-1,-8,-1,-8,-1,-10,-1,-11,-1,-15,-1,-18,-1,-22,-1,-26,-1,-29,-1,-33,-1,-36,-1,-40,-1,-42,-1,-46,-1,-48,-1,-49,-1,-50,-1,-51,-1,...
   ```
   - little endian이라서 바꿔서 계산해야 함  
-    ![FMETP-audio-comm-1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-audio-comm-1.png)
+    ![FMETP-audio-comm-1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-audio-comm-1.png)
     - 7, 209 순서로 이진수로 변환하면 2001임
 
 ## Implementation
 
 - `FaceCamera` object에 `MicEncoder.cs` 스크립트를 추가함  
-  ![FMETP-audio-comm-2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-audio-comm-2.png)
+  ![FMETP-audio-comm-2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-audio-comm-2.png)
   - `Stream Game Sound` : 컴퓨터에서 출력되는 오디오를 같이 녹음할지 선택
 - `WebCameDecoder` object에 `AudioDecoder.cs` 스크립트를 추가함  
-  ![FMETP-audio-comm-3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-audio-comm-3.png)
+  ![FMETP-audio-comm-3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-audio-comm-3.png)
   - `AudioDecoder.cs`에서 재생할 Audio Source가 필요하기 때문에 `Audio Source`가 자동으로 추가됨
   - `Audio Source` properties
     - Mute : default가 true이기 때문에 확인해야 함
@@ -80,7 +80,7 @@ tags:
   - `AudioDecoder` properties
     - Playback - `Volume` : Playback이 자신의 오디오를 다시 들려줄 때의 볼륨일 줄 알았는데, 그냥 수신한 오디오의 볼륨을 조절하는 것임
 - `StreamVideoRelated-SocketManager` object의 `OnReceivedByteDataEvent(Byte[])`에 오디오 이벤트 핸들러 `AudioDecoder.Action_ProcessFMPCM16Data`를 추가함  
-  ![FMETP-audio-comm-4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-audio-comm-4.png)
+  ![FMETP-audio-comm-4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-audio-comm-4.png)
   - `GameViewDecoder.Action_ProcessImageData`, `AudioDecoder.Action_ProcessFMPCM16Data` 모두 패킷의 label을 확인하고 다르면 처리하지 않기 때문에 따로 label에 따른 처리를 해줄 필요가 없음
 - `MicEncoder.cs`, `AudioDecoder.cs`의 samplingRate, StreamFPS를 동기화함
   - samplingRate : 48000
@@ -120,7 +120,7 @@ tags:
   - The whole audio pipeline starts and ends in `MicEncoder.cs`
     - `CaptureMic()` is invoked only once when `StartAll()` executed, so I couldn’t find the relation of available Mic list and the audio source of `AddMicData()`
 
-<img src="https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-audio-comm-5.png" width="50%" height="50%">
+<img src="https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-audio-comm-5.png" width="50%" height="50%">
 
 - `Encoded Size(byte)` fixed to 8 when the audiobyte wasn’t put
   - So whenever I tried to change the Mic device, it was fixed to 8

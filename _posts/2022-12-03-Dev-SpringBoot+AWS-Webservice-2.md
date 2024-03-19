@@ -218,7 +218,7 @@ tags:
   - Transaction, Domain 기능 간의 순서를 보장하는 Service
     - Service는 business logic을 처리하지 않고 transaction, domain 간의 순서 보장의 역할만 함
 - Spring Web Layer
-  ![springawsnote1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/springawsnote1.png)
+  ![springawsnote1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/springawsnote1.png)
   - Web Layer : View Template 영역
     - `@Controller`, JSP/Freemarker, `@Filter`, `@ControllerAdvice`, 인터셉터 등의 **외부 요청과 응답**에 대한 영역
   - Service Layer : 서비스 영역

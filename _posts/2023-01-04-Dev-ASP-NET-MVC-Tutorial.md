@@ -142,7 +142,7 @@ dotnet new mvc -o HelloMvc
   ...
   ```
 
-  ![aspdnet mvc 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/asdpnet-mvc1.png)
+  ![aspdnet mvc 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/asdpnet-mvc1.png)
 
   - layout template을 사용해서 `Index.cshtml`과 `Views/Shared/_Layout.cshtml`을 합침
 
@@ -176,7 +176,7 @@ dotnet new mvc -o HelloMvc
   </ul>
   ```
 
-  ![aspdnet mvc 2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/asdpnet-mvc2.png)
+  ![aspdnet mvc 2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/asdpnet-mvc2.png)
 
   - `ViewData`를 사용해서 컨트롤러에서 뷰로 데이터를 전달함
 
@@ -251,7 +251,7 @@ dotnet ef database update
 ```
 
 - 앱 실행해서 Movie App 클릭 후 정상 작동 확인
-  ![aspdnet mvc 3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/asdpnet-mvc3.png)
+  ![aspdnet mvc 3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/asdpnet-mvc3.png)
 
 ## DB 초기화
 

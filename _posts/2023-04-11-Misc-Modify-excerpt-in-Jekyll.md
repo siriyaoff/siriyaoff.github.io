@@ -12,7 +12,7 @@ tags:
 
 ## Excerpt
 
-![excerpt explanation 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/jekyll-excerpt-1.png)
+![excerpt explanation 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/jekyll-excerpt-1.png)
 
 - Jekyll에서 사용되는 블로그의 내용 미리보기이다. 기존에는 첫 h2만 보여서 수정을 하게 되었고, 위 사진은 이후의 내용들도 나오게 한 상태이다.
 

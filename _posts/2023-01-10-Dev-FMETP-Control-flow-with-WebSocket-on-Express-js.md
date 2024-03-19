@@ -21,19 +21,19 @@ tags:
   - express 서버
   - FMWebSocket과 통신하기 위해서 Socket.io를 사용하지 않고 `ws` 모듈 사용함
 - Unity app  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-1.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-1.png)
   - FaceCamera 객체 내부의 OnDataByteReadyEvent에서 웹캠 피드를 전송할 방식 선택 가능
     - `Assets/FMETP_STREAM/FMWebSocket/Scripts/WebSocket/FMWebSocketManager`에 전송 방식이 정의되어 있음
       - SendToAll, SendToServer, SendToOthers, SendToTarget  
-        ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-2.png)  
-        ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-3.png)
+        ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-2.png)  
+        ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-3.png)
     - `_meta[]`도 아래의 `_byteReg[]`와 같이 `ws.send()`로 보내는 argument임
 
 ## WebSocket Base Framing Protocol
 
 - socket.io, FMWebSocket 모두 [WebSocket Protocol RFC 6455](https://datatracker.ietf.org/doc/rfc6455/) 프로토콜을 사용함
 
-![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-4.png)
+![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-4.png)
 
 ### Express 서버의 `index.html`에서의 예시
 
@@ -109,8 +109,8 @@ ws.onmessage = function (evt) {
 ### FMETP_STREAM에서의 전송 방식 분석
 
 - 처음 접속할 때 접속 방식(server, client)을 설정함  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-5.png)  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-6.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-5.png)  
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-6.png)
   - 특별히 다른 기능을 하진 않고, 전송 방식을 위해서 구별된 것 같음(all/server/others)
     - FMWebSocket에서 말하는 server를 room 개념으로 이용할 것임
 - 각 소켓의 uuid는 아래와 같은 방법으로 생성됨
@@ -279,9 +279,9 @@ ws.on("message", function incoming(message) {
 ### 발생했던 문제들
 
 - payload type을 `Uint8Array` → `Uint32Array`로 바꿨을 때 제대로 입력받지 못함  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-7.png)  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-8.png)  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Ctrl-flow-9.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-7.png)  
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-8.png)  
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Ctrl-flow-9.png)
   - ws에서 메시지 받을때는 원래 데이터 타입과 상관없이 1B로 쪼개서 받아서 이렇게 배치되는 듯
   - `Uint32Array(4)` 대신 `Uint8Array(16)`으로 바꿈
 - JS의 `Array`는 asisgn 연산을 실행하면 shallow copy됨

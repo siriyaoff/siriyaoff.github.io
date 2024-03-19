@@ -61,7 +61,7 @@ public class HelloController : ControllerBase
 - `dotnet watch`로 실행하면 swagger라는 템플릿이 자동으로 실행되는데, 이를 통해서 API 상태 확인 가능
 - `/hello` 들어가서 `"hello"` 반환 확인
 
-![aspdnet conf](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/aspdnet-conf.png)
+![aspdnet conf](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/aspdnet-conf.png)
 
 ## 설치된 버전 제거
 

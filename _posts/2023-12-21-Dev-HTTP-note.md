@@ -59,7 +59,7 @@ tags:
 
 # TCP/IP 스택
 
-![HTTP-TCP-IP-Stack.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-TCP-IP-Stack.png)
+![HTTP-TCP-IP-Stack.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-TCP-IP-Stack.png)
 
 - IP(Internet Procotol)
   - 지정한 IP 주소에 packet 단위로 데이터 전달
@@ -74,9 +74,9 @@ tags:
     - IP와 거의 비슷하지만, 포트, 체크섬이 추가됨
     - 앱에서 추가 처리 필요
 - 프로토콜 분석  
-  ![HTTP-Protocol.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Protocol.png)
+  ![HTTP-Protocol.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Protocol.png)
 - TCP/IP 패킷  
-  ![HTTP-TCP-IP-Packet.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-TCP-IP-Packet.png)
+  ![HTTP-TCP-IP-Packet.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-TCP-IP-Packet.png)
   - 연결지향(3-way handshake)
   - 데이터 전달 보증
   - 순서 보장
@@ -90,12 +90,12 @@ tags:
 
 # URI(Uniform Resource Identifier)
 
-![HTTP-URI.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-URI.png)
+![HTTP-URI.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-URI.png)
 
 - URI는 Locator, Name 또는 둘 다 추가로 분류할 수 있음
   - URL을 주로 사용(이후 URI, URL을 같은 의미로 사용함)
 
-![HTTP-URL-URN.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-URL-URN.png)
+![HTTP-URL-URN.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-URL-URN.png)
 
 - URL : 리소스가 있는 위치 지정
   - `scheme://[userinfo@]host[:port][/path][?query][#fragment]`
@@ -133,7 +133,7 @@ tags:
 1. 웹 브라우저에 도메인 입력
 2. 웹 브라우저가 DNS 조회, HTTP 요청 메시지 생성
 
-   ![HTTP-Web-Browser-Request.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Web-Browser-Request.png)
+   ![HTTP-Web-Browser-Request.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Web-Browser-Request.png)
 
 3. OS에서 TCP/IP 패킷 생성
 4. 네트워크 인터페이스를 통해 요청 패킷 전달
@@ -143,7 +143,7 @@ tags:
 # HTTP 메시지
 
 - 메시지 구조  
-  ![HTTP-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Message.png)
+  ![HTTP-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Message.png)
   - start-line : request-line 또는 status-line
   - header : `field-name ":" OWS field-value OWS`
     - `OWS` : 띄어쓰기 허용
@@ -156,7 +156,7 @@ tags:
 
 ## 요청 메시지
 
-![HTTP-Request-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Request-Message.png)
+![HTTP-Request-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Request-Message.png)
 
 - start-line : request-line
   - `method SP request-target SP HTTP-version CRLF`
@@ -165,7 +165,7 @@ tags:
 
 ## 응답 메시지
 
-![HTTP-Response-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Response-Message.png)
+![HTTP-Response-Message.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Response-Message.png)
 
 - start-line : status-line
   - `HTTP-version SP status-code SP reason-phrase CRLF`
@@ -179,7 +179,7 @@ tags:
   - 압축, 인증, 클라이언트, 서버 정보, 메시지 바디의 내용, 크기, …
 - RFC2616 : 과거 헤더 분류
 - RC7230 - 7235 : Entity → Representation으로 변화  
-  ![HTTP-Header.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Header.png)
+  ![HTTP-Header.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Header.png)
   - Representation : Representation Metadata + Representation Data
   - message body : payload라고도 함
 
@@ -274,7 +274,7 @@ tags:
     - 검증 헤더 `Last-Modified`, 조건부 요청 헤더 `If-Modified-Since`를 통해 데이터 재사용성을 높일 수 있음
       - 검증 결과 재사용 가능한 데이터일 경우 `304` (Not Modified) 응답을 보냄(http body가 없음)
 - 프록시 캐시(CDN)  
-  ![HTTP-CDN.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-CDN.png)
+  ![HTTP-CDN.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-CDN.png)
 - field-value
   - `max-age` : 캐시 유효 시간, 초 단위
   - `no-cache` : 캐시를 해도 되지만, 항상 origin 서버(프록시(CDN) 서버 안됨)에 검증함
@@ -336,7 +336,7 @@ tags:
 
 ## HTTP 메서드 속성
 
-![HTTP-Methods-Properties.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-Methods-Properties.png)
+![HTTP-Methods-Properties.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-Methods-Properties.png)
 
 - 안전(Safe Methods) : 호출해도 리소스를 변경하지 않음
 - 멱등(Idempotent Methods) : 반복해서 호출해도 결과가 같음
@@ -463,6 +463,6 @@ tags:
 - Temporary Redirection : 일시적인 변경(e.g. 주문 완료 후 주문 내역 화면으로 이동)
   - `302`, `307`, `303`
   - PRG : Post/Redirect/Get  
-    ![HTTP-PRG.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/HTTP-PRG.png)
+    ![HTTP-PRG.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/HTTP-PRG.png)
     - `POST`로 주문 후에 주문 결과 화면을 `GET`으로 리다이렉트
     - 새로고침해도 결과 화면 `GET` 요청이 다시 전송됨

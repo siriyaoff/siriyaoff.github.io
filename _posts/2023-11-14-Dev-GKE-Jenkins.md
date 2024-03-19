@@ -354,7 +354,7 @@ git remote add origin https://source.developers.google.com/p/$DEVSHELL_PROJECT_I
   - Project Repository : Cloud Source Repositories - sample-app - HTTPS clone URL
   - 사용자 인증 정보 : 위에서 만든 사용자 인증 정보
   - Scan Multibranch Pipeline Triggers : Periodically if not otherwise run(Interval : 1분)
-    ![configuration](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/GKE-Jenkins-configuration.png)
+    ![configuration](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/GKE-Jenkins-configuration.png)
 - Jenkinsfile 작성 및 배포
   ```groovy
   PROJECT = "REPLACE_WITH_YOUR_PROJECT_ID"
@@ -395,7 +395,7 @@ git remote add origin https://source.developers.google.com/p/$DEVSHELL_PROJECT_I
   - 볼륨 : 파드에 포함되는 데이터 디스크
     - 파드에 포함되는 컨테이너들에 의해 사용됨
 - 서비스 : 파드를 위한 엔드포인트 제공
-  ![service-concept](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/GKE-Jenkins-service-concept.jpg)
+  ![service-concept](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/GKE-Jenkins-service-concept.jpg)
   - 파드 집합에 대한 액세스 수준
     - `ClusterIP` : 클러스터 내부에서만 볼 수 있음, 기본 유형
     - `NodePort` : 클러스터의 각 노드에 외부에서 접근 가능한 IP 주소 제공

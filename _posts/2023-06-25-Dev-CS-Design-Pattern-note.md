@@ -562,7 +562,7 @@ console.log(pukuba.a);
 
 ## 1.1.8 MVC 패턴
 
-![router-MVC-DB.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/router-MVC-DB.png)
+![router-MVC-DB.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/router-MVC-DB.png)
 
 - Model : 앱이 포함해야 할 데이터를 정의
 - View : 데이터를 보여주는 방식을 정의

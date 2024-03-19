@@ -16,7 +16,7 @@ tags:
 
 # 클래스 다이어그램
 
-![class diagram 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/classdiagram1.png)
+![class diagram 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/classdiagram1.png)
 
 - 아래 설명들에서 A-B이라고 하면 위 그림 기준 A가 왼쪽, B가 오른쪽에 있는 것임
 

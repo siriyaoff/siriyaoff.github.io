@@ -45,7 +45,7 @@ public static void main(String[] args){
 
 # `HttpServer` 와 관련된 자세한 클래스 관계 및 다이어그램
 
-![class diagram](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Java-HttpServer-Classdiagram.svg)
+![class diagram](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Java-HttpServer-Classdiagram.svg)
 
 ## `InetSocketAddress`
 
@@ -55,7 +55,7 @@ public static void main(String[] args){
     - `InetAddressHolder` 클래스로 IP 정보를 저장함
       - hostname, address, family 등
 - 생성자  
-  ![Java-HttpServer-InetSocketAddress-Constructor](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Java-HttpServer-InetSocketAddress-Constructor.png)
+  ![Java-HttpServer-InetSocketAddress-Constructor](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Java-HttpServer-InetSocketAddress-Constructor.png)
   - `InetSocketAddress(int port)` : `addr`은 `InetAddress.anyLocalAddress()`로 설정
   - `InetSocketAddress(InetAddress addr, int port)` : `hostname`은 `null` 로 저장
   - `InetSocketAddress(String hostname, int port)` : `addr`은 `InetAddress.getByName(hostname)`으로 설정

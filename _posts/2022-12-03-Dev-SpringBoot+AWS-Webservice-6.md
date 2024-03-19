@@ -66,7 +66,7 @@ notifications:
 
 ### Travis CI 연동시 아키텍처
 
-![springawsnote3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/springawsnote3.png)
+![springawsnote3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/springawsnote3.png)
 
 - AWS Code Deploy는 저장 기능이 없기 때문에 Travis CI에서 빌드한 결과를 저장할 공간이 필요함
   - 보통 S3를 사용함
@@ -335,7 +335,7 @@ deploy:
      - `ApplicationStart` 단계에서 `deploy.sh`를 `ec2-user` 권한으로 실행함
 
 - CodeDeploy에서 배포 결과 확인 가능
-  ![springawsnote4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/springawsnote4.png)
+  ![springawsnote4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/springawsnote4.png)
 
 ## CodeDeploy 로그 확인
 
@@ -380,7 +380,7 @@ deploy:
 
 - 서버 하나에 Nginx 1대와 Spring Boot Jar 2대를 사용하는 방식
 
-![springawsnote5](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/springawsnote5.png)
+![springawsnote5](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/springawsnote5.png)
 
 - Nginx : 80(http), 443(https) 포트 사용
 - Jar : 각각 8081, 8082 포트 사용

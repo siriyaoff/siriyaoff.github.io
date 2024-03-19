@@ -16,7 +16,7 @@ tags:
 - Agile Manifesto
   - 의사소통(>프로세스, 도구), 동작하는 소프트웨어(>문서), 고객과의 협력(>계약 협상), 변화에 대응
 
-![daily-scrum](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/am-daily-scrum.png)
+![daily-scrum](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/am-daily-scrum.png)
 
 - Backlog Refinement : 스프린트 진행하는 동안에도 상시 이루어짐
 - Sprint Review : PO와 함께 개발 완료된 내용의 데모 시연
@@ -25,7 +25,7 @@ tags:
 
 ### User Story
 
-![userstory](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/am-userstory.png)
+![userstory](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/am-userstory.png)
 
 - Theme : 추상화된 개발 대상
 - Epic : Theme 내 분리 가능한 내용

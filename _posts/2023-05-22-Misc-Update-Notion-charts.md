@@ -18,7 +18,7 @@ tags:
 - 다시 대체제들을 찾아보다가 datajumbo가 위 조건들을 대부분 만족하고 세밀한 그래프 조절 기능을 제공해줘서 사용하게 되었다.
   - 단순히 x-y 관계 뿐만 아니라 범례를 생성할 수 있다.
 
-![datajumbo introduction](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/datajumbo-introduction.PNG)
+![datajumbo introduction](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/datajumbo-introduction.PNG)
 
 - `Configuration` : 차트 설정
 - `Source` : DB 선택

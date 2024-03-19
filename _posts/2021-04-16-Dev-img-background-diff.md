@@ -31,7 +31,7 @@ HTML:
 ```
 
 Result:  
-![html-img-tag](https://github.com/siriyaoff/siriyaoff.github.io/blob/master/_posts/img/html-img-tag.PNG?raw=true)
+![html-img-tag](https://github.com/siriyaoff/siriyaoff.github.io/blob/master/assets/img/html-img-tag.PNG?raw=true)
 
 # CSS `background` property를 사용해서 img 삽입
 CSS:  
@@ -52,7 +52,7 @@ HTML:
 ```
 
 Result:  
-![css-background-property](https://github.com/siriyaoff/siriyaoff.github.io/blob/master/_posts/img/css-background-property.PNG?raw=true)
+![css-background-property](https://github.com/siriyaoff/siriyaoff.github.io/blob/master/assets/img/css-background-property.PNG?raw=true)
 
 # 차이점
 둘 다 이미지의 aspect ratio는 유지되지만 노출되는 부분이 다르다.

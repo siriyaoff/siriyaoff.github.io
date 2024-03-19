@@ -184,7 +184,7 @@ writer.close();
 
 - `FileWriter`, `BufferedWriter`는 문자 기반 스트림이기 때문에 `byte[] b`를 바로 넣을 수 없음
 - 실행 결과  
-  ![byte copy](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/java-byte-copy.png)
+  ![byte copy](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/java-byte-copy.png)
   - `serveriris.png`가 원본 파일, `returniris.png`가 위 코드를 실행한 결과물
   - 복사가 제대로 되지 않고 크기가 4.64배 정도로 차이가 나는 이유
     1. `psdb`는 `Arrays.toString(b)`로 만들어진 문자열임

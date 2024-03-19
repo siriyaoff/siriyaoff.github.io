@@ -29,11 +29,11 @@ tags:
 - 로컬에서 `main.scss`의 `.language-plaintext`를 계속 바꿔봐도 inline code의 스타일이 바뀌지 않았음
 - 같은 파일의 `.highlight`는 바꾸면 적용되었음
 
-![updatecss1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/updatecss1.PNG)
+![updatecss1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/updatecss1.PNG)
 
 - `.highlight`는 코드 블럭의 조상 클래스 중 하나였고, 이후 자식 클래스들부터 `#include`와 같은 하이라이트 클래스까지 모두 `em`으로 font-size를 조절했기 때문에 `.highlight`의 font-size를 조절해도 적용이 됨
 
-![updatecss2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/updatecss2.PNG)
+![updatecss2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/updatecss2.PNG)
 
 - `.language-plaintext`는 `.page__content :not(pre)>code`보다 specificity가 낮고, 둘 다 같은 대상에게 적용되는 것이기 때문에 `.language-plaintext`는 overwrite됨
   - `.language-plaintext` : 1 class -> 010

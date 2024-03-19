@@ -14,7 +14,7 @@ tags:
 - Authentication : 인증, 로그인  
   Authorization : 권한 부여
 - Spring MVC request lifecycle
-  ![springawsnote2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/springawsnote2.png)
+  ![springawsnote2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/springawsnote2.png)
   - Spring Interceptor : DispatcherServlet에서 Handler로 가기 전에 정보를 처리
     - Spring에서 자체 제공하는 기능
     - 인증, 권한같은 작업을 주로 담당

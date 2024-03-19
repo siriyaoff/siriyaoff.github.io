@@ -121,7 +121,7 @@ app.post("/register", (req, res) => {
 
 # 보안 정보 관리
 
-![express, react 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Express.js-React-class-1.png)
+![express, react 1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Express.js-React-class-1.png)
 
 - mongoDB 연결하는 부분에 id, pw가 노출될 수 있음
 - `config/dev.js`에서 설정 가능함
@@ -178,7 +178,7 @@ mongoose.connect(config.mongoURI, ...);
 - 먼저 root directory에 `server`, `client`로 나누는게 좋음
 - `client` 폴더 안에서 `npx create-react-app .`로 react 설치
 
-![express, react 2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Express.js-React-class-2.png)
+![express, react 2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Express.js-React-class-2.png)
 
 - `client` 내부가 create-react-app을 했을 때 생기는 기본 구조
 - `index.js`의 `ReactDOM.render(<App />, document.getElementById('root'));`에서 페이지를 렌더링해줌
@@ -186,7 +186,7 @@ mongoose.connect(config.mongoURI, ...);
 
 ## CRA 수정(+redux)
 
-![express, react 3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Express.js-React-class-3.png)
+![express, react 3](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Express.js-React-class-3.png)
 
 - `_actions`, `_reducer` : redux에서 사용
 - `components/views` : 페이지들을 넣음
@@ -288,13 +288,13 @@ app.get("/api/hello", (req, res) => {
     - 한 component 안에서 데이터를 교환하고 싶을 때 state에 담아야 함
     - component 안에서는 state를 변하게 할 수 있음(state가 변하면 component가 rerendering됨)
 
-![express, react 4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Express.js-React-class-4.png)
+![express, react 4](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Express.js-React-class-4.png)
 
 - state를 상위 component에 두지 않고 store를 이용해 관리할 경우 가져오는 단계를 줄일 수 있음
 
 ## Redux data flow
 
-![express, react 5](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/Express.js-React-class-5.png)
+![express, react 5](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/Express.js-React-class-5.png)
 
 - strict unidirectional(철저한 단방향임)
 

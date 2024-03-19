@@ -113,7 +113,7 @@ plt.show()
 
 - 자바에서 csv 형식으로 바꿔서 처리함
 
-![string-intarray-speed-test](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/string-intarray-speed-test.png)
+![string-intarray-speed-test](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/string-intarray-speed-test.png)
 
 - 위 그래프는 `nums1`, `nums2`, `nums3`의 순서대로 실행한 결과임
 

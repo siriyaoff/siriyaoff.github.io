@@ -58,10 +58,10 @@ tags:
 ## 1. Toggle button added
 
 - UI - Toggle used  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-1.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-1.png)
   - 잘 안보이지만, Game view 가장 아래쪽에 토글 버튼과 회색 Stop video 글자가 있음
 - Inspector of Stop video toggle  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-2.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-2.png)
   - set `Is On` to inactive
   - add `Stopvideo.toggleMeshes()`, `HolisticTrackingSolution.toggleAvatar()` to Event Trigger `On Value Changed`
 - `Stopvideo.cs`
@@ -90,7 +90,7 @@ tags:
 
 ### Mediapipe analysis
 
-![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-3.png)
+![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-3.png)
 
 - UML에 따라서 그린게 아님
 - 실선 화살표는 의존, 점선 화살표는 Implementation을 나타냄
@@ -153,13 +153,13 @@ tags:
 ### Add Blackscreen image to `Assets`
 
 - 최상위 경로의 `Assets` 폴더에 black screen 파일들을 넣음  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-4.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-4.png)
 - `ImageSource`의 구현체 중에 하나인 `StaticImageSource`에 추가함  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-5.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-5.png)
 
 # Result
 
-![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-6.png)
+![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-6.png)
 
 - Stop video 버튼을 클릭하면 black screen이 1frame이 전송되고 피드가 멈춤
 - 다시 클릭하면 아바타가 켜진 후 피드가 보내지면서 4프레임 안에 웹캠으로 ImageSource가 전환됨
@@ -183,6 +183,6 @@ tags:
     Debug.Log(pixels[2].ToString());
     Debug.Log(pixels[3].ToString());
   ```
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-Stop-video-Button-7.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-Stop-video-Button-7.png)
   - rgba 형식임
   - setpixels32에 파라미터 추가해서 `[0, 0, 0, 255]`로 바꿀 수는 있지만 Textureframe을 생성하는 iteration 하나를 독자적으로 실행할 방법을 못찾음

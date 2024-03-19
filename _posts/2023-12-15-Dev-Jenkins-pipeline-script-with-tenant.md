@@ -73,10 +73,10 @@ tags:
     ```
     - locale이 `en_US`이고 codeset이 생략되어 있었는데, 기본이 `POSIX`였기 때문에 한글이 지원되지 않았음
   - 아래 그림에서 codeset이 `POSIX`일 경우 한글 파일 이름이 제대로 표현되지 않지만, locale이 `en_US.UTF-8`일 경우 정상적으로 나오는 것을 확인할 수 있음  
-    ![sonarqube-encoding1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/jenkins-pipeline-sonarqube-encoding1.png)
+    ![sonarqube-encoding1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/jenkins-pipeline-sonarqube-encoding1.png)
 - 해결 방법
   - mvn 빌드 명령어 앞에 임시 환경변수 설정으로 locale 지정
-    ![sonarqube-encoding2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/jenkins-pipeline-sonarqube-encoding2.png)
+    ![sonarqube-encoding2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/jenkins-pipeline-sonarqube-encoding2.png)
 - 시도한 방법들
   - 쉘 스크립트로 locale 직접 적용
     ```jsx

@@ -114,7 +114,7 @@ tags:
 - TCP/IP(Transmission Control Protocol/Internet Protocol)
   - 각 계층은 서로 영향을 받지 않도록 설계됨
 
-![TCP-IP-OSI-7-Layer.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/TCP-IP-OSI-7-Layer.png)
+![TCP-IP-OSI-7-Layer.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/TCP-IP-OSI-7-Layer.png)
 
 ### Application Layer
 
@@ -126,12 +126,12 @@ tags:
 - 송신자, 수신자를 연결하는 통신 서비스 제공(TCP, UDP, QUIC)
 - TCP
   - 가상회선 패킷 교환 방식 사용  
-    ![virtual-circuit-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/virtual-circuit-packet-transportation.png)
+    ![virtual-circuit-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/virtual-circuit-packet-transportation.png)
     - 가상회선 : 송신자, 수신자 사이에 임의로 정한 하나의 경로
     - 각 패킷에 가상회선 식별자가 포함되어 모든 패킷은 가상회선으로만 전송됨
     - 패킷 사이 순서 보장
   - 3-way Handshake  
-    ![3-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/3-way-handshake.png)
+    ![3-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/3-way-handshake.png)
     - TCB(TCP Control Block) : connection state, sequece 번호 등의 연결에 필요한 정보를 가진 구조체
     1. client에서 `SYN`(client ISN) 보냄
        - client : `SYN_SENT`
@@ -143,7 +143,7 @@ tags:
        - client : `ESTABLISHED`
        - server : `ACK` 받은 후 `ESTABLISHED`
   - 4-way Handshake  
-    ![4-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/4-way-handshake.png)
+    ![4-way-handshake.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/4-way-handshake.png)
     1. client에서 `FIN` 보냄
        - client : `FIN_WAIT_1`
        - server : `ESTABLISHED`
@@ -162,7 +162,7 @@ tags:
       - Ubuntu는 1분, Windows는 4분
 - UDP
   - 데이터그램 패킷 교환 방식 사용  
-    ![datagram-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/datagram-packet-transportation.png)
+    ![datagram-packet-transportation.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/datagram-packet-transportation.png)
     - 각 패킷들이 독립적으로 이동함
     - 패킷 사이 순서 보장되지 않음
 
@@ -180,7 +180,7 @@ tags:
     - 전이중화 통신 : 송신, 수신로를 나눠 동시에 송수신 가능
   - CSMA/CD : 이전에 사용하던 반이중화 통신(충돌이 발생하면 일정 시간 후 재전송)
   - 이더넷 프레임  
-    ![ethernet-frame.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/ethernet-frame.png)
+    ![ethernet-frame.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/ethernet-frame.png)
     - Preamble : 프레임의 시작을 알림(0, 1 반복)
     - SFD(Start Frame Delimiter) : 다음 바이트부터 DA가 시작됨을 알림(`10101011`)
     - DA(Destination Address) : 목적지의 MAC 주소
@@ -198,7 +198,7 @@ tags:
 
 ### 계층 간 데이터 송수신 과정
 
-![tcp-ip-stack-packet.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/tcp-ip-stack-packet.png)
+![tcp-ip-stack-packet.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/tcp-ip-stack-packet.png)
 
 - Message : Application layer에서 생성된 PDU
 - Segment : TCP(L4) header가 붙은 PDU
@@ -297,7 +297,7 @@ tags:
 
 ### 클래스 기반 할당 방식
 
-![ip-classes.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/ip-classes.png)
+![ip-classes.png](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/ip-classes.png)
 
 - 가장 앞 주소(`1.0.0.0`) : 네트워크 구별 주소(클래스 A 네트워크 `1.0.0.0` 기준)
 - 가장 뒷 주소(`1.255.255.255`) : broadcast 주소(클래스 A 네트워크 `1.0.0.0` 기준)

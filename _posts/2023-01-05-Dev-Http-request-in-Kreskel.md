@@ -94,11 +94,11 @@ tags:
   }
   ```
 
-  ![kreskel-http-req1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/kreskel-http-req1.png)
+  ![kreskel-http-req1](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/kreskel-http-req1.png)
 
   - 뒤에 `'\0'`을 제거하지 않으면 파일으로 다운로드됨
 
-  ![kreskel-http-req2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/kreskel-http-req2.png)
+  ![kreskel-http-req2](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/kreskel-http-req2.png)
 
 ## PNG GET
 

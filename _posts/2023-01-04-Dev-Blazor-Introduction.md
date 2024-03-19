@@ -13,7 +13,7 @@ tags:
 
 - JS 대신 C#을 사용해서 interactive web UI를 구축할 수 있는 SPA framework
 
-![blazor architecture](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/blazor-archi.png)
+![blazor architecture](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/blazor-archi.png)
 
 - WebAssembly : bytecode instruction을 실행함
   - DOM을 직접적으로 건드리진 못함 → JS를 사용해서 접근

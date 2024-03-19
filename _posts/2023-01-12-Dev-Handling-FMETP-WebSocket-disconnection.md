@@ -20,9 +20,9 @@ tags:
 ### Scenes
 
 - StartScene_General  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-1.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-1.png)
 - Holistic  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-2.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-2.png)
   - StartScene_General에서 Start Session 버튼을 클릭하면 Holistic scene으로 넘어감
   - 오른쪽 버튼들은 가장 위 토글 버튼을 클릭했을 때 확장되는 버튼들임
 
@@ -84,7 +84,7 @@ tags:
   - `StartCoroutine(LoadSceneAsync(levelName))`으로 scene을 호출하는 것을 알 수 있음
 
 - `Holistic` scene이 로드되면 `Solution` game object가 mediapipeline을 초기화함  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-3.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-3.png)
 
 ## Implement disconnect button
 
@@ -115,7 +115,7 @@ tags:
   ```
 
   - `On Click()` 이벤트에 아래와 같이 메소드를 붙임  
-    ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-4.png)
+    ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-4.png)
   - `GotoStartScene()` 메소드를 붙임
     - 버튼을 눌렀을 때 `StartScene_General`으로 화면 전환이 되는 것을 확인함
   - `FMWebSocketManager.Close`도 붙여서 웹소켓도 같이 종료되도록 설정함
@@ -126,13 +126,13 @@ tags:
 ### Start session → X → Start session으로 다시 `Holistic` scene으로 넘어갔을 때 웹캠 화면이 나오지 않음
 
 - 처음 한 번만 실행해서 정상 작동할 때의 로그  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-5.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-5.png)
 - GotoStartsession 호출 후 다시 Start session 버튼을 눌렀을 때의 로그  
-  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-6.png)
+  ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-6.png)
 - `LoadSceneAsync`는 어셋에서 제공해주는 함수임
 - 웹캠 피드를 담당하는 MediaPipeUnity 패키지의 초기화 문제라 생각하고 유니티에서 MediaPipeline을 담당하는 game object를 찾음 → `solution`
   - `solution`이 MediaPipeUnity의 스크립트들을 호출하고 있었음  
-    ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/_posts/img/FMETP-ws-disconnection-7.png)
+    ![Untitled](https://raw.githubusercontent.com/siriyaoff/siriyaoff.github.io/master/assets/img/FMETP-ws-disconnection-7.png)
   - `MediaPipeException` 에러의 스택 가장 처음을 보면 `Bootstrap:OnEnable()`에서 에러가 난다는 것을 알 수 있음
     - bootstrap 초기화 문제라 생각하고 로그 찍어본 결과 AssetLoader 부분에서 에러남
     ```csharp
