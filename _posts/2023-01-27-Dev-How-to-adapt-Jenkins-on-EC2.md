@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "How to adapt Jenkins on EC2"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

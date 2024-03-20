@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CSSnote5: CSS layout"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -84,9 +87,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex1.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex1.PNG?raw=true) |
 
 - flexbox의 `flex-direction` property에 `row`가 initial value로 들어가있기 때문에 위와 같이 row로 layout됨
 - flexbox의 `align-items` property에 `stretch`가 initial value로 들어가있기 때문에 item 중 height가 가장 큰 것에 맞춰짐
@@ -112,9 +115,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex2.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex2.PNG?raw=true) |
 
 - flex items에 적용하는 property도 있음!
 - `flex: 1;`을 flex item에 적용하면 공간이 채워지도록 확대/축소할 수 있음
@@ -147,9 +150,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex1.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex1.PNG?raw=true) |
 
 - `grid-template-rows`, `grid-template-columns` properties를 사용해서 행, 열 개수 정의
 
@@ -187,9 +190,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex2.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex2.PNG?raw=true) |
 
 - `grid-column`, `grid-row`를 이용해서 element가 차지할 영역을 지정할 수 있음<br>`start/end`로 지정, 좌표는 1부터 시작
 
@@ -221,9 +224,9 @@ HTML:
 
 ```
 
-|Result:|
-|:---|
-|![css-float-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-float-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex.PNG?raw=true) |
 
 ## Positioning techniques
 Positioning isn't a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.  
@@ -274,9 +277,9 @@ HTML:
 <p>I am a basic block level element.</p>
 ```
 
-|Result:|
-|:---|
-|![css-position-static](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-static.PNG?raw=true)|
+| Result:                                                                                                           |
+| :---------------------------------------------------------------------------------------------------------------- |
+| ![css-position-static](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-static.PNG?raw=true) |
 
 ### Relative positioning
 Relative positioning을 사용하면
@@ -293,9 +296,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-relative](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-relative.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-position-relative](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-relative.PNG?raw=true) |
 
 - `top`, `left` properties를 이용해서 위치를 지정해줘야 함
 - element의 원래 위치가 빈 상태로 유지됨(normal flow에 남아있음)
@@ -314,9 +317,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-absolute](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-absolute.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-position-absolute](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-absolute.PNG?raw=true) |
 
 - `top`, `left` properties를 이용해서 위치를 지정하는 것은 relative와 비슷하지만, 기준이 다름
 	- 이 예시에서는 page의 top, left가 기준
@@ -347,10 +350,10 @@ HTML:
 <p>Paragraph 3.</p>
 ```
 
-|Result:|
-|:---|
-|![css-position-fixed1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-fixed1.PNG?raw=true)|
-|![css-position-fixed2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-fixed2.PNG?raw=true)|
+| Result:                                                                                                           |
+| :---------------------------------------------------------------------------------------------------------------- |
+| ![css-position-fixed1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-fixed1.PNG?raw=true) |
+| ![css-position-fixed2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-fixed2.PNG?raw=true) |
 
 - absolute와 마찬가지로 document normal flow에서 제외시킴
 - viewport에 relative하게 위치를 지정하기 때문에 스크롤되어도 계속 유지됨
@@ -367,10 +370,10 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-sticky1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-sticky1.PNG?raw=true)|
-|![css-position-sticky2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-sticky2.PNG?raw=true)|
+| Result:                                                                                                             |
+| :------------------------------------------------------------------------------------------------------------------ |
+| ![css-position-sticky1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-sticky1.PNG?raw=true) |
+| ![css-position-sticky2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-sticky2.PNG?raw=true) |
 
 - offset을 hit하기 전까지는 `static`이기 때문에 normal flow에 남아있음(`fixed`로 바뀐 후에도)
 
@@ -442,9 +445,9 @@ HTML:
 </form>
 ```
 
-|Result:|
-|:---|
-|![css-table-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-table-ex.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-table-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-table-ex.PNG?raw=true) |
 
 - 표 안에 넣은 것 같이 정렬됨
 - `table-caption`의 경우 `caption-side: bottom;`을 이용해서 위치 조정 가능
@@ -472,9 +475,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-multi-column-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-multi-column-ex.PNG?raw=true)|
+| Result:                                                                                                           |
+| :---------------------------------------------------------------------------------------------------------------- |
+| ![css-multi-column-ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-multi-column-ex.PNG?raw=true) |
 
 # Normal Flow
 CSS를 적용하지 않았을 때 normal flow가 default로 적용됨
@@ -578,9 +581,9 @@ article {
 /* Add your flexbox CSS below here */
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex1.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex1.PNG?raw=true) |
 
 ## Specifying what elements to lay out as flexible boxes
 flex container로 만들 element에 `display: flex;`를 적용시켜서 flex container를 구현  
@@ -594,9 +597,9 @@ section {
 }
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex2.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex2.PNG?raw=true) |
 
 - 위 예시의 경우 `<section>`이 flex container, `<article>`이 flex item
 - default values에 의해 모든 열들이 같은 열 너비, 높이를 가짐
@@ -622,9 +625,9 @@ main axis가 명시된 후 flex item들이 나열되는 방향은 browser's defa
 flex-direction: column;
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex3.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex3.PNG?raw=true) |
 
 ## Wrapping
 flex item의 width or height를 고정하면 item이 많을 때 flex container를 overflow함(flex item을 임시로 추가함)  
@@ -643,9 +646,9 @@ flex-wrap: wrap;
 flex: 200px;
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex5.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex5.PNG?raw=true) |
 
 - `flex-wrap: warp;`을 flex container에 적용하면 overflow되는 item들을 다음 줄로 내림
 - `flex: 200px;`를 flex item에 적용하면 flex item의 최소 main size를 `200px`로 제한함
@@ -678,9 +681,9 @@ article:nth-of-type(3) {
 }
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-ex9](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex7.PNG?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-ex9](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-ex7.PNG?raw=true) |
 
 - `flex: 1 200px;`에서
 	- 첫 번째 값 `1`은 proportion unit으로, 각 list item의 main size의 비율을 정함
@@ -747,9 +750,9 @@ div {
 /* Add your flexbox CSS below here */
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-align-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-align-ex1.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-align-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-align-ex1.PNG?raw=true) |
 
 `style.css`에 아래 rule을 추가:  
 ```css
@@ -764,9 +767,9 @@ button:first-child { /* 이 rule은 예시를 본 후 지움 */
 }
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-align-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-align-ex2.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-align-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-align-ex2.PNG?raw=true) |
 
 - `<button>`의 `width`가 `15%`로 설정되어있기 때문에 공간을 다 차지하지 않음
 	- `30%`로 설정하면 overflow하지 않고 공간을 다 채우기만 함
@@ -800,9 +803,9 @@ button:first-child {
 }
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-order](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-order.PNG?raw=true)|
+| Result:                                                                                                       |
+| :------------------------------------------------------------------------------------------------------------ |
+| ![css-flexbox-order](https://github.com/siriyaoff/MDN-note/blob/master/images/css-flexbox-order.PNG?raw=true) |
 
 - `order`의 default value : `0`
 - 값이 클수록 우선순위가 떨어짐
@@ -921,9 +924,9 @@ button {
 }
 ```
 
-|Result:|
-|:---|
-|![css-flexbox-nesting](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flexbox-example7.png)|
+| Result:                                                                                                            |
+| :----------------------------------------------------------------------------------------------------------------- |
+| ![css-flexbox-nesting](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flexbox-example7.png) |
 
 - flexbox로 지정되는 element는 모두 block element이기 때문에 HTML에서 table, list를 nest하는 것과 비슷함
 - flex container 관련 properties:
@@ -1002,9 +1005,9 @@ body {
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex3.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex3.PNG?raw=true) |
 
 `style.css`에 아래 rule을 추가:  
 ```css
@@ -1014,9 +1017,9 @@ body {
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex4.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex4.PNG?raw=true) |
 
 - `display: grid;`를 적용해서 grid layout 사용
 	- single column grid가 default로 적용됨
@@ -1036,9 +1039,9 @@ Use `fr` unit to flexibly size grid rows and columns
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex5.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex5.PNG?raw=true) |
 
 - `grid-template-rows`(`-columns`)에 `fr`과 fixed length를 섞어서 사용할 수 있음
 	- fixed length에 공간을 분배한 다음 남은 공간을 `fr`들이 가져감
@@ -1057,9 +1060,9 @@ Use `fr` unit to flexibly size grid rows and columns
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex5.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex5.PNG?raw=true) |
 
 - `gap`에는 `fr` unit 사용 불가
 
@@ -1088,9 +1091,9 @@ e.g. `repeat(3, 1fr 2fr)` is equal to `1fr 2fr 1fr 2fr 1fr 2fr`
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex7.PNG?raw=true)|
+| Result:                                                                                             |
+| :-------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex7.PNG?raw=true) |
 
 - explicit grid, implicit grid을 둘 다 사용할 수 있음
 
@@ -1139,10 +1142,10 @@ e.g. `grid-auto-rows: minmax(100px, auto);`
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex9](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex9.PNG?raw=true)|
-|![css-grid-ex10](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex10.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex9](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex9.PNG?raw=true)   |
+| ![css-grid-ex10](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex10.PNG?raw=true) |
 
 - flex에서 flex items의 width를 지정하지 않았을 때 늘어나는 것과 비슷
 - column은 너비가 200px인 col을 최대로 만든 다음, 남는 공간은 균등하게 분배
@@ -1182,9 +1185,9 @@ footer {
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex11](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex11.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex11](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex11.PNG?raw=true) |
 
 - `-1`과 같이 음수도 사용 가능(끝에서부터 count됨)
 - `grid-row: 1;`과 같이 row를 선언할 수도 있음<br>=> 하나의 row만 차지한다는 뜻임(⇔ `grid-row: 1 / 2;`)
@@ -1223,9 +1226,9 @@ footer {
 }
 ```
 
-|Result:|
-|:---|
-|Line-based placement와 같음|
+| Result:                     |
+| :-------------------------- |
+| Line-based placement와 같음 |
 
 - line number를 사용하지 않고 배치 가능
 - `grid-area`로 각 item들의 alias를 줘야 함
@@ -1269,9 +1272,9 @@ footer {
 }
 ```
 
-|Result:|
-|:---|
-|![css-grid-ex12](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex12.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-grid-ex12](https://github.com/siriyaoff/MDN-note/blob/master/images/css-grid-ex12.PNG?raw=true) |
 
 - line-based placement를 지정하지 않으면 각각의 item들은 column 하나씩을 차지함(row는 implicit grid이기 때문에 자동으로 한 줄만 생성됨)
 - `grid-template-*`의 `fr`으로 비율을 설정할 수도 있지만 위와 같이 frameworks를 이용해서 비율을 설정할 수도 있음
@@ -1430,9 +1433,9 @@ body {
 }
 ```
 
-|Result:|
-|:---|
-|![css-float-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex1.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-float-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex1.PNG?raw=true) |
 
 - float가 적용된 element(`.box`)는 normal flow에서 제외되고 parent container의 왼쪽에 배치됨
 - normal layout flow에서 `.box` 뒤에 오는 element는 `.box`를 감쌈(`.box`보다 윗쪽은 제외)
@@ -1457,9 +1460,9 @@ possible values:
 }
 ```
 
-|Result:|
-|:---|
-|![css-float-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex3.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-float-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex3.PNG?raw=true) |
 
 - clearing이라는 keyword의 의미는 normal flow에서 제외된 상태인 float를 다시 인식시킨다 정도로 생각하면 될 듯
 
@@ -1485,9 +1488,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-float-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex4.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-float-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex4.PNG?raw=true) |
 
 - float가 normal flow에서 제외되었기 때문에 box가 제대로 감싸지 못함
 	- following element를 clear해도 해결되지 않음
@@ -1503,9 +1506,9 @@ clearfix hack : generated content를 wrapping box뒤에 삽입해서 clear both 
 }
 ```
 
-|Result:|
-|:---|
-|![css-float-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex5.PNG?raw=true)|
+| Result:                                                                                               |
+| :---------------------------------------------------------------------------------------------------- |
+| ![css-float-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-float-ex5.PNG?raw=true) |
 
 - wrapper 뒤에 element를 삽입하고 `clear: both`를 추가한 것과 같음
 
@@ -1585,9 +1588,9 @@ span {
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex1.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex1.PNG?raw=true) |
 
 ## Static positioning
 `position: static;`을 사용해서 구현  
@@ -1609,9 +1612,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex2.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex2.PNG?raw=true) |
 
 - static positioning이 default behavior이기 때문에 위치는 변화없음
 
@@ -1633,9 +1636,9 @@ element가 normal flow에 의해 배치된 다음 `top`, `bottom`, `left`, `righ
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex3.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex3.PNG?raw=true) |
 
 - `top`, `bottom`, `left`, `right`의 value로 pixels, mm, rems, % 등의 unit들이 가능함
 - `top: 30px;`는 위에 30px만큼 거리를 띄운다고 생각하면 될 듯
@@ -1650,9 +1653,9 @@ absolute positioning에서는 `top`, `bottom`, `left`, `right`가 normal flow에
 position: absolute;
 ```
 
-|Result:|
-|:---|
-|![css-position-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex4.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex4.PNG?raw=true) |
 
 - `top`, `bottom`, `left`, `right`, `margin` 모두 `0`으로 설정하면 화면을 가득 채움<br>=>`margin`이 적용됨(margin collapsing은 일어나지 않음)
 
@@ -1679,9 +1682,9 @@ position: absolute;
 `position: relative;`
 ```
 
-|Result:|
-|:---|
-|![css-position-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex5.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex5](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex5.PNG?raw=true) |
 
 - `<body>`에 relative positioning을 적용해서 `.positioned`의 containing block이 `<body>`로 변경됨
 
@@ -1696,9 +1699,9 @@ p:nth-of-type(1) {
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-ex6](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex6.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex6](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex6.PNG?raw=true) |
 
 - 더 나중에 position된 `.positioned`가 더 앞으로 나옴
 - `z-index` property를 사용해서 stack 순서를 바꿀 수 있음
@@ -1730,9 +1733,9 @@ h1 {
 }
 ```
 
-|Result:|
-|:---|
-|![css-position-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex7.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-position-ex7](https://github.com/siriyaoff/MDN-note/blob/master/images/css-position-ex7.PNG?raw=true) |
 
 - `<h1>`이 viewport 위쪽에 고정되지만, 첫 번째 `<p>`가 가려짐
 	- fixed positioning도 element를 normal flow에서 제외시키기 때문
@@ -1784,9 +1787,9 @@ i.e. 한 열만 넓게 하거나 배경을 바꾸는 등의 작업 불가
 }
 ```
 
-|Result:|
-|:---|
-|![css-multicol-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-multicol-ex1.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-multicol-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-multicol-ex1.PNG?raw=true) |
 
 ## Spanning columns
 `column-span` property를 사용해서 element가 열들을 가로질러 span하게 만들 수 있음  
@@ -2236,9 +2239,9 @@ article {
 }
 ```
 
-|Result:|
-|:---|
-|![css-responsive-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex1.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![css-responsive-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex1.PNG?raw=true) |
 
 - 페이지의 가독성을 높이는 순서로 소스를 작성해야 함
 
@@ -2261,9 +2264,9 @@ article {
 }
 ```
 
-|Result:|
-|:---|
-|![css-responsive-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex2.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![css-responsive-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex2.PNG?raw=true) |
 
 - media query를 `em`으로 설정해서, 같은 width라도 글자 크기에 따라서 적용되는 layout이 다르도록 만듦
 
@@ -2287,9 +2290,9 @@ article {
 }
 ```
 
-|Result:|
-|:---|
-|![css-responsive-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex3.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![css-responsive-ex3](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex3.PNG?raw=true) |
 
 - 위의 `min-width: 40em`에서는 `<article>`에 grid를 사용해서 main content, related만 묶었지만, 이 media query에서는 `<main>`에 grid를 사용해서 `<article>`의 grid와 sidebar를 묶었음<br>즉, grid(grid(3fr, 1fr), 1fr)으로 이루어짐
 - `article`에 `margin-bottom:0;`을 적용하는 이유 : main의 grid에 article의 grid를 nesting하는 형식인데, article에 margin-bottom이 있으면 sidebar와 article의 높이가 달라지기 때문
@@ -2337,9 +2340,9 @@ media query부분만:
 }
 ```
 
-|Result:|
-|:---|
-|![css-responsive-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex4.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![css-responsive-ex4](https://github.com/siriyaoff/MDN-note/blob/master/images/css-responsive-ex4.PNG?raw=true) |
 
 - `.cards`도 flex로 해보려 했는데 좌우 여백 때문에 그냥 grid 사용함(flex도 여러 행일 때 flex item의 `width`를 지정하면 모든 item들의 너비를 같게 할 수 있음)
 - **좌우로는 margin-collapsing이 일어나지 않음!!**
@@ -2393,9 +2396,9 @@ div:nth-of-type(2) {
 - `nth-of-type()` pseudo-class를 이용해서 너비 지정 후 각각 왼쪽, 오른쪽에 float시킴
 - 둘 다 `width: 48%;`로 설정해서 나머지 `4%`는 grid의 gutter처럼 이용함
 
-|Result:|
-|:---|
-|![css-legacy-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-legacy-ex1.PNG?raw=true)|
+| Result:                                                                                                 |
+| :------------------------------------------------------------------------------------------------------ |
+| ![css-legacy-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-legacy-ex1.PNG?raw=true) |
 
 - width를 설정할 때 모두 percentage를 사용함<br>=>**liquid layout**(화면 크기가 달라져도 열 너비들이 같은 비율을 유지)<br>=>valuable tool for responsive web design
 
@@ -2473,9 +2476,9 @@ body {
 .col.span12 { width: 940px; }
 ```
 
-|Result:|
-|:---|
-|![css-legacy-fixed-grid](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods/simple-grid-finished.png)|
+| Result:                                                                                                                                |
+| :------------------------------------------------------------------------------------------------------------------------------------- |
+| ![css-legacy-fixed-grid](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods/simple-grid-finished.png) |
 
 - `body`의 `980px` 중 `20px`는 `.wrapper`의 `padding-right`로 사용됨
 - `.row`로 줄을 바꿔야 하기 때문에 `clear: both;`를 사용해서 다른 float와 간섭하지 않게 만듦
@@ -2630,9 +2633,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![css-feature-query-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-feature-query-ex1.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-feature-query-ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-feature-query-ex1.PNG?raw=true) |
 
 - floated layout에서 percentage는 container으로부터 계산됨
 - Grid에서는 item이 속한 grid area로부터 계산됨<br>=>fallback으로 사용하는 float의 width 설정이 grid가 지원되는 browser에서도 영향을 미쳐 width가 제대로 나오지 않음
@@ -2651,9 +2654,9 @@ feature queries를 이용해서 browser가 특정한 CSS feature를 지원하는
 }
 ```
 
-|Result:|
-|:---|
-|![css-feature-query-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-feature-query-ex2.PNG?raw=true)|
+| Result:                                                                                                               |
+| :-------------------------------------------------------------------------------------------------------------------- |
+| ![css-feature-query-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-feature-query-ex2.PNG?raw=true) |
 
 - CSS Grid를 지원하면 `.item`에 `width: auto;`<br>=> width가 제대로 나옴
 
@@ -2675,9 +2678,9 @@ Sauce Labs같은 online testing tool을 이용하거나 VM([MS에서도 제공](
 
 # Assessment10-Fundamental-layout-comprehension
 
-|Result:|
-|:---|
-|![css-layout-assmt](https://github.com/siriyaoff/MDN-note/blob/master/images/css-layout-assmt.PNG?raw=true)|
+| Result:                                                                                                     |
+| :---------------------------------------------------------------------------------------------------------- |
+| ![css-layout-assmt](https://github.com/siriyaoff/MDN-note/blob/master/images/css-layout-assmt.PNG?raw=true) |
 
 1. navigation을 한 줄로 표시
 	- `display: flex;` 적용

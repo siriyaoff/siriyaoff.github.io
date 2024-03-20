@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CUDA 환경 구축"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Miscellaneous
 tags:

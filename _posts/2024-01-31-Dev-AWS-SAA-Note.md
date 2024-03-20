@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "AWS SA Associate Dump Note"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

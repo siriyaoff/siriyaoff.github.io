@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CSSnote4: Styling text"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -30,27 +33,27 @@ Use `font-family`
 #### Web safe fonts
 generally available한 font들
 
-|Name|Generic type|Notes|
-|:---|:---|:---|
-|Arial|sans-serif|*Helvetica*이 alternative로 사용하기 좋음(둘의 모양이 비슷함, *Arial*이 더 범용성있음)|
-|Courier New|monospace|preferred alternative : *Courier*(더 오래된 버전)|
-|Georgia|serif||
-|Times New Roman|serif|preferred alternative : *Times*(더 오래된 버전)|
-|Trebuchet MS|sans-serif|mobile OSes에서는 widely available하지 않음|
-|Verdana|sans-serif||
+| Name            | Generic type | Notes                                                                                  |
+| :-------------- | :----------- | :------------------------------------------------------------------------------------- |
+| Arial           | sans-serif   | *Helvetica*이 alternative로 사용하기 좋음(둘의 모양이 비슷함, *Arial*이 더 범용성있음) |
+| Courier New     | monospace    | preferred alternative : *Courier*(더 오래된 버전)                                      |
+| Georgia         | serif        |                                                                                        |
+| Times New Roman | serif        | preferred alternative : *Times*(더 오래된 버전)                                        |
+| Trebuchet MS    | sans-serif   | mobile OSes에서는 widely available하지 않음                                            |
+| Verdana         | sans-serif   |                                                                                        |
 
 #### Default fonts
 CSS defines five generic names for fonts : `serif`, `sans-serif`, `monospace`, `cursive`, `fantasy`  
 이 글꼴들은 브라우저, OS에 따라서 실제 사용되는 font face가 다를 수 있음!  
 특히 `cursive`와 `fantasy`는 사용할 때 주의해야함(특이한 글꼴이라서 많이 다를 수 있음)
 
-|Term|Definition|Example|
-|:---|:---|:---|
-|`serif`|Fonts that have serifs(the flourishes and other small details you see at the ends of the strokes in some typefaces)|<span style="font-family:serif;">My big red elephant</span>|
-|`sans-serif`|Fonts that don't have serifs|<span style="font-family:sans-serif;">My big red elephant</span>|
-|`monospace`|Fonts where every character has the same width, typically used in code listings|<span style="font-family:monospace;">My big red elephant</span>|
-|`cursive`|Fonts that are intended to emulate handwriting, with flowing, connected strokes|<span style="font-family:cursive;">My big red elephant</span>|
-|`fantasy`|Fonts that are intended to be decorative|<span style="font-family:fantasy;">My big red elephant</span>|
+| Term         | Definition                                                                                                          | Example                                                          |
+| :----------- | :------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------- |
+| `serif`      | Fonts that have serifs(the flourishes and other small details you see at the ends of the strokes in some typefaces) | <span style="font-family:serif;">My big red elephant</span>      |
+| `sans-serif` | Fonts that don't have serifs                                                                                        | <span style="font-family:sans-serif;">My big red elephant</span> |
+| `monospace`  | Fonts where every character has the same width, typically used in code listings                                     | <span style="font-family:monospace;">My big red elephant</span>  |
+| `cursive`    | Fonts that are intended to emulate handwriting, with flowing, connected strokes                                     | <span style="font-family:cursive;">My big red elephant</span>    |
+| `fantasy`    | Fonts that are intended to be decorative                                                                            | <span style="font-family:fantasy;">My big red elephant</span>    |
 
 #### Font stacks
 Supply a font stack so that the browser has multiple fonts it can choose from.  

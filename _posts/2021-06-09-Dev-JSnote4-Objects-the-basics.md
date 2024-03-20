@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote4: Objects: the basics"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -164,12 +167,12 @@ Integer property : `"1"`, `"41"`과 같이 property name을 Integer로 변환했
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let user = {};`|object literal|
-|`user[key]=1;`|computed properties<br>object literal에서도 사용 가능|
-|`"key" in obj`|이름이 `"key"`인 property 존재 여부|
-|`for(let key in user) {...}`|properties 탐색<br>숫자 property만 오름차순, 나머지는 생성 시간 기준으로 나열됨|
+| code                         | description                                                                     |
+| :--------------------------- | :------------------------------------------------------------------------------ |
+| `let user = {};`             | object literal                                                                  |
+| `user[key]=1;`               | computed properties<br>object literal에서도 사용 가능                           |
+| `"key" in obj`               | 이름이 `"key"`인 property 존재 여부                                             |
+| `for(let key in user) {...}` | properties 탐색<br>숫자 property만 오름차순, 나머지는 생성 시간 기준으로 나열됨 |
 
 - property 선언
 	- object literal 안에서 : `name: "John",`
@@ -279,9 +282,9 @@ properties를 constant로 만들기 위해선 Property flags를 사용해야 함
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`Object.assign(dest, [src1, src2...]);`|object cloning(shallow copy)|
+| code                                    | description                  |
+| :-------------------------------------- | :--------------------------- |
+| `Object.assign(dest, [src1, src2...]);` | object cloning(shallow copy) |
 
 - `object`는 호출될 때 항상 call by reference로 처리됨
 - deep copy는 lodash의 `_.cloneDeep(obj)` 이용
@@ -324,9 +327,9 @@ let family = marry({
 });
 ```
 
-|Result:|
-|:---|
-|![js-garbage-collection1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-garbage-collection1.PNG?raw=true)|
+| Result:                                                                                                                 |
+| :---------------------------------------------------------------------------------------------------------------------- |
+| ![js-garbage-collection1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-garbage-collection1.PNG?raw=true) |
 
 - 모든 object가 reachable함
 
@@ -336,9 +339,9 @@ delete family.father;
 delete family.mother.husband;
 ```
 
-|Result:|
-|:---|
-|![js-garbage-collection2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-garbage-collection2.PNG?raw=true)|
+| Result:                                                                                                                 |
+| :---------------------------------------------------------------------------------------------------------------------- |
+| ![js-garbage-collection2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-garbage-collection2.PNG?raw=true) |
 
 - 위의 경우 `name: john`인 object가 garbage collect됨
 - incoming reference만 object를 reachable하게 만들 수 있음
@@ -702,10 +705,10 @@ john.sayHi(); // My name is: John
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let user = new User([param...]);`|Constructor function|
-|`new.target`|현재 함수가 `new`와 함께 호출되었는지 판별|
+| code                               | description                                |
+| :--------------------------------- | :----------------------------------------- |
+| `let user = new User([param...]);` | Constructor function                       |
+| `new.target`                       | 현재 함수가 `new`와 함께 호출되었는지 판별 |
 
 - `new` operator가 `.`보다 우선순위가 높음  
 	`new User().name`을 실행하면 만들어진 객체의 `name` property가 정상적으로 출력됨
@@ -817,11 +820,11 @@ delete user?.name; // delete user.name if user exists
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`user?.address`|optional chaining<br>연산자 이전의 값은 반드시 선언되어 있어야 함|
-|`obj.method?.()`|method에 대해 optional chaining 적용|
-|`obj?.[var]`|computed property에 대해 optional chaining 적용|
+| code             | description                                                       |
+| :--------------- | :---------------------------------------------------------------- |
+| `user?.address`  | optional chaining<br>연산자 이전의 값은 반드시 선언되어 있어야 함 |
+| `obj.method?.()` | method에 대해 optional chaining 적용                              |
+| `obj?.[var]`     | computed property에 대해 optional chaining 적용                   |
 
 # Symbol type
 specification에 따르면, object property key는 `string` type이거나 `symbol` type임  
@@ -942,12 +945,12 @@ system symbols가 존재함:
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let id = Symbol("description");`|symbol 생성|
-|`sym.description`|symbol의 `"description"` 반환|
-|`let id = Symbol.for("description");`|global symbol 생성|
-|`Symbol.keyFor(sym)`|global symbol의 key(`"description"`) 반환|
+| code                                  | description                               |
+| :------------------------------------ | :---------------------------------------- |
+| `let id = Symbol("description");`     | symbol 생성                               |
+| `sym.description`                     | symbol의 `"description"` 반환             |
+| `let id = Symbol.for("description");` | global symbol 생성                        |
+| `Symbol.keyFor(sym)`                  | global symbol의 key(`"description"`) 반환 |
 
 - symbolic property는 `for...in`에서도 배제됨
 - global symbol은 `sym.description`을 사용하든 `Symbol.keyFor()`을 사용하든 생성될 때 사용한 description을 리턴함
@@ -1101,11 +1104,11 @@ alert(obj + 2); // 22
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`[Symbol.toPrimitive](hint)`|conversion method|
-|`toString()`|conversion method|
-|`valueOf()`|conversion method|
+| code                         | description       |
+| :--------------------------- | :---------------- |
+| `[Symbol.toPrimitive](hint)` | conversion method |
+| `toString()`                 | conversion method |
+| `valueOf()`                  | conversion method |
 
 - 실무에서는 `obj.toString()`가 모든 변환을 담당하는 "catch-all" method로 구현되는 경우가 많음
 - 호환성을 위해서 `toString()`, `valueOf()`을 `return this[Symbol.toPrimitive]('string or number')`과 같이 구현할 수 있음

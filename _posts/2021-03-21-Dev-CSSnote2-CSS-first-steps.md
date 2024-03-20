@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CSSnote2: CSS first steps"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

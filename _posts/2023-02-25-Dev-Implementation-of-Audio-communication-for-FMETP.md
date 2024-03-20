@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Implemention of Audio communication for FMETP"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

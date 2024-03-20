@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote2: JavaScript Fundamentals"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -376,9 +379,9 @@ let age = prompt('How old are you?', 100);
 alert(`You are ${age} years old!`); // You are 100 years old!
 ```
 
-|Result:|
-|:---|
-|![js-prompt](https://github.com/siriyaoff/MDN-note/blob/master/images/js-prompt.PNG?raw=true)|
+| Result:                                                                                       |
+| :-------------------------------------------------------------------------------------------- |
+| ![js-prompt](https://github.com/siriyaoff/MDN-note/blob/master/images/js-prompt.PNG?raw=true) |
 
 - cancel을 누르거나 Esc로 창을 닫으면 `null`이 반환됨
 - IE의 경우 default를 선언해놓지 않으면 default가 반환되어야 할 때 `"undefined"`를 반환함
@@ -413,12 +416,12 @@ chrome에서는 `prompt`가 제대로 작동하지 않음
 `Number(value)`를 이용해서 명시적으로 conversion 가능  
 Numeric conversion rules:
 
-|Value|Becomes...|
-|:---|:---|
-|`undefined`|`NaN`|
-|`null`|`0`|
-|`true` and `false`|`1` and `0`|
-|`string`|Trim 후 남아있는 string이 없으면 `0`, 아니면 숫자를 읽음, string에 숫자만 있는게 아니면 `NaN` 리턴|
+| Value              | Becomes...                                                                                         |
+| :----------------- | :------------------------------------------------------------------------------------------------- |
+| `undefined`        | `NaN`                                                                                              |
+| `null`             | `0`                                                                                                |
+| `true` and `false` | `1` and `0`                                                                                        |
+| `string`           | Trim 후 남아있는 string이 없으면 `0`, 아니면 숫자를 읽음, string에 숫자만 있는게 아니면 `NaN` 리턴 |
 
 #### Example
 ```javascript

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "HTMLnote4: HTML Tables"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Python virtual environments 관리"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Miscellaneous
 tags:

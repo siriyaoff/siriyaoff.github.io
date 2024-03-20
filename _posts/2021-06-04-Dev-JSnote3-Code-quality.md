@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote3: Code quality"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -282,9 +285,9 @@ The full HTML page with these frameworks and `pow` spec:
 </html>
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action1.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action1.PNG?raw=true) |
 
 - `let assert=chai.assert;`로 chai의 assert 함수들을 사용
 - `.mocha` div에 테스트 결과가 표시됨
@@ -298,9 +301,9 @@ function pow(x, n) {
 }
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action2.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action2.PNG?raw=true) |
 
 - `it`의 ㅕㅕ `it` 함수의 두 번째 인자를 볼 수 있음
 
@@ -318,9 +321,9 @@ spec에 test를 추가하는 두 가지 방법:
 	});
 	```
 	
-	|Result:|
-	|:---|
-	|![js-spec-in-action3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action3.PNG?raw=true)|
+ | Result:                                                                                                         |
+ | :-------------------------------------------------------------------------------------------------------------- |
+ | ![js-spec-in-action3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action3.PNG?raw=true) |
 2. `it` block을 추가 - test를 하나 더 만듦
 	```javascript
 	describe("pow", function() {
@@ -336,9 +339,9 @@ spec에 test를 추가하는 두 가지 방법:
 	});
 	```
 	
-	|Result:|
-	|:---|
-	|![js-spec-in-action4](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action4.PNG?raw=true)|
+ | Result:                                                                                                         |
+ | :-------------------------------------------------------------------------------------------------------------- |
+ | ![js-spec-in-action4](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action4.PNG?raw=true) |
 
 두 방법의 가장 큰 차이점 : `assert`가 에러를 발생시키는 시점  
 => 첫 번째 방법은 첫 번째 `assert`가 에러나면 두 번째 `assert`는 아예 실행되지가 않아서 결과를 알 수 없음  
@@ -377,9 +380,9 @@ describe("pow", function() {
 });
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action5](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action5.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action5](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action5.PNG?raw=true) |
 
 ## Nested describe
 `it`를 추가해서 test 안에 test case를 추가할 수 있지만, 아예 `describe`를 중첩해서 test를 추가할 수도 있음:  
@@ -405,9 +408,9 @@ describe("pow", function() {
 });
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action6](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action6.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action6](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action6.PNG?raw=true) |
 
 `before`, `after`, `beforeEach`, `afterEach`를 이용해서 `it` 실행 전/후로 실행될 내용을 정의 가능:  
 ```javascript
@@ -457,9 +460,9 @@ describe("pow", function() {
 });
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action7](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action7.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action7](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action7.PNG?raw=true) |
 
 - JS에서는 보통 에러를 `NaN`으로 표현
 - 현재는 n이 양수일 경우만 구현하고 예외처리를 하지 않았기 때문에 테스트가 실패함(`NaN` 리턴하지 않음)
@@ -478,9 +481,9 @@ describe("pow", function() {
   if (Math.round(n) != n) return NaN;
 ```
 
-|Result:|
-|:---|
-|![js-spec-in-action8](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action8.PNG?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![js-spec-in-action8](https://github.com/siriyaoff/MDN-note/blob/master/images/js-spec-in-action8.PNG?raw=true) |
 
 ## Summary
 BDD에 따르면, spec을 먼저 작성하고 난 다음에 기능을 구현함  

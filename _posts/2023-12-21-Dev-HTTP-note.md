@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "HTTP note"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "HTMLnote1: HTML Basics"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

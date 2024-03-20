@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Spring Boot와 AWS로 혼자 구현하는 웹 서비스 4 - Spring Security, OAuth 2.0으로 로그인 구현(Ch.05)"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

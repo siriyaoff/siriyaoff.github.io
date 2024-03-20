@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "FMETP Control flow with WebSocket on Express.js"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

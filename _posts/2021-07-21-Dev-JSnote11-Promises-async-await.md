@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote11: Promises, async/await"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -176,9 +179,9 @@ let promise = new Promise(function(resolve, reject) {
 	- `resolve(value)` : executor의 작업이 성공적으로 수행되면 그 결과를 이용해서 작동하는 callback
 	- `reject(error)` : executor에서 에러가 발생하면 그것을 처리하는 callback
 	
-	|![js-promise-properties](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-properties.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-promise-properties](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-properties.PNG?raw=true) |
+ | :-------------------------------------------------------------------------------------------------------------------: |
+ |                                                 javascript.info 참고                                                  |
 	
 	우리가 적어야 하는 코드는 executor 안의 코드 밖에 없음
 - `promise` 객체는 아래와 같은 내부 property를 가짐:
@@ -356,11 +359,11 @@ promise.then(script => alert('Another handler...'));
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`promise.then(f1, f2)`|`promise`가 fulfilled면 `f1`, rejected면 `f2` 실행|
-|`promise.catch(f)`|`promise`가 rejected면 `f` 실행<br>`promise.then(null, f)`와 같음|
-|`promise.finally(f)`|`promise`가 settled면 `f` 실행|
+| code                   | description                                                       |
+| :--------------------- | :---------------------------------------------------------------- |
+| `promise.then(f1, f2)` | `promise`가 fulfilled면 `f1`, rejected면 `f2` 실행                |
+| `promise.catch(f)`     | `promise`가 rejected면 `f` 실행<br>`promise.then(null, f)`와 같음 |
+| `promise.finally(f)`   | `promise`가 settled면 `f` 실행                                    |
 
 ```javascript
 let promise = new Promise(function(resolve, reject) {
@@ -439,10 +442,10 @@ promise.then(function(result) {
 });
 ```
 
-|chaining|multiple `.then`|
-|:---:|
-|![js-promise-chaining1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining1.PNG?raw=true)|![js-promise-chaining2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining2.PNG?raw=true)|
-|javascript.info 참고|javascript.info 참고|
+|                                                      chaining                                                       | multiple `.then`                                                                                                    |
+| :-----------------------------------------------------------------------------------------------------------------: |
+| ![js-promise-chaining1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining1.PNG?raw=true) | ![js-promise-chaining2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining2.PNG?raw=true) |
+|                                                javascript.info 참고                                                 | javascript.info 참고                                                                                                |
 
 ## Returning promises
 `.then(handler)` 안의 `handler`도 promise를 생성하고 반환할 수 있음  
@@ -639,9 +642,9 @@ loadJson('/article/promise-chaining/user.json')
 	`.then` 메소드를 가지기 때문에 chaining 가능
 - `.then/catch/finally`가 promise를 리턴한다면, chain의 나머지 부분은 그 promise가 settled될 때까지 기다림  
 	
-	|![js-promise-chaining3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining3.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-promise-chaining3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-promise-chaining3.PNG?raw=true) |
+ | :-----------------------------------------------------------------------------------------------------------------: |
+ |                                                javascript.info 참고                                                 |
 
 ## Tasks
 ### 아래 두 코드는 같은가?
@@ -1016,13 +1019,13 @@ let promise = new Promise((resolve, reject) => reject(error));
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`Promise.all([...promises...])`|`promises`가 모두 resolved되면 그 결과들의 배열 리턴|
-|`Promise.allSettled([...promises...])`|`promises`가 모두 settled되면 그 결과를 담은 객체들의 배열 리턴|
-|`Promise.race([...promises...])`|`promises` 중에서 가장 먼저 처리된 promise의 결과 또는 에러 리턴|
-|`Promise.any([...promises...])`|`promises` 중에서 가장 먼저 fulfilled되는 promise의 결과 리턴<br>`promises`가 모두 rejected면 `AggregateError` 리턴|
-|`Promise.resolve(value)`<br>`Promise.reject(error)`|`value`로 resolved된 promise 리턴<br>`error`로 rejected된 promise 리턴|
+| code                                                | description                                                                                                         |
+| :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| `Promise.all([...promises...])`                     | `promises`가 모두 resolved되면 그 결과들의 배열 리턴                                                                |
+| `Promise.allSettled([...promises...])`              | `promises`가 모두 settled되면 그 결과를 담은 객체들의 배열 리턴                                                     |
+| `Promise.race([...promises...])`                    | `promises` 중에서 가장 먼저 처리된 promise의 결과 또는 에러 리턴                                                    |
+| `Promise.any([...promises...])`                     | `promises` 중에서 가장 먼저 fulfilled되는 promise의 결과 리턴<br>`promises`가 모두 rejected면 `AggregateError` 리턴 |
+| `Promise.resolve(value)`<br>`Promise.reject(error)` | `value`로 resolved된 promise 리턴<br>`error`로 rejected된 promise 리턴                                              |
 
 - `Promise.all`은 하나라도 rejected되면 rejected promise 리턴
 - `Promise.allSettled`가 리턴하는 배열은 아래 과정으로 만들어지는 객체들을 저장함:
@@ -1443,10 +1446,10 @@ f().catch(alert); // TypeError: failed to fetch
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`async function f() { ... }`|`f()`를 async function으로 만듦|
-|`let value = await promise;`|`promise`가 settled 될 때까지 함수 실행을 중지함|
+| code                         | description                                      |
+| :--------------------------- | :----------------------------------------------- |
+| `async function f() { ... }` | `f()`를 async function으로 만듦                  |
+| `let value = await promise;` | `promise`가 settled 될 때까지 함수 실행을 중지함 |
 
 - async function은 항상 promise를 리턴해야 함  
 	primitive일 경우 자동으로 promise로 변환됨

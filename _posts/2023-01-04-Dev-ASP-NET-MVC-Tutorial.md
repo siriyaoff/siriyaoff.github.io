@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "ASP.NET MVC Tutorial"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

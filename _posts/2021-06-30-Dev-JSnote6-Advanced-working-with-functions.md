@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote6: Advanced working with functions"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -317,9 +320,9 @@ global Lexical Environment는 outer reference가 없음!
 script가 실행되면 문장이 실행되기 전에 Lexical Environment가 먼저 준비됨  
 이때 Environment Record에는 변수들이 미리 등록되어 있지만, 초기화되지 않은 상태임
 
-|![js-lexical-environment1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-lexical-environment1.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-lexical-environment1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-lexical-environment1.PNG?raw=true) |
+| :-----------------------------------------------------------------------------------------------------------------------: |
+|                                                   javascript.info 참고                                                    |
 
 - 직사각형이 Environment Record, 화살표가 outer reference를 뜻함
 	- global Lexical Environment는 outer reference가 `null`로 향함
@@ -986,9 +989,9 @@ getFunc()(); // error: value is not defined
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let func = new Function ([arg1, arg2, ...argN], functionBody);`|`new Function`을 이용한 함수 정의|
+| code                                                             | description                       |
+| :--------------------------------------------------------------- | :-------------------------------- |
+| `let func = new Function ([arg1, arg2, ...argN], functionBody);` | `new Function`을 이용한 함수 정의 |
 
 - `new Function`들은 `[[Environment]]`가 global Lexical Environment로 설정됨  
 	=> 외부 변수들을 건드릴 수 없음  
@@ -1094,12 +1097,12 @@ alert("Hello");
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`setTimeout(func|code[, delay[, arg1, arg2, ...]])`|`delay` ms 만큼 기다린 후에 `func`를 실행시킴<br>현재 timerId를 반환함(숫자)|
-|`clearTimeout(timerId)`|`timerId`에 해당하는 타이머를 취소시킴|
-|`seInterval(func|code[, delay[, arg1, arg2, ...]])`|`delay` ms 만큼 기다린 후에 `func`를 실행시키는 작업을 반복<br>현재 timerId를 반환함(숫자)|
-|`clearInterval(timerId)`|`timerId`에 해당하는 타이머를 취소시킴|
+| code                     | description                            |
+| :----------------------- | :------------------------------------- |
+| `setTimeout(func         | code[, delay[, arg1, arg2, ...]])`     | `delay` ms 만큼 기다린 후에 `func`를 실행시킴<br>현재 timerId를 반환함(숫자)               |
+| `clearTimeout(timerId)`  | `timerId`에 해당하는 타이머를 취소시킴 |
+| `seInterval(func         | code[, delay[, arg1, arg2, ...]])`     | `delay` ms 만큼 기다린 후에 `func`를 실행시키는 작업을 반복<br>현재 timerId를 반환함(숫자) |
+| `clearInterval(timerId)` | `timerId`에 해당하는 타이머를 취소시킴 |
 
 - scheduling method들은 현재 script가 끝난 다음 한꺼번에 실행됨!  
 	e.g. 2초마다 출력, 5초에 2초 타이머 취소가 있으면, 출력이 2번 되고 1초 후에 2초의 타이머가 취소됨  
@@ -1352,11 +1355,11 @@ function property를 유지하는 decorator를 만들기 위해선 `Proxy` objec
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`func.call([context[, ...args]])`|`this`를 `context`로 설정하고 `...args`를 argument로 받는 `func` 실행|
-|`func.apply(context[, arguments])`|`this`를 `context`로 설정하고 array-like `arguments`를 argument의 리스트로 받는 `func` 실행|
-|`tempobj.method.call(arguments)`|method borrowing|
+| code                               | description                                                                                 |
+| :--------------------------------- | :------------------------------------------------------------------------------------------ |
+| `func.call([context[, ...args]])`  | `this`를 `context`로 설정하고 `...args`를 argument로 받는 `func` 실행                       |
+| `func.apply(context[, arguments])` | `this`를 `context`로 설정하고 array-like `arguments`를 argument의 리스트로 받는 `func` 실행 |
+| `tempobj.method.call(arguments)`   | method borrowing                                                                            |
 
 - argument가 많을 경우 `call` 보다는 `apply`가 더 빠름  
 	∵ array-like가 최적화가 더 잘 되어있기 때문
@@ -1660,9 +1663,9 @@ user.sayNow("Hello"); // [10:00] John: Hello!
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let bound = func.bind(context, [arg1], [arg2], ...);`|`func`의 context와 arguments를 `context`, `arg1...`로 bind한 새로운 함수 반환|
+| code                                                   | description                                                                   |
+| :----------------------------------------------------- | :---------------------------------------------------------------------------- |
+| `let bound = func.bind(context, [arg1], [arg2], ...);` | `func`의 context와 arguments를 `context`, `arg1...`로 bind한 새로운 함수 반환 |
 
 - context와 arguments 일부를 bind한 함수를 bound function이라고 부름
 	- 주로 method를 callback으로 전달하기 위해 사용

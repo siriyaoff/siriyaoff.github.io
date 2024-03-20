@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote9: Classes"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -393,9 +396,9 @@ rabbit.hide(); // White Rabbit hides!
 - `rabbit`은 `Rabbit`의 method, `Animal`의 method 모두에 접근할 수 있음
 - 위 코드에서 `extends` 키워드는 `Rabbit.prototype.[[Prototype]]`을 `Animal.prototype`으로 설정함  
 	
-	|![js-class-inheritance1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-class-inheritance1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-class-inheritance1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-class-inheritance1.PNG?raw=true) |
+ | :-------------------------------------------------------------------------------------------------------------------: |
+ |                                                 javascript.info 참고                                                  |
 	
 	=> `rabbit`, `Rabbit.prototype`, `Animal.prototype` 순으로 메소드를 찾음
 
@@ -689,9 +692,9 @@ tree.sayHi();  // I'm an animal (?!?)
 - `(*)`에서 `tree.sayHi`는 `rabbit.sayHi`를 복사함  
 	`rabbit.sayHi`의 `[[HomeObject]]`는 `rabbit`이므로 `tree.sayHi()`를 호출해도 `super.sayHi()`가 `animal.sayHi()`를 호출함  
 	
-	|![js-home-object1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-home-object1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-home-object1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-home-object1.PNG?raw=true) |
+ | :-------------------------------------------------------------------------------------------------------: |
+ |                                           javascript.info 참고                                            |
 
 ### Methods, not function properties
 `[[HomeObject]]`는 class method와 object method에서 정의될 수 있지만, object method에서 제대로 작동하게 하려면 반드시 method syntax(`method(){...}`)의 형태로 정의해야 함  
@@ -899,9 +902,9 @@ alert(Rabbit.planet); // Earth
 ```
 - `Rabbit`이 `Animal`을 extend하면 `Rabbit`의 `[[Prototype]]`이 `Animal`이 되기 때문에 static method도 상속됨  
 
-	|![js-static-inheritance1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-static-inheritance1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance1.PNG?raw=true) |
+ | :---------------------------------------------------------------------------------------------------------------------: |
+ |                                                  javascript.info 참고                                                   |
 	
 	따라서, `Rabbit extends Animal`은 두 개의 `[[Prototype]]` reference를 만들어냄
 	1. `Rabbit` 함수가 `Animal` 함수를 상속받음
@@ -941,9 +944,9 @@ alert( rabbit.hasOwnProperty('name') ); // Error
 - 모든 객체들은 `Object.prototype`을 상속받지만, 이 예제에서는 `Object`를 상속받음  
 	`class Rabbit`와 `class Rabbit extends Object`도 차이가 있음:  
 	
-	|![js-static-inheritance2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance2.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-static-inheritance2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance2.PNG?raw=true) |
+ | :---------------------------------------------------------------------------------------------------------------------: |
+ |                                                  javascript.info 참고                                                   |
 	
 	e.g. `obj.getOwnPropertyNames`는 `Object.prototype`에 정의되어 있음  
 	=> `class Rabbit`에서는 `Rabbit.getOwnPropertyNames()`로 호출할 수 없지만, `class Rabbit extends Object`에서는 `Rabbit.getOwnPropertyNames()`로 호출 가능
@@ -1201,9 +1204,9 @@ e.g. `Array`와 `Date`는 `Object`를 상속받기 때문에, 이 클래스들�
 하지만 `Array.[[Prototype]]`은 `Object`를 가리키기 않음!!  
 => `Array.keys()`같이 `Object` 안에 있는 static method를 사용할 수 없음!
 
-|![js-static-inheritance3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance3.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-static-inheritance3](https://github.com/siriyaoff/MDN-note/blob/master/images/js-static-inheritance3.PNG?raw=true) |
+| :---------------------------------------------------------------------------------------------------------------------: |
+|                                                  javascript.info 참고                                                   |
 
 - `Date.prototype`만 `Object.prototype`을 확장함!  
 	`extends`를 사용했을 때와 객체로 상속할 때의 가장 큰 차이점임!
@@ -1213,9 +1216,9 @@ e.g. `Array`와 `Date`는 `Object`를 상속받기 때문에, 이 클래스들�
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`static get [Symbol.species](){return Class;}`|메소드에서 새로운 객체를 리턴해야 할 때 `Class`의 생성자를 사용하게 함|
+| code                                           | description                                                            |
+| :--------------------------------------------- | :--------------------------------------------------------------------- |
+| `static get [Symbol.species](){return Class;}` | 메소드에서 새로운 객체를 리턴해야 할 때 `Class`의 생성자를 사용하게 함 |
 
 - `Array`, `Map`과 같은 내장 클래스도 확장할 수 있음  
 	이때, 이 클래스들의 메소드 중 새로운 객체를 리턴하는 메소드들은 `Array.constructor`가 아닌 현재 클래스의 `arr.constructor`를 사용함
@@ -1305,9 +1308,9 @@ alert( arr instanceof Object ); // true
 	// rabbit.__proto__.__proto__ === Animal.prototype (match!)
 	```
 	
-	|![js-instanceof](https://github.com/siriyaoff/MDN-note/blob/master/images/js-instanceof.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-instanceof](https://github.com/siriyaoff/MDN-note/blob/master/images/js-instanceof.PNG?raw=true) |
+ | :---------------------------------------------------------------------------------------------------: |
+ |                                         javascript.info 참고                                          |
 
 `objA.isPrototypeOf(objB)` method도 존재함  
 `objA`가 `objB`의 prototype chain의 어딘가에 존재하면 `true`를 반환함  
@@ -1377,12 +1380,12 @@ alert( {}.toString.call(new XMLHttpRequest()) ); // [object XMLHttpRequest]
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`objA instanceof Class`|`objA`가 `Class`의 인스턴스인지 판별|
-|`static [Symbol.hasInstance](obj){...}`|`obj`가 조건을 충족시키면 현재 클래스의 인스턴스로 인정해, `instanceof obj`가 `true`를 리턴하도록 만듦|
-|`objB.isPrototypeOf(objA)`|`objB`가 `objA`의 prototpye chain에 존재하는지 판별<br>`objA instanceof Class`는 `Class.prototype.isPrototypeOf(objA)`와 같음|
-|`[Symbol.toStringTag]`|`toString`의 결과값 `[object Object]`에서 `Object` 대신 들어갈 문자열을 저장하는 property|
+| code                                    | description                                                                                                                   |
+| :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| `objA instanceof Class`                 | `objA`가 `Class`의 인스턴스인지 판별                                                                                          |
+| `static [Symbol.hasInstance](obj){...}` | `obj`가 조건을 충족시키면 현재 클래스의 인스턴스로 인정해, `instanceof obj`가 `true`를 리턴하도록 만듦                        |
+| `objB.isPrototypeOf(objA)`              | `objB`가 `objA`의 prototpye chain에 존재하는지 판별<br>`objA instanceof Class`는 `Class.prototype.isPrototypeOf(objA)`와 같음 |
+| `[Symbol.toStringTag]`                  | `toString`의 결과값 `[object Object]`에서 `Object` 대신 들어갈 문자열을 저장하는 property                                     |
 
 - `obj instanceof Class` operator의 동작 과정
 	1. `Symbol.hasInstance`가 존재하면 그것을 따름
@@ -1486,9 +1489,9 @@ new User("Dude").sayHi(); // Hello Dude!
 	외부에서 `sayHiMixin.say()`로 호출하면 부모까지 메소드를 찾아가지만, 클래스 안에서 호출하면 현재 context에서만 찾는 듯
 - `super.say()`는 `sayMixin`의 prototype인 `sayMixin`에서 메소드를 찾음
 - diagram:  
-	|![js-mixin](https://github.com/siriyaoff/MDN-note/blob/master/images/js-mixin.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-mixin](https://github.com/siriyaoff/MDN-note/blob/master/images/js-mixin.PNG?raw=true) |
+ | :-----------------------------------------------------------------------------------------: |
+ |                                    javascript.info 참고                                     |
 	
 	- `sayHi`, `sayBye`는 `sayHiMixin`에서 생성되었기 때문에 `User.prototype`으로 복사되었다 하더라도 `[[HomeObject]]`에는 `sayHiMixin`이 들어있기 때문에 `super.say()`가 제대로 동작함  
 	∵ `super`는 `[[HomeObject]].[[Prototype]]`을 찾음

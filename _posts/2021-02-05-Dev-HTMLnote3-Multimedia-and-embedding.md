@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "HTMLnote3: Multimedia and embedding"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 classes: wide
 categories:
   - Dev

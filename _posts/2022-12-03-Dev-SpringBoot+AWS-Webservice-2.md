@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Spring Boot와 AWS로 혼자 구현하는 웹 서비스 2 - JPA(Ch.03)"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

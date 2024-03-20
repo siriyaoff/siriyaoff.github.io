@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote5: Data types"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -207,19 +210,19 @@ alert( parseInt('a123') ); // NaN, the first symbol stops the process
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`num.toString(base)`|`num`을 `base`진법의 문자열으로 변환|
-|`Math.floor()`<br>`Math.ceil()`<br>`Math.round()`<br>`Math.trunc()`|소수점 처리|
-|`num.toFixed(n)`|소수점 이하 `n`자리까지 남도록 반올림|
-|`isNaN(val)`|`val`이 `NaN`인지 판별|
-|`isFinite(val)`|`val`이 finite한 수인지 판별|
-|`Object.is(v1, v2)`|`v1`, `v2`가 SameValue인지 판별|
-|`parseInt(str[, radix])`|`str`을 `radix` 진법으로 파싱함|
-|`parseFloat(str)`|`str`을 소수점까지 파싱함|
-|`Math.random()`|`[0, 1)` 범위의 임의의 수 반환|
-|`Math.max(a, b, c...)`<br>`Math.min(a, b, c...)`|max, min 반환|
-|`Math.pow(n, pow)`|`n^pow` 반환|
+| code                                                                | description                           |
+| :------------------------------------------------------------------ | :------------------------------------ |
+| `num.toString(base)`                                                | `num`을 `base`진법의 문자열으로 변환  |
+| `Math.floor()`<br>`Math.ceil()`<br>`Math.round()`<br>`Math.trunc()` | 소수점 처리                           |
+| `num.toFixed(n)`                                                    | 소수점 이하 `n`자리까지 남도록 반올림 |
+| `isNaN(val)`                                                        | `val`이 `NaN`인지 판별                |
+| `isFinite(val)`                                                     | `val`이 finite한 수인지 판별          |
+| `Object.is(v1, v2)`                                                 | `v1`, `v2`가 SameValue인지 판별       |
+| `parseInt(str[, radix])`                                            | `str`을 `radix` 진법으로 파싱함       |
+| `parseFloat(str)`                                                   | `str`을 소수점까지 파싱함             |
+| `Math.random()`                                                     | `[0, 1)` 범위의 임의의 수 반환        |
+| `Math.max(a, b, c...)`<br>`Math.min(a, b, c...)`                    | max, min 반환                         |
+| `Math.pow(n, pow)`                                                  | `n^pow` 반환                          |
 
 - SameValue는 `===`과 비슷하지만, `(NaN, NaN)`은 같고, `(0, -0)`은 다름
 
@@ -246,17 +249,17 @@ quotes 중 backtick(`` ` ` ``)은 안에 변수를 포함(`${}`)하거나 줄바
 
 ## Special characters
 
-|Character|Description|
-|:---|:---|
-|`\n`|New line|
-|`\r`|Carriage return<br>window에서는 line break가 `\r\n`으로 표현됨|
-|`\'`, `\"`|Quotes|
-|`\\`|Backslash|
-|`\t`|Tab|
-|`\b`, `\f`, `\v`|Backspace, Form feed, Vertical tab<br>호환성을 위해서 유지되지만, 현재는 사용되지 않음|
-|`\xXX`|Unicode character with the given hexadecimal Unicode `XX`<br>e.g. `\x7A` = `'z'`|
-|`\uXXXX`|Unicode symbol with the hex code `XXXX` in UTF-16 encoding|
-|`\u{X...XXXXXX}`<br>(1 to 6 hex characters)|Unicode symbol with the given UTF-32 encoding|
+| Character                                   | Description                                                                            |
+| :------------------------------------------ | :------------------------------------------------------------------------------------- |
+| `\n`                                        | New line                                                                               |
+| `\r`                                        | Carriage return<br>window에서는 line break가 `\r\n`으로 표현됨                         |
+| `\'`, `\"`                                  | Quotes                                                                                 |
+| `\\`                                        | Backslash                                                                              |
+| `\t`                                        | Tab                                                                                    |
+| `\b`, `\f`, `\v`                            | Backspace, Form feed, Vertical tab<br>호환성을 위해서 유지되지만, 현재는 사용되지 않음 |
+| `\xXX`                                      | Unicode character with the given hexadecimal Unicode `XX`<br>e.g. `\x7A` = `'z'`       |
+| `\uXXXX`                                    | Unicode symbol with the hex code `XXXX` in UTF-16 encoding                             |
+| `\u{X...XXXXXX}`<br>(1 to 6 hex characters) | Unicode symbol with the given UTF-32 encoding                                          |
 
 - escape character `\`를 이용해서 특수문자를 표현
 
@@ -442,26 +445,26 @@ alert( "S\u0307\u0323".normalize() == "\u1e68" ); // true
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`str.length`|`str`의 길이 리턴|
-|`str[n]`|`str`의 `n` 번째 문자(없으면 `undefined`) 리턴|
-|`str.charAt(pos)`|`str`의 `pos` 번째 문자(없으면 `''`) 리턴|
-|`for...of`|iterating할 때 사용|
-|`str.toUpperCase()`<br>`str.toLowerCase()`|`str`을 대/소문자화|
-|`str.indexOf(substr[, pos])`|`str`의 `pos` 번째 문자부터 오른쪽으로 `substr`을 찾고 첫 번째 위치(없으면 `-1`) 리턴|
-|`str.lastIndexOf(substr[, pos])`|`str`의 `pos` 번째 문자부터 왼쪽으로 `substr`을 찾고 첫 번째 위치(없으면 `-1`) 리턴|
-|`str.includes(substr[, pos])`|`str`에 `substr`이 있는지 판별<br>`true/false` 리턴|
-|`str.startsWith(substr)`<br>`str.endsWith(substr)`|`str`이 `substr`로 시작/끝나는지 판별<br>`true/false` 리턴|
-|`str.slice(start[, end])`|`str`의 `[start, end)`(`end` 없으면 끝까지) 리턴<br>`start`, `end`는 음수가 허용됨|
-|`str.substring(start[, end])`|`start`와 `end` 사이의 부분문자열 리턴<br>`start`가 `end`보다 클 수 있지만, 음수가 허용되지 않음|
-|`str.substr(start[, length])`|`str`에서 `start`부터 시작하고 길이가 `length`인 부분문자열 리턴<br>`start`는 음수가 허용됨|
-|`str.codePointAt(pos)`|`str`의 `pos`번째 문자의 코드 리턴|
-|`String.fromCodePoint(code)`|`code`에 해당하는 문자 리턴|
-|`str.localeCompare(str2)`|`str`과 `str2`를 비교, (`<`, `>`, `==`) 각각의 경우에 (음수, 양수, 0) 리턴|
-|`str.normalize()`|`str`을 Unicode normalization 처리함|
-|`str.trim()`|`str`을 trim한 결과 리턴|
-|`str.repeat(n)`|`str`을 `n`번 반복한 결과 리턴|
+| code                                               | description                                                                                      |
+| :------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
+| `str.length`                                       | `str`의 길이 리턴                                                                                |
+| `str[n]`                                           | `str`의 `n` 번째 문자(없으면 `undefined`) 리턴                                                   |
+| `str.charAt(pos)`                                  | `str`의 `pos` 번째 문자(없으면 `''`) 리턴                                                        |
+| `for...of`                                         | iterating할 때 사용                                                                              |
+| `str.toUpperCase()`<br>`str.toLowerCase()`         | `str`을 대/소문자화                                                                              |
+| `str.indexOf(substr[, pos])`                       | `str`의 `pos` 번째 문자부터 오른쪽으로 `substr`을 찾고 첫 번째 위치(없으면 `-1`) 리턴            |
+| `str.lastIndexOf(substr[, pos])`                   | `str`의 `pos` 번째 문자부터 왼쪽으로 `substr`을 찾고 첫 번째 위치(없으면 `-1`) 리턴              |
+| `str.includes(substr[, pos])`                      | `str`에 `substr`이 있는지 판별<br>`true/false` 리턴                                              |
+| `str.startsWith(substr)`<br>`str.endsWith(substr)` | `str`이 `substr`로 시작/끝나는지 판별<br>`true/false` 리턴                                       |
+| `str.slice(start[, end])`                          | `str`의 `[start, end)`(`end` 없으면 끝까지) 리턴<br>`start`, `end`는 음수가 허용됨               |
+| `str.substring(start[, end])`                      | `start`와 `end` 사이의 부분문자열 리턴<br>`start`가 `end`보다 클 수 있지만, 음수가 허용되지 않음 |
+| `str.substr(start[, length])`                      | `str`에서 `start`부터 시작하고 길이가 `length`인 부분문자열 리턴<br>`start`는 음수가 허용됨      |
+| `str.codePointAt(pos)`                             | `str`의 `pos`번째 문자의 코드 리턴                                                               |
+| `String.fromCodePoint(code)`                       | `code`에 해당하는 문자 리턴                                                                      |
+| `str.localeCompare(str2)`                          | `str`과 `str2`를 비교, (`<`, `>`, `==`) 각각의 경우에 (음수, 양수, 0) 리턴                       |
+| `str.normalize()`                                  | `str`을 Unicode normalization 처리함                                                             |
+| `str.trim()`                                       | `str`을 trim한 결과 리턴                                                                         |
+| `str.repeat(n)`                                    | `str`을 `n`번 반복한 결과 리턴                                                                   |
 
 - `str.toUpperCase()`, `str.toLowerCase()`는 문자 하나에도 사용 가능
 - 문자열을 비교할 때 기본적으로 발음 구별 기호들은 알파벳으로 취급됨
@@ -609,11 +612,11 @@ alert('0' == [] ); // false, (4)
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`arr.length`|`arr`의 길이 반환|
-|`arr.push(val[, val2...])`<br>`arr.pop()`|`arr`의 뒤쪽에 원소 삽입/삭제|
-|`arr.unshift(val[, val2...])`<br>`arr.shift()`|`arr`의 앞쪽에 원소 삽입/삭제|
+| code                                           | description                   |
+| :--------------------------------------------- | :---------------------------- |
+| `arr.length`                                   | `arr`의 길이 반환             |
+| `arr.push(val[, val2...])`<br>`arr.pop()`      | `arr`의 뒤쪽에 원소 삽입/삭제 |
+| `arr.unshift(val[, val2...])`<br>`arr.shift()` | `arr`의 앞쪽에 원소 삽입/삭제 |
 
 - `unshift`, `shift`는 `O(n)`임
 - 웬만하면 `for...of` 사용해서 탐색
@@ -968,29 +971,29 @@ alert(soldiers[1].age); // 23
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`arr.splice(start[, deleteCount, elem1, ..., elemN])`|`arr`의 `start` 번째부터 `deleteCount`만큼 지운 다음 `elem1, ..., elemN`을 삽입하고, 지운 원소들의 배열을 리턴<br>`arr`도 변화함|
-|`arr.slice([start[, end]])`|`arr`의 `[start, end)`를 리턴|
-|`arr.concat(arg1, arg2...)`|`arr`에 `arg...`을 더한 배열을 리턴|
-|`arr.forEach(function(item, index, array) { ... })`|`arr`의 원소들을 순회하면서 함수에 대입함|
-|`arr.indexOf(item[, from])`<br>`arr.lastIndexOf(item[, from])`|`arr`의 `from` 번째부터 `item`을 찾고 첫 번째 일치하는 원소의 인덱스(없으면 `-1`)을 리턴<br>`arr`의 `from`부터 왼쪽으로 `item`을 찾고 첫 번째 일치하는 원소의 인덱스(없으면 `-1`)을 리턴|
-|`arr.includes(item[, from])`|`arr`의 `from` 번째부터 `item`이 존재하는지 판별<br>`true/false` 리턴|
-|`arr.find(function(item, index, array) { ... })`<br>`arr.findIndex(function(item, index, array) { ... })`|함수가 `true`를 반환하면 탐색을 멈추고 해당 원소 리턴<br>`arr.find`와 같지만, 해당 index 리턴|
-|`arr.filter(function(item, index, array) { ... })`|함수를 `true`로 만드는 원소들의 배열 리턴|
-|`arr.map(function(item, index, array) { ... })`|함수로 `arr`을 매핑하고 result array를 리턴|
-|`arr.sort([function() { ... })`|함수를 기준으로 정렬한 결과를 리턴<br>`arr`도 변화함<br>함수를 생략하면 string으로 비교해서 정렬함|
-|`arr.reverse()`|`arr`을 역순으로 정렬하고 결과 리턴<br>`arr`도 변화함|
-|`str.split([delim[, limit]])`|`str`을 `delim`으로 구분하고 `limit` 개까지만 array에 저장 후 리턴<br>아무 것도 넣지 않을 경우 나눠지지 않고, `''`을 넣을 경우 한 글자씩 나눠짐|
-|`arr.join(glue)`|`arr`의 원소들을 `glue`를 사이에 넣어서 이은 string을 리턴|
-|`arr.reduce(function(accumulator, item, index, array) { ... }, [initial])`|`arr`의 원소들을 함수에 넣으면서 `accumulator`에 결과를 저장하고 반환<br>`initial`은 `accumulator`의 초기값|
-|`arr.reduceRight(function(accumulator, item, index, array) { ... }, [initial])`|`arr.reduce`와 같은 기능이지만 원소들을 역순으로 처리함|
-|`Array.isArray(value)`|`value`가 `Array` type인지 판별|
-|`arr.some(function(item, index, array) { ... })`<br>`arr.every(function(item, index, array) { ... })`|`arr` 안에 함수를 `true`로 만드는 원소가 있는지 판별<br>모든 원소가 함수를 `true`로 만드는지 판별|
-|`arr.fill(value[, start[, end]])`|`arr`의 `[start, end)`를 `value`로 채우고 리턴<br>`arr`도 변화함|
-|`arr.copyWithin(target[, start[, end]])`|`arr`의 `[start, end)`를 `target` 번째부터 시작해서 붙여넣고 리턴<br>`arr`도 변화함|
-|`arr.flat([depth])`|`arr`의 원소들을 `depth`만큼 차원을 낮춘 결과를 리턴<br>`depth`를 `Infinity`로 설정할 수 있음|
-|`arr.flatMap(function(item, index, array) { ... })`|`arr`의 원소들을 함수로 매핑 후 한 차원 낮춘 결과를 리턴|
+| code                                                                                                      | description                                                                                                                                                                              |
+| :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arr.splice(start[, deleteCount, elem1, ..., elemN])`                                                     | `arr`의 `start` 번째부터 `deleteCount`만큼 지운 다음 `elem1, ..., elemN`을 삽입하고, 지운 원소들의 배열을 리턴<br>`arr`도 변화함                                                         |
+| `arr.slice([start[, end]])`                                                                               | `arr`의 `[start, end)`를 리턴                                                                                                                                                            |
+| `arr.concat(arg1, arg2...)`                                                                               | `arr`에 `arg...`을 더한 배열을 리턴                                                                                                                                                      |
+| `arr.forEach(function(item, index, array) { ... })`                                                       | `arr`의 원소들을 순회하면서 함수에 대입함                                                                                                                                                |
+| `arr.indexOf(item[, from])`<br>`arr.lastIndexOf(item[, from])`                                            | `arr`의 `from` 번째부터 `item`을 찾고 첫 번째 일치하는 원소의 인덱스(없으면 `-1`)을 리턴<br>`arr`의 `from`부터 왼쪽으로 `item`을 찾고 첫 번째 일치하는 원소의 인덱스(없으면 `-1`)을 리턴 |
+| `arr.includes(item[, from])`                                                                              | `arr`의 `from` 번째부터 `item`이 존재하는지 판별<br>`true/false` 리턴                                                                                                                    |
+| `arr.find(function(item, index, array) { ... })`<br>`arr.findIndex(function(item, index, array) { ... })` | 함수가 `true`를 반환하면 탐색을 멈추고 해당 원소 리턴<br>`arr.find`와 같지만, 해당 index 리턴                                                                                            |
+| `arr.filter(function(item, index, array) { ... })`                                                        | 함수를 `true`로 만드는 원소들의 배열 리턴                                                                                                                                                |
+| `arr.map(function(item, index, array) { ... })`                                                           | 함수로 `arr`을 매핑하고 result array를 리턴                                                                                                                                              |
+| `arr.sort([function() { ... })`                                                                           | 함수를 기준으로 정렬한 결과를 리턴<br>`arr`도 변화함<br>함수를 생략하면 string으로 비교해서 정렬함                                                                                       |
+| `arr.reverse()`                                                                                           | `arr`을 역순으로 정렬하고 결과 리턴<br>`arr`도 변화함                                                                                                                                    |
+| `str.split([delim[, limit]])`                                                                             | `str`을 `delim`으로 구분하고 `limit` 개까지만 array에 저장 후 리턴<br>아무 것도 넣지 않을 경우 나눠지지 않고, `''`을 넣을 경우 한 글자씩 나눠짐                                          |
+| `arr.join(glue)`                                                                                          | `arr`의 원소들을 `glue`를 사이에 넣어서 이은 string을 리턴                                                                                                                               |
+| `arr.reduce(function(accumulator, item, index, array) { ... }, [initial])`                                | `arr`의 원소들을 함수에 넣으면서 `accumulator`에 결과를 저장하고 반환<br>`initial`은 `accumulator`의 초기값                                                                              |
+| `arr.reduceRight(function(accumulator, item, index, array) { ... }, [initial])`                           | `arr.reduce`와 같은 기능이지만 원소들을 역순으로 처리함                                                                                                                                  |
+| `Array.isArray(value)`                                                                                    | `value`가 `Array` type인지 판별                                                                                                                                                          |
+| `arr.some(function(item, index, array) { ... })`<br>`arr.every(function(item, index, array) { ... })`     | `arr` 안에 함수를 `true`로 만드는 원소가 있는지 판별<br>모든 원소가 함수를 `true`로 만드는지 판별                                                                                        |
+| `arr.fill(value[, start[, end]])`                                                                         | `arr`의 `[start, end)`를 `value`로 채우고 리턴<br>`arr`도 변화함                                                                                                                         |
+| `arr.copyWithin(target[, start[, end]])`                                                                  | `arr`의 `[start, end)`를 `target` 번째부터 시작해서 붙여넣고 리턴<br>`arr`도 변화함                                                                                                      |
+| `arr.flat([depth])`                                                                                       | `arr`의 원소들을 `depth`만큼 차원을 낮춘 결과를 리턴<br>`depth`를 `Infinity`로 설정할 수 있음                                                                                            |
+| `arr.flatMap(function(item, index, array) { ... })`                                                       | `arr`의 원소들을 함수로 매핑 후 한 차원 낮춘 결과를 리턴                                                                                                                                 |
 
 - `arr.concat`은 shallow copy이기 때문에 객체의 배열은 deep copy를 따로 해야함
 - `includes`는 `NaN`도 찾을 수 있음  
@@ -1207,11 +1210,11 @@ alert(chars.length); // 2
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`range.[Symbol.iterator]()`|객체 `range`를 iterable로 만들기 위해서 정의해야 함<br>iterator 객체를 리턴해야 함|
-|`iterator.next()`|`iterator`가 다음 반복으로 넘어가기 전에 호출하는 함수<br>`done`, `value` property를 가진 객체를 리턴해야 함|
-|`Array.from(obj[, mapFn, thisArg])`|iterable 또는 array-like 객체인 `obj`를 `Array` type으로 바꾸고 `mapFn`을 사용해서 매핑한 배열을 리턴|
+| code                                | description                                                                                                  |
+| :---------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| `range.[Symbol.iterator]()`         | 객체 `range`를 iterable로 만들기 위해서 정의해야 함<br>iterator 객체를 리턴해야 함                           |
+| `iterator.next()`                   | `iterator`가 다음 반복으로 넘어가기 전에 호출하는 함수<br>`done`, `value` property를 가진 객체를 리턴해야 함 |
+| `Array.from(obj[, mapFn, thisArg])` | iterable 또는 array-like 객체인 `obj`를 `Array` type으로 바꾸고 `mapFn`을 사용해서 매핑한 배열을 리턴        |
 
 - `[Symbol.iterator]()` method는 `for...of`가 호출될 때 자동으로 실행됨
 - `String`, `Array` 같은 built-in iterables도 위 메소드가 구현되어 있음
@@ -1366,27 +1369,27 @@ set.forEach((value, valueAgain, set) => {
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|**Map**| |
-|`new Map([entries])`|`entries`로 초기화된 map 리턴|
-|`map.set(key, value)`|`key`와 `value`를 저장하고 `map` 리턴|
-|`map.get(key)`|`key`에 해당하는 값(존재하지 않으면 `undefined`) 리턴|
-|`map.has(key)`|`key`가 존재하면 `true`, 아니면 `false` 리턴|
-|`map.delete(key)`|`key`, `value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴|
-|`map.clear()`|`map`을 비움|
-|`map.size`|`map`의 현재 원소 수를 리턴|
-|`map.keys()`<br>`map.values()`<br>`map.entries()`|key의 iterable을 리턴<br>value의 iterable을 리턴<br>`[key, value]`의 iterable을 리턴|
-|`Object.entries(obj)`|`obj`로부터 entries의 **array**를 만들어서 리턴|
-|`Object.fromEntries(entries)`|`entries`로부터 object를 만들어서 리턴<br>`entries`는 꼭 array를 이용하지 않아도 entries를 포함한 iterable이면 됨|
-|**Set**| |
-|`new Set([iterable])`|`iterable`의 values로 초기화된 set 리턴|
-|`set.add(value)`|`value`를 추가하고 `set` 리턴|
-|`set.delete(value)`|`value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴|
-|`set.has(value)`|`value`가 존재하면 `true`, 아니면 `false` 리턴|
-|`set.clear()`|`set`을 비움|
-|`set.size`|`set`의 현재 원소 수를 리턴|
-|`set.keys()`<br>`set.values()`<br>`set.entries()`|value의 iterable을 리턴<br>value의 iterable을 리턴<br>`[value, value]`의 iterable을 리턴|
+| code                                              | description                                                                                                       |
+| :------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------- |
+| **Map**                                           |                                                                                                                   |
+| `new Map([entries])`                              | `entries`로 초기화된 map 리턴                                                                                     |
+| `map.set(key, value)`                             | `key`와 `value`를 저장하고 `map` 리턴                                                                             |
+| `map.get(key)`                                    | `key`에 해당하는 값(존재하지 않으면 `undefined`) 리턴                                                             |
+| `map.has(key)`                                    | `key`가 존재하면 `true`, 아니면 `false` 리턴                                                                      |
+| `map.delete(key)`                                 | `key`, `value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴                                                    |
+| `map.clear()`                                     | `map`을 비움                                                                                                      |
+| `map.size`                                        | `map`의 현재 원소 수를 리턴                                                                                       |
+| `map.keys()`<br>`map.values()`<br>`map.entries()` | key의 iterable을 리턴<br>value의 iterable을 리턴<br>`[key, value]`의 iterable을 리턴                              |
+| `Object.entries(obj)`                             | `obj`로부터 entries의 **array**를 만들어서 리턴                                                                   |
+| `Object.fromEntries(entries)`                     | `entries`로부터 object를 만들어서 리턴<br>`entries`는 꼭 array를 이용하지 않아도 entries를 포함한 iterable이면 됨 |
+| **Set**                                           |                                                                                                                   |
+| `new Set([iterable])`                             | `iterable`의 values로 초기화된 set 리턴                                                                           |
+| `set.add(value)`                                  | `value`를 추가하고 `set` 리턴                                                                                     |
+| `set.delete(value)`                               | `value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴                                                           |
+| `set.has(value)`                                  | `value`가 존재하면 `true`, 아니면 `false` 리턴                                                                    |
+| `set.clear()`                                     | `set`을 비움                                                                                                      |
+| `set.size`                                        | `set`의 현재 원소 수를 리턴                                                                                       |
+| `set.keys()`<br>`set.values()`<br>`set.entries()` | value의 iterable을 리턴<br>value의 iterable을 리턴<br>`[value, value]`의 iterable을 리턴                          |
 
 - `Object` : collection of keyed values  
 	`Map` : collection of keyed values  
@@ -1516,17 +1519,17 @@ e.g. 사용자의 방문 횟수가 아닌, 방문 여부
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|**WeakMap**| |
-|`weakMap.get(key)`|`weakMap`에 `key`에 해당하는 값 리턴|
-|`weakMap.set(key, value)`|`weakMap`에 `key`, `value`를 추가하고 `weakMap` 리턴|
-|`weakMap.delete(key)`|`weakMap`에서 `key`가 존재하면 삭제 후 `true`, 아니면 `false` 리턴|
-|`weakMap.has(key)`|`weakMap`에 `key`가 존재하는지 판별|
-|**WeakSet**| |
-|`weakSet.add(value)`|`value`를 추가하고 `weakSet` 리턴|
-|`weakSet.has(value)`|`value`가 존재하는지 판별|
-|`weakSet.delete(value)`|`value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴|
+| code                      | description                                                        |
+| :------------------------ | :----------------------------------------------------------------- |
+| **WeakMap**               |                                                                    |
+| `weakMap.get(key)`        | `weakMap`에 `key`에 해당하는 값 리턴                               |
+| `weakMap.set(key, value)` | `weakMap`에 `key`, `value`를 추가하고 `weakMap` 리턴               |
+| `weakMap.delete(key)`     | `weakMap`에서 `key`가 존재하면 삭제 후 `true`, 아니면 `false` 리턴 |
+| `weakMap.has(key)`        | `weakMap`에 `key`가 존재하는지 판별                                |
+| **WeakSet**               |                                                                    |
+| `weakSet.add(value)`      | `value`를 추가하고 `weakSet` 리턴                                  |
+| `weakSet.has(value)`      | `value`가 존재하는지 판별                                          |
+| `weakSet.delete(value)`   | `value`가 존재하면 삭제하고 `true`, 아니면 `false` 리턴            |
 
 - `WeakMap`과 `WeakSet`은 secondary storage로서, primary storage에서 객체가 지워지면 이 자료구조들에서도 자동으로 지워짐
 
@@ -1574,10 +1577,10 @@ alert(doublePrices.meat); // 8
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`Object.keys(obj)`<br>`Object.values(obj)`<br>`Object.entries(obj)`|`obj`의 key들의 array 리턴<br>`obj`의 value들의 array 리턴<br>`obj`의 `[key, value]`들의 array 리턴|
-|`Object.fromEntries(array)`|entry들로 이루어진 `array`를 바탕으로 객체를 생성하고 리턴|
+| code                                                                | description                                                                                         |
+| :------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------- |
+| `Object.keys(obj)`<br>`Object.values(obj)`<br>`Object.entries(obj)` | `obj`의 key들의 array 리턴<br>`obj`의 value들의 array 리턴<br>`obj`의 `[key, value]`들의 array 리턴 |
+| `Object.fromEntries(array)`                                         | entry들로 이루어진 `array`를 바탕으로 객체를 생성하고 리턴                                          |
 
 - `Object.keys/values/entries`는 `Map`이나 다른 객체들의 method와 같이 iterable이 아닌 `Array`를 리턴함에 주의!
 
@@ -1787,11 +1790,11 @@ showMenu(options);
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`let [...] = array;`|array destructuring|
-|`let {...} = obj;`|object destructuring|
-|`...`|rest pattern<br>객체일 경우 새로운 객체 안에, 배열일 경우 새로운 배열을 저장 공간으로 사용함|
+| code                 | description                                                                                  |
+| :------------------- | :------------------------------------------------------------------------------------------- |
+| `let [...] = array;` | array destructuring                                                                          |
+| `let {...} = obj;`   | object destructuring                                                                         |
+| `...`                | rest pattern<br>객체일 경우 새로운 객체 안에, 배열일 경우 새로운 배열을 저장 공간으로 사용함 |
 
 - 기존에 존재하는 변수에 대해 수행할 경우 전체 문장을 괄호로 묶어야 함
 
@@ -1940,19 +1943,19 @@ alert(date);
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`date.getFullYear()`|`date`의 연도를 4자리로 리턴|
-|`date.getMonth()`|`date`의 달을 `[0, 11]`으로 리턴|
-|`date.getDate()`|`date`의 일을 `[1, 31]`으로 리턴|
-|`date.getHours()`<br>`date.getMinutes()`<br>`date.getSeconds()`<br>`date.getMilliseconds()`|`date`의 시/분/초/밀리초 리턴|
-|`date.getDay()`|`date`의 요일을 `[0, 6]`으로 리턴<br>0이 일요일|
-|`date.getTime()`|1970.01.01 UTC+0부터 현재까지 경과한 시간을 ms 단위로 리턴|
-|`date.getTimezoneOffset()`|UTC+0과 현재 timezone의 차이를 분 단위로 리턴<br>UTC+0 기준임|
-|`date.setFullYear(year[, month[, date]])`<br>`date.setMonth(month[, date])`<br>`date.setDate(date)`<br>`date.setHours(hour[, min[, sec[, ms]]])`<br>`date.setMinutes(min[, sec[, ms]])`<br>`date.setSeconds(sec[, ms])`<br>`date.setMilliseconds(ms)`|`date`의 시간 설정|
-|`date.setTime(milliseconds)`|`date`의 시간을 1970.01.01 UTC 기준으로 `milliseconds` ms 만큼 지난 시간으로 설정|
-|`Date.now()`|`new Date().getTime()`과 같음|
-|`Date.parse(str)`|`YYYY-MM-DDTHH:mm:ss.sssZ` 포맷의 `str`을 파싱해서 timestamp 리턴<br>`str`의 포맷이 잘못된 경우 `NaN` 리턴|
+| code                                                                                                                                                                                                                                                  | description                                                                                                |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `date.getFullYear()`                                                                                                                                                                                                                                  | `date`의 연도를 4자리로 리턴                                                                               |
+| `date.getMonth()`                                                                                                                                                                                                                                     | `date`의 달을 `[0, 11]`으로 리턴                                                                           |
+| `date.getDate()`                                                                                                                                                                                                                                      | `date`의 일을 `[1, 31]`으로 리턴                                                                           |
+| `date.getHours()`<br>`date.getMinutes()`<br>`date.getSeconds()`<br>`date.getMilliseconds()`                                                                                                                                                           | `date`의 시/분/초/밀리초 리턴                                                                              |
+| `date.getDay()`                                                                                                                                                                                                                                       | `date`의 요일을 `[0, 6]`으로 리턴<br>0이 일요일                                                            |
+| `date.getTime()`                                                                                                                                                                                                                                      | 1970.01.01 UTC+0부터 현재까지 경과한 시간을 ms 단위로 리턴                                                 |
+| `date.getTimezoneOffset()`                                                                                                                                                                                                                            | UTC+0과 현재 timezone의 차이를 분 단위로 리턴<br>UTC+0 기준임                                              |
+| `date.setFullYear(year[, month[, date]])`<br>`date.setMonth(month[, date])`<br>`date.setDate(date)`<br>`date.setHours(hour[, min[, sec[, ms]]])`<br>`date.setMinutes(min[, sec[, ms]])`<br>`date.setSeconds(sec[, ms])`<br>`date.setMilliseconds(ms)` | `date`의 시간 설정                                                                                         |
+| `date.setTime(milliseconds)`                                                                                                                                                                                                                          | `date`의 시간을 1970.01.01 UTC 기준으로 `milliseconds` ms 만큼 지난 시간으로 설정                          |
+| `Date.now()`                                                                                                                                                                                                                                          | `new Date().getTime()`과 같음                                                                              |
+| `Date.parse(str)`                                                                                                                                                                                                                                     | `YYYY-MM-DDTHH:mm:ss.sssZ` 포맷의 `str`을 파싱해서 timestamp 리턴<br>`str`의 포맷이 잘못된 경우 `NaN` 리턴 |
 
 - 이름에 "Time"이 들어가지 않은 method들은 `get/set` 다음에 `UTC`를 붙여서 UTC+0 기준으로 설정 가능(= UTC-variant)
 - `set*` 메소드들은 argument 이외의 정보들은 수정되지 않음  
@@ -2176,11 +2179,11 @@ alert( meetup.date.getDate() ); // now works!
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`JSON.stringify(value[, replacer[, space]])`|`value`를 JSON으로 변환함<br>`replacer`로 포함할 property 선택<br>`space`로 인덴팅 설정|
-|`JSON.parse(str[, reviver])`|`str`을 object로 변환함<br>`reviver`로 `Date`와 같은 객체를 decode함|
-|`obj.toJSON()`|`obj`의 JSON으로의 변환 구현(= custom `stringify`)|
+| code                                         | description                                                                             |
+| :------------------------------------------- | :-------------------------------------------------------------------------------------- |
+| `JSON.stringify(value[, replacer[, space]])` | `value`를 JSON으로 변환함<br>`replacer`로 포함할 property 선택<br>`space`로 인덴팅 설정 |
+| `JSON.parse(str[, reviver])`                 | `str`을 object로 변환함<br>`reviver`로 `Date`와 같은 객체를 decode함                    |
+| `obj.toJSON()`                               | `obj`의 JSON으로의 변환 구현(= custom `stringify`)                                      |
 
 - JSON은 plain objects, arrays, strings, numbers, booleans, `null`을 지원함  
 	JS-specific values(methods, `undefined`, symbolic properties)는 무시됨

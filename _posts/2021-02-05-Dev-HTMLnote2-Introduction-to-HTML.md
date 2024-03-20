@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "HTMLnote2: Introduction to HTML"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -43,12 +46,12 @@ Always include attribute quotes!
 - `<`, `>`, `"`, `'`, `&` : Character entity 사용!
 
 | Literal character | Character reference equivalent |
-| :--- | :--- |
-| `<` | `&lt;` |
-| `>` | `&gt;` |
-| `"` | `&quot;` |
-| `'` | `&apos;` |
-| `&` | `&amp;` |
+| :---------------- | :----------------------------- |
+| `<`               | `&lt;`                         |
+| `>`               | `&gt;`                         |
+| `"`               | `&quot;`                       |
+| `'`               | `&apos;`                       |
+| `&`               | `&amp;`                        |
 
 e.g. `<a href='http://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>`  
 나머지는 utf-8인코딩이면 그냥 사용해도됨

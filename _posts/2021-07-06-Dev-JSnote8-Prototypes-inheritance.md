@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote8: Prototypes, inheritance"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -23,9 +26,9 @@ specification에 명시된 hidden property인 `[[Prototype]]`은 `null` 또는 �
 한 객체로부터 property를 읽는데 없다면, JS는 자동으로 prototype 객체로부터 그것을 찾음  
 ⇔ prototypal inheritance(프로토타입 상속)
 
-|![js-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-prototype1.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-prototype1.PNG?raw=true) |
+| :---------------------------------------------------------------------------------------------------: |
+|                                         javascript.info 참고                                          |
 
 `[[Prototype]]`은 숨겨져 있지만, 몇 가지 방법으로 설정 가능함  
 그 중 하나가 `__proto__`를 사용하는 것임:  
@@ -152,9 +155,9 @@ alert(animal.isSleeping); // undefined (no such property in the prototype)
 ```
 - prototype에 정의된 메소드 `sleep()`을 `rabbit`에서 호출했으므로 `this`가 `rabbit`을 가리켜 `rabbit`에 `isSleeping`이라는 property가 생김
 
-|![js-object-state1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-object-state1.PNG?raw=true)|
-|:---:|
-|위 예시의 object state<br>javascript.info 참고|
+| ![js-object-state1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-object-state1.PNG?raw=true) |
+| :---------------------------------------------------------------------------------------------------------: |
+|                               위 예시의 object state<br>javascript.info 참고                                |
 
 ## `for...in` loop
 `for...in`은 상속받은 property도 순회함  
@@ -195,9 +198,9 @@ for(let prop in rabbit) {
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`obj.hasOwnProperty(prop)`|`obj`가 `prop`라는 key를 가지는지 판별|
+| code                       | description                            |
+| :------------------------- | :------------------------------------- |
+| `obj.hasOwnProperty(prop)` | `obj`가 `prop`라는 key를 가지는지 판별 |
 
 - hidden property `[[Prototype]]`에 prototype의 reference가 저장됨
 	- `__proto__`를 사용해서 설정 가능
@@ -234,9 +237,9 @@ alert( rabbit.eats ); // true
 ```
 - `Rabbit.prototype = animal`은 `new Rabbit`이 생성될 때 그것의 `[[Prototype]]`에 `animal`을 대입해라는 의미임  
 
-	|![js-f-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-f-prototype1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-f-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-f-prototype1.PNG?raw=true) |
+ | :-------------------------------------------------------------------------------------------------------: |
+ |                                           javascript.info 참고                                            |
 	
 	가로 화살표는 평범한 property를 뜻하고 세로 화살표는 inheritance를 뜻함
 
@@ -265,9 +268,9 @@ let rabbit = new Rabbit(); // inherits from {constructor: Rabbit}
 alert(rabbit.constructor == Rabbit); // true (from prototype)
 ```
 
-|![js-f-prototype2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-f-prototype2.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-f-prototype2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-f-prototype2.PNG?raw=true) |
+| :-------------------------------------------------------------------------------------------------------: |
+|                                           javascript.info 참고                                            |
 
 아래와 같이 기존의 객체의 constructor를 생성자로 사용할 수도 있음:  
 ```javascript
@@ -357,9 +360,9 @@ alert( obj ); // "[object Object]"
 	`obj = {}`은 `obj = new Object()`의 shorthand이기 때문에 `Object.prototype`에 선언된 `toString`을 사용한 것임  
 	즉, `obj.toString`과 `obj.__proto__.toString`과 `Object.prototype.toString`은 모두 같은 레퍼런스임  
 	
-	|![js-object-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-object-prototype1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-object-prototype1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-object-prototype1.PNG?raw=true) |
+ | :-----------------------------------------------------------------------------------------------------------------: |
+ |                                                javascript.info 참고                                                 |
 
 `Object.prototype`의 `[[Prototype]]`은 `null`임!
 
@@ -370,9 +373,9 @@ alert( obj ); // "[object Object]"
 
 specification에 의하면, 모든 내장 prototype들은 `Object.prototype`을 상속받음  
 
-|![js-built-in-prototypes1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-built-in-prototypes1.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-built-in-prototypes1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-built-in-prototypes1.PNG?raw=true) |
+| :-----------------------------------------------------------------------------------------------------------------------: |
+|                                                   javascript.info 참고                                                    |
 
 ```javascript
 let arr = [1, 2, 3];
@@ -391,9 +394,9 @@ alert(arr.toString === Object.prototype.toString); // false
 
 `console.dir(obj)`를 이용하면 `obj`의 prototype chain을 알 수 있음:  
 
-|![js-console-dir](https://javascript.info/article/native-prototypes/console_dir_array.png)|
-|:---:|
-|javascript.info 참고|
+| ![js-console-dir](https://javascript.info/article/native-prototypes/console_dir_array.png) |
+| :----------------------------------------------------------------------------------------: |
+|                                    javascript.info 참고                                    |
 
 `Function`도 마찬가지로, `call`, `apply` 같은 method들은 `Function.prototype`에 정의되어 있음
 
@@ -607,11 +610,11 @@ alert(obj[key]); // "some value"
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`Object.create(proto[, descriptors])`|`proto`를 `[[Prototype]]`으로 하고 `descriptor`를 적용한 객체 생성|
-|`Object.getPrototypeOf(obj)`|`obj`의 `[[Prototype]]` 리턴|
-|`Object.setPrototypeOf(obj, proto)`|`obj`의 `[[Prototype]]`을 `proto`로 설정|
+| code                                  | description                                                        |
+| :------------------------------------ | :----------------------------------------------------------------- |
+| `Object.create(proto[, descriptors])` | `proto`를 `[[Prototype]]`으로 하고 `descriptor`를 적용한 객체 생성 |
+| `Object.getPrototypeOf(obj)`          | `obj`의 `[[Prototype]]` 리턴                                       |
+| `Object.setPrototypeOf(obj, proto)`   | `obj`의 `[[Prototype]]`을 `proto`로 설정                           |
 
 - 사용자의 입력을 key로 사용하는 경우 `__proto__`가 호출될 수도 있기 때문에 위험함  
 	=> 이런 경우 very plain object를 사용하거나 `Map`을 사용하는게 좋음

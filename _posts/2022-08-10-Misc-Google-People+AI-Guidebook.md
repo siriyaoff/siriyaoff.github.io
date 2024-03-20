@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Google People + AI Guidebook 간단 요약"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Miscellaneous
 tags:

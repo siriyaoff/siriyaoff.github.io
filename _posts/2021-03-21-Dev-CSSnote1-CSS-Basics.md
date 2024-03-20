@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CSSnote1: CSS Basics"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -38,13 +41,13 @@ CSS Basics
 
 ## Different types of selectors
 
-| Selector name			| What does it select | Example |
-| :--- | :--- | :--- |
-| Element selector		| All HTML elements of the specified type. | `p`<br>selects `<p>` |
-| ID selector			| The element with the specified ID. Each id value should be unique. | `#my-id`<br>selects `<p id="my-id">` |
-| Class selector		| The element(s) with the specified class. Classes can be duplicated. | `.my-class`<br>selects `<p class="my-class">` and `<a class="my-class">` |
-| Attribute selector	| The element(s) with specified attribute. | `img[src]`<br>selects `<img src="myimage.png">` but not `<img>` |
-| Pseudo-class selector	| The specified element(s) but only when in the specified state. | `a:hover`<br>selects `<a>` but only when the mouse is hovering over the link |
+| Selector name         | What does it select                                                 | Example                                                                      |
+| :-------------------- | :------------------------------------------------------------------ | :--------------------------------------------------------------------------- |
+| Element selector      | All HTML elements of the specified type.                            | `p`<br>selects `<p>`                                                         |
+| ID selector           | The element with the specified ID. Each id value should be unique.  | `#my-id`<br>selects `<p id="my-id">`                                         |
+| Class selector        | The element(s) with the specified class. Classes can be duplicated. | `.my-class`<br>selects `<p class="my-class">` and `<a class="my-class">`     |
+| Attribute selector    | The element(s) with specified attribute.                            | `img[src]`<br>selects `<img src="myimage.png">` but not `<img>`              |
+| Pseudo-class selector | The specified element(s) but only when in the specified state.      | `a:hover`<br>selects `<a>` but only when the mouse is hovering over the link |
 
 이 외에도 많은 selector가 있음([MDN Selectors guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors){:target="_blank"} 참고)
 

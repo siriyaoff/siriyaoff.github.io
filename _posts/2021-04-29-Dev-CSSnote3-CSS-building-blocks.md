@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "CSSnote3: CSS building blocks"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -93,9 +96,9 @@ HTML:
 </ul>
 ```
 
-|Result:|
-|:---|
-|![Inheritance ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inheritance-ex1.PNG?raw=true)|
+| Result:                                                                                                      |
+| :----------------------------------------------------------------------------------------------------------- |
+| ![Inheritance ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inheritance-ex1.PNG?raw=true) |
 
 - We have given the outer `<ul>`(with class `main`) a border, padding, and font color. The color has applied to the direct children, but also the indirect children. Same for another class `special`. But things like widths, margins, padding, and borders do not inherit.(Probably not an effect we would ever want!)
 - Which properties are inherited by default and which aren't is largely **down to common sense.
@@ -142,9 +145,9 @@ HTML:
 </ul>
 ```
 
-|Result:|
-|:---|
-|![universal property ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-universal-property-ex1.PNG?raw=true)|
+| Result:                                                                                                                    |
+| :------------------------------------------------------------------------------------------------------------------------- |
+| ![universal property ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-universal-property-ex1.PNG?raw=true) |
 
 - `a { color: red;}`를 추가하면 맨 위 링크만 빨간색으로 변함(다른 것들은 `' '` combinator, class selector로 specificity가 더 높은 rule이 적용되어있기 때문)
 
@@ -175,9 +178,9 @@ HTML:
 </blockquote>
 ```
 
-|Result:|
-|:---|
-|![all property ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-all-property-ex1.PNG?raw=true)|
+| Result:                                                                                                        |
+| :------------------------------------------------------------------------------------------------------------- |
+| ![all property ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-all-property-ex1.PNG?raw=true) |
 
 - `all`도 다른 property와 같이 conflicting rule에 의해 처리됨
 - `all`은 모든 property를 포함하기 때문에 padding과 같은 ruleset으로 정의하지 않았지만 기본적으로 정의해주는 속성(padding, margin 등)도 같이 `unset`됨
@@ -277,9 +280,9 @@ HTML:
 <p class="better" id="winning">One selector to rule them all!</p>
 ```
 
-|Result:|
-|:---|
-|![css important ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-important-ex1.PNG?raw=true)|
+| Result:                                                                                                      |
+| :----------------------------------------------------------------------------------------------------------- |
+| ![css important ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-important-ex1.PNG?raw=true) |
 
 - id selector가 두 번째 p에 적용되어 원래는 테두리가 있어야 하지만 class selector의 속성을 따름
 	- class selector의 border declaration에 `!important`가 있기 때문에 specificity가 가장 높게 설정되었기 때문에 overriding되지 않음
@@ -359,12 +362,12 @@ a[href="https://example.com"] {}
 
 ### Presence and value selectors
 
-|Selector|Example|Description|
-|:---|:---|:---|
-|[*attr*]|`a[title]`|elements with an *attr* attribute|
-|[*attr*=*value*]|`a[href="https://example.com"]`|elements with an *attr* attribute whose value is exactly *value*|
-|[*attr*~=*value*]|`p[class~="special"]`|elements with an *attr* attribute whose value is exactly *value*, or contains *value* in its (space separated)list of values|
-|[*attr*&#124;=*value*]|`div[lang|="zh"]`|elements with an *attr* attribute whose value is exactly *value* or begins with *value* immediately followed by a hyphen(`-`)|
+| Selector               | Example                         | Description                                                                                                                  |
+| :--------------------- | :------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
+| [*attr*]               | `a[title]`                      | elements with an *attr* attribute                                                                                            |
+| [*attr*=*value*]       | `a[href="https://example.com"]` | elements with an *attr* attribute whose value is exactly *value*                                                             |
+| [*attr*~=*value*]      | `p[class~="special"]`           | elements with an *attr* attribute whose value is exactly *value*, or contains *value* in its (space separated)list of values |
+| [*attr*&#124;=*value*] | `div[lang                       | ="zh"]`                                                                                                                      | elements with an *attr* attribute whose value is exactly *value* or begins with *value* immediately followed by a hyphen(`-`) |
 
 - `div[lang|="zh"]`는 `<div lang="zh-*">`를 선택함
 - [*attr*=*value*]는 값이 정확히 *value*인것만(다른 값이 더 있을 경우 선택하지 않음)  
@@ -374,11 +377,11 @@ a[href="https://example.com"] {}
 
 ### Substring matching selectors
 
-|Selector|Example|Description|
-|:---|:---|:---|
-|[*attr*^=*value*]|`li[class^="box-"]`|elements with an *attr* attribute whose value begins with *value*|
-|[*attr*$=*value*]|`li[class$="-box"]`|elements with an *attr* attribute whose value ends with *value*|
-|[*attr*\*=*value*]|`li[class*="box"]`|elements with an *attr* attribute whose value contains *value* anywhere within the string|
+| Selector           | Example             | Description                                                                               |
+| :----------------- | :------------------ | :---------------------------------------------------------------------------------------- |
+| [*attr*^=*value*]  | `li[class^="box-"]` | elements with an *attr* attribute whose value begins with *value*                         |
+| [*attr*$=*value*]  | `li[class$="-box"]` | elements with an *attr* attribute whose value ends with *value*                           |
+| [*attr*\*=*value*] | `li[class*="box"]`  | elements with an *attr* attribute whose value contains *value* anywhere within the string |
 
 ### Case-sensitivity
 - Add `i` before the closing bracket(`]`) to match attribute values case-insensitively!  
@@ -528,9 +531,9 @@ HTML:
 <p>I am another paragraph. Some of the <span class="block">words</span> have been wrapped in a <span>span element</span>.</p>
 ```
 
-|Result:|
-|:---|
-|![display type ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-display-type-ex1.png?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![display type ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-display-type-ex1.png?raw=true) |
 
 CSS:  
 ```css
@@ -571,9 +574,9 @@ HTML:
 <p class="inline">I am another paragraph. Also a short one.</p>
 ```
 
-|Result:|
-|:---|
-|![display type ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-display-type-ex2.png?raw=true)|
+| Result:                                                                                                         |
+| :-------------------------------------------------------------------------------------------------------------- |
+| ![display type ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-display-type-ex2.png?raw=true) |
 
 - `block` : 새로운 줄에서 시작, 너비 지정 없으면 부모 노드의 너비를 모두 차지, `span`과 같은 inline element에도 `display: block;`을 부여할 수 있음, 반대도 가능(`ul`에 inline 부여)
 - `inline` : 줄바꿈 없음, '글자처럼 취급'이랑 비슷
@@ -610,9 +613,9 @@ CSS:
 }
 ```
 
-|Result:|
-|:---|
-|![standard box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/standard-box-model.png)|
+| Result:                                                                                                                        |
+| :----------------------------------------------------------------------------------------------------------------------------- |
+| ![standard box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/standard-box-model.png) |
 
 The space taken up by the box using the standard box model will be 410px(350+25+25+5+5) * 210px(150+25+25+5+5).  
 **Note**: The margin is not counted towards the actual size of the box. It affects only the space outside the box. The box's area stops at the border.(보여지는 박스의 크기는 border까지임)
@@ -694,9 +697,9 @@ HTML:
 </p>
 ```
 
-|Result:|
-|:---|
-|![inline box ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inline-box-ex.png?raw=true)|
+| Result:                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------- |
+| ![inline box ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inline-box-ex.png?raw=true) |
 
 ## Using display: inline-block
 `inline-block` is a middle ground between `inline` and `block`.
@@ -725,9 +728,9 @@ HTML:
 </p>
 ```
 
-|Result:|
-|:---|
-|![inline block ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inline-block-ex.png?raw=true)|
+| Result:                                                                                                       |
+| :------------------------------------------------------------------------------------------------------------ |
+| ![inline block ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-inline-block-ex.png?raw=true) |
 
 - 저 예제에서는 80!=20+20+2+2이므로 standard box model 사용중
 - `<p>`는 block element이기 때문에 `<span>`에 `display: block;`을 적용시켜도 줄만 바뀔 뿐 p의 border가 두 개로 나눠지지 않음!
@@ -864,9 +867,9 @@ When we switch the writing mode, the directions of inline, block is changed.
 The directions are also called as **dimensions**.  
 The **block dimension** is always the direction blocks are displayed on the page, and the **inline dimension** is always the direction a sentence flows.
 
-|horizontal writing mode|vertical writing mode|
-|:---|:---|
-|![horizontal writing mode](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/horizontal-tb.png)|![vertical writing mode](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/vertical.png)|
+| horizontal writing mode                                                                                                                             | vertical writing mode                                                                                                                        |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![horizontal writing mode](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/horizontal-tb.png) | ![vertical writing mode](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/vertical.png) |
 
 ### Direction
 Arabic과 같이 horizontal하지만 right-to-left로 읽고 쓰는 언어도 있음 -> 이런 언어들도 있기 때문에 newer CSS layout methods들은 텍스트의 *start*와 *end*도 지정함
@@ -906,9 +909,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![text overflow ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-text-overflow-ex1.png?raw=true)|
+| Result:                                                                                                           |
+| :---------------------------------------------------------------------------------------------------------------- |
+| ![text overflow ex1](https://github.com/siriyaoff/MDN-note/blob/master/images/css-text-overflow-ex1.png?raw=true) |
 
 In the example above, the box with a vertical writing mode still has a width, and this causing the text to overflow.  
 It is needed to swap height and width along with the writing mode. For example, when we're in a vertical writing mode we want the box to expand in the block dimension.  
@@ -993,12 +996,12 @@ Every property used in CSS has a value type defining the set of values that are 
 ## Numbers, lengths, and percentages
 Numeric value types:
 
-|Data type|Description|Example|
-|:---|:---|:---|
-|`<integer>`|whole number|`1024` or `-55`|
-|`<number>`|decimal number(+fractional componenet)|`0.255`, `128`, `-1.2`|
-|`<dimension>`|`<number>` with a unit attached<br>an umbrella category that includes the `<length>`, `<angle>`, `<time>`, and `<resolution>` types|`45deg`, `5s`, `10px`|
-|`<percentage>`|fraction of some other value|`50%`|
+| Data type      | Description                                                                                                                         | Example                |
+| :------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :--------------------- |
+| `<integer>`    | whole number                                                                                                                        | `1024` or `-55`        |
+| `<number>`     | decimal number(+fractional componenet)                                                                                              | `0.255`, `128`, `-1.2` |
+| `<dimension>`  | `<number>` with a unit attached<br>an umbrella category that includes the `<length>`, `<angle>`, `<time>`, and `<resolution>` types | `45deg`, `5s`, `10px`  |
+| `<percentage>` | fraction of some other value                                                                                                        | `50%`                  |
 
 ### Lengths
 There are two types of lengths, relative and absolute.
@@ -1006,32 +1009,32 @@ There are two types of lengths, relative and absolute.
 #### Absolute length units
 These are always the same size.
 
-|Unit|Name|Equivalent to|
-|:---|:---|:---|
-|`cm`|Centimeters|1`cm` = 38`px`|
-|`mm`|Millimeters|1`mm` = 1/10th of 1`cm`|
-|`Q`|Quarter-millimeters|1`Q` = 1/40th of 1`cm`|
-|`in`|Inches|1`in` = 96`px`|
-|`pc`|Picas|1`pc` = 1/6 of 1`in`|
-|`pt`|Points|1`pt` = 1/72th of 1`in`|
-|`px`|Pixels|1`px` = 1/96th of 1`in`|
+| Unit | Name                | Equivalent to           |
+| :--- | :------------------ | :---------------------- |
+| `cm` | Centimeters         | 1`cm` = 38`px`          |
+| `mm` | Millimeters         | 1`mm` = 1/10th of 1`cm` |
+| `Q`  | Quarter-millimeters | 1`Q` = 1/40th of 1`cm`  |
+| `in` | Inches              | 1`in` = 96`px`          |
+| `pc` | Picas               | 1`pc` = 1/6 of 1`in`    |
+| `pt` | Points              | 1`pt` = 1/72th of 1`in` |
+| `px` | Pixels              | 1`px` = 1/96th of 1`in` |
 
 The only value that you will commonly use is `px`.
 
 #### Relative length units
 These are relative to something else, perhaps the size of the parent element's font.
 
-|Unit|Relative to|
-|:---|:---|
-|`em`|Font size of the parent in the case of typographical properties like `font-size`, <br>font size of the element itself in the case of other properties like `width`|
-|`ex`|x-height of the element's font|
-|`ch`|The advance measure(width) of the glyph "0" of the element's font|
-|`rem`|Font size of the root element|
-|`lh`|Line height of the element|
-|`vw`|1% of the viewport's width|
-|`vh`|1% of the viewport's height|
-|`vmin`|1% of the viewport's smaller dimension|
-|`vmax`|1% of the viewport's larger dimension|
+| Unit   | Relative to                                                                                                                                                        |
+| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`   | Font size of the parent in the case of typographical properties like `font-size`, <br>font size of the element itself in the case of other properties like `width` |
+| `ex`   | x-height of the element's font                                                                                                                                     |
+| `ch`   | The advance measure(width) of the glyph "0" of the element's font                                                                                                  |
+| `rem`  | Font size of the root element                                                                                                                                      |
+| `lh`   | Line height of the element                                                                                                                                         |
+| `vw`   | 1% of the viewport's width                                                                                                                                         |
+| `vh`   | 1% of the viewport's height                                                                                                                                        |
+| `vmin` | 1% of the viewport's smaller dimension                                                                                                                             |
+| `vmax` | 1% of the viewport's larger dimension                                                                                                                              |
 
 - `ex`는 `em`의 절반
 - `rem`은 root element의 font-size 기준, `em`는 parent의 font-size 기준 -> nested element의 경우 `em`으로 글자설정하면 계속 커짐!
@@ -1150,9 +1153,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![max width ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-max-width-ex.png?raw=true)|
+| Result:                                                                                                 |
+| :------------------------------------------------------------------------------------------------------ |
+| ![max width ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-max-width-ex.png?raw=true) |
 
 - `max-width: 100%`를 이용하면 이미지를 responsive하게 만들면서 크기를 박스 이상으로 커지지 않게 만들 수 있음
 
@@ -1213,9 +1216,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-||![object fit ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-object-fit-ex.PNG?raw=true)|
+| Result: |
+| :------ |
+|         | ![object fit ex](https://github.com/siriyaoff/MDN-note/blob/master/images/css-object-fit-ex.PNG?raw=true) |
 
 - img의 `width`, `height`를 둘 다 100%로 설정해놓은 상태라 `object-fit` 속성을 선언해놓지 않으면 box를 채움(`object-fit: fill;`과 같음, img의 aspect ratio를 무시하고 box를 채워버림)
 
@@ -1538,10 +1541,10 @@ HTML:
 </table>
 ```
 
-|Result:||
-|:---|:---|
-|Before|After|
-|![css-tables-before](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-before.PNG?raw=true)|![css-tables-after](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-after.PNG?raw=true)|
+| Result:                                                                                                       |                                                                                                             |
+| :------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------- |
+| Before                                                                                                        | After                                                                                                       |
+| ![css-tables-before](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-before.PNG?raw=true) | ![css-tables-after](https://github.com/siriyaoff/MDN-note/blob/master/images/css-tables-after.PNG?raw=true) |
 
 - `th, td`에 padding을 줘서 셀 넓힐 수 있음
 - `:nth-child(n)` : element 상관없이 세었을 때 n번째 자식들<br>`td:nth-child(n)` : element 상관없이 세었을 때 n번째 자식이면서 `td`인 element들<br>`:nth-of-type(n)` : element type별로 세었을 때 n번째 자식들<br>`td:nth-of-type(n)` : element type별로 세었을 때 n번째 자식이면서 `td`인 element들
@@ -1803,9 +1806,9 @@ HTML:
 </div>
 ```
 
-|Result:|
-|:---|
-|![css-shape-outside](https://github.com/siriyaoff/MDN-note/blob/master/images/css-shape-outside.PNG?raw=true)|
+| Result:                                                                                                       |
+| :------------------------------------------------------------------------------------------------------------ |
+| ![css-shape-outside](https://github.com/siriyaoff/MDN-note/blob/master/images/css-shape-outside.PNG?raw=true) |
 
 - `circle()`은 shape를 만드는 함수 중 하나임(<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes" target="_blank">필요하면 더 공부하기</a>)
 - `circle(<percentage>)`은 이미지의 중심에서부터 `<percentage>*이미지의 width`만큼 원을 그려서 shape으로 활용하는 듯
@@ -1837,9 +1840,9 @@ HTML:
 <h2 class="text-clip">WOW</h2>  
 ```
 
-|Result:|
-|:---|
-|![css-webkit-background-clip](https://github.com/siriyaoff/MDN-note/blob/master/images/css-webkit-background-clip.PNG?raw=true)|
+| Result:                                                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------ |
+| ![css-webkit-background-clip](https://github.com/siriyaoff/MDN-note/blob/master/images/css-webkit-background-clip.PNG?raw=true) |
 
 - Non-Webkit/Chrome-based browsers도 `-webkit-` vendor prefix를 붙여서 properties를 사용해야 함
 	- 너무 많이 쓰여서 표준이 아니지만 다른 브라우저도 이 기능을 구현한 결과임

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Express.js + React 강의"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

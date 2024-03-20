@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote10: Error handling"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -33,9 +36,9 @@ try {
 	3. 에러가 발생하면 `try`의 실행이 중단되고 제어 흐름이 `catch (err)`로 바뀜  
 		`err`은 발생한 에러에 대한 정보를 담고 있는 에러 객체임
 	
-	|![js-try-catch1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-try-catch1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-try-catch1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-try-catch1.PNG?raw=true) |
+ | :---------------------------------------------------------------------------------------------------: |
+ |                                         javascript.info 참고                                          |
 	
 즉, `try {...}`에서 에러가 발생해도 스크립트가 멈추지 않고 `catch`에서 그것을 해결할 수 있는 기회가 주어지는 것임
 
@@ -439,9 +442,9 @@ window.onerror = function(message, url, line, col, error) {
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`throw <error object>`|`<error object>`를 에러 객체로 하는 에러를 발생시킴|
+| code                   | description                                         |
+| :--------------------- | :-------------------------------------------------- |
+| `throw <error object>` | `<error object>`를 에러 객체로 하는 에러를 발생시킴 |
 
 - `try...catch...finally`를 사용해서 runtime error의 error handling 가능  
 	`setTimeout`과 같은 scheduled code 내부의 에러는 잡을 수 없음

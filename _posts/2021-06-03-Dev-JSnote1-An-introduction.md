@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote1: An introduction"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Socket.io 소개"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

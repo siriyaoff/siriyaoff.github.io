@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "디자인 패턴과 프로그래밍 패러다임"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

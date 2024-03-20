@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote13: Modules"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -250,10 +253,10 @@ Build tool은 아래와 같은 동작을 함:
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`import {feature} from './module.js';`|`'./module.js'`에서 `feature`을 import함|
-|`export let feature = { };`|`feature`을 export함|
+| code                                   | description                              |
+| :------------------------------------- | :--------------------------------------- |
+| `import {feature} from './module.js';` | `'./module.js'`에서 `feature`을 import함 |
+| `export let feature = { };`            | `feature`을 export함                     |
 
 - 모듈을 참조할 때는 `<script type="module">`와 같이 attribute를 넣어야 함
 - 모듈의 특징
@@ -377,10 +380,10 @@ new User('John');
 ```
 - `export default`로 export하면 curly braces를 제외하고 import할 수 있음!
 
-|Named export|Default export|
-|:---|:---|
-|`export class User {...}`|`export default class User {...}`|
-|`import {User} from ...`|`import User from ...`|
+| Named export              | Default export                    |
+| :------------------------ | :-------------------------------- |
+| `export class User {...}` | `export default class User {...}` |
+| `import {User} from ...`  | `import User from ...`            |
 
 default와 named export를 한 모듈에 같이 사용할 수 있지만, 보통 그렇게 사용하지 않음  
 하나의 모듈은 named exports를 가지거나 default 하나만을 가짐

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote12: Generators, advanced iteration"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -234,9 +237,9 @@ generator.next(4); // --> pass the result into the generator
 ```
 - `(*)`의 `"2 + 2 = ?"`가 바깥의 `question`으로 들어가고, `generator.next(4)`에 의해 `gen()`의 `result`에 `4`가 대입됨  
 	
-	|![js-generator1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-generator1.PNG?raw=true)|
-	|:---:|
-	|javascript.info 참고|
+ | ![js-generator1](https://github.com/siriyaoff/MDN-note/blob/master/images/js-generator1.PNG?raw=true) |
+ | :---------------------------------------------------------------------------------------------------: |
+ |                                         javascript.info 참고                                          |
 	
 	1. `generator.next()`에 의해 실행이 시작되고 `yield "2+2=?"`의 결과가 리턴됨  
 		이 시점에서 함수 흐름은 `(*)`에 멈춰있음
@@ -271,9 +274,9 @@ alert( generator.next(9).done ); // true
 ```
 - 첫 번째를 제외한 나머지 `next(value)`는 `value`를 현재 `yield`의 결과값이 되도록 전달하고, 다음 `yield`의 값을 가져옴
 
-|![js-generator2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-generator2.PNG?raw=true)|
-|:---:|
-|javascript.info 참고|
+| ![js-generator2](https://github.com/siriyaoff/MDN-note/blob/master/images/js-generator2.PNG?raw=true) |
+| :---------------------------------------------------------------------------------------------------: |
+|                                         javascript.info 참고                                          |
 
 ## generator.throw
 outer code도 `yield`의 결과가 되도록 generator 안으로 값을 전달할 수 있음  
@@ -335,14 +338,14 @@ g.next();        // { value: undefined, done: true }
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`function* f(...) { ... }`|generator function `f`를 선언|
-|`yield value`|generator 내부에서 외부와 값을 전달할 때 사용됨|
-|`f.next(value)`|generator `f`의 현재 `yield`의 값으로 `value`를 전달하고 다음 `yield`의 결과값을 받음|
-|`yield* <generator object>`|`<generator object>`의 결과값을 outer generator object의 `yield`의 결과값으로 사용|
-|`generator.throw(err)`|`generator`에 `err`를 던짐|
-|`generator.return(value)`|`generator`를 `value`를 가진 객체를 리턴함과 함께 끝냄|
+| code                        | description                                                                           |
+| :-------------------------- | :------------------------------------------------------------------------------------ |
+| `function* f(...) { ... }`  | generator function `f`를 선언                                                         |
+| `yield value`               | generator 내부에서 외부와 값을 전달할 때 사용됨                                       |
+| `f.next(value)`             | generator `f`의 현재 `yield`의 값으로 `value`를 전달하고 다음 `yield`의 결과값을 받음 |
+| `yield* <generator object>` | `<generator object>`의 결과값을 outer generator object의 `yield`의 결과값으로 사용    |
+| `generator.throw(err)`      | `generator`에 `err`를 던짐                                                            |
+| `generator.return(value)`   | `generator`를 `value`를 가진 객체를 리턴함과 함께 끝냄                                |
 
 - generator function을 실행하면 내부 코드가 실행되는게 아니라 generator object가 반환됨
 - generator는 iterable임  
@@ -465,11 +468,11 @@ let range = {
 
 iterator, async iterator의 차이:
 
-||Iterators|Async iterators|
-|:---|:---|:---|
-|Object method to provide iterator|`Symbol.iterator`|`Symbol.asyncIterator`|
-|`next()` return value is|any value|`Promise`|
-|to loop, use|`for...of`|`for await ...of`|
+|                                   | Iterators         | Async iterators        |
+| :-------------------------------- | :---------------- | :--------------------- |
+| Object method to provide iterator | `Symbol.iterator` | `Symbol.asyncIterator` |
+| `next()` return value is          | any value         | `Promise`              |
+| to loop, use                      | `for...of`        | `for await ...of`      |
 
 > #### The spread syntax `...` doesn't work asynchronously
 > asynchronous iterator에 대해서는 spread syntax를 사용할 수 없음!
@@ -616,16 +619,16 @@ async function* fetchCommits(repo) {
 
 regular iterator, async iterator 구현 차이:
 
-||Iterable|Async Iterable|
-|:---|:---|:---|
-|Method to provide iterator|`Symbol.iterator`|`Symbol.asyncIterator`|
-|`next()` return value is|`{value:..., done:...}`|`Promise` that resolves to `{value:..., done:...}`|
+|                            | Iterable                | Async Iterable                                     |
+| :------------------------- | :---------------------- | :------------------------------------------------- |
+| Method to provide iterator | `Symbol.iterator`       | `Symbol.asyncIterator`                             |
+| `next()` return value is   | `{value:..., done:...}` | `Promise` that resolves to `{value:..., done:...}` |
 
 regular generator, async generator 구현 차이:
 
-||Generators|Async Generators|
-|:---|:---|:---|
-|Declaration|`function*`|`async function*`|
-|`next()` return value is|`{value:..., done:...}`|`Promise` that resolves to `{value:..., done:...}`|
+|                          | Generators              | Async Generators                                   |
+| :----------------------- | :---------------------- | :------------------------------------------------- |
+| Declaration              | `function*`             | `async function*`                                  |
+| `next()` return value is | `{value:..., done:...}` | `Promise` that resolves to `{value:..., done:...}` |
 
 - browser 환경에서는 Stream API를 사용하면 이런 paginated data를 쉽게 다룰 수 있음

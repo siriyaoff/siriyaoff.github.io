@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "네트워크"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

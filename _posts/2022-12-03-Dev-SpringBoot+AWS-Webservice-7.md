@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Spring Boot와 AWS로 혼자 구현하는 웹 서비스 7 - 1인 개발 시 팁(Ch.11)"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

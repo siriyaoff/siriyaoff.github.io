@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "Spring Boot와 AWS로 혼자 구현하는 웹 서비스 1 - 초기 설정(Ch.01 - 02)"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:

@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "JSnote7: Object properties configuration"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
@@ -193,18 +196,18 @@ object에 대한 접근을 제한할 수 있는 method들이 있음:
 
 ## Summary
 
-|code|description|
-|:---|:---|
-|`Object.getOwnPropertyDescriptor(obj, propertyName)`|`obj`의 `propertyName`의 descriptor를 리턴|
-|`Object.defineProperty(obj, propertyName, descriptor)`|`obj`의 `propertyName`에 `descriptor`를 적용함<br>`obj` 리턴|
-|`Object.defineProperties(obj, descriptors)`|`obj`의 properties에 descriptors 적용<br>`obj` 리턴|
-|`Object.getOwnPropertyDescriptors(obj)`|`obj`의 모든 property의 descriptor 리턴|
-|`Object.preventExtensions(obj)`|`obj`에 새로운 property가 추가되는 것을 제한함|
-|`Object.seal(obj)`|property 추가/삭제가 제한, 모든 property에 대해 `configurable: false`가 적용됨<br>`obj` 리턴|
-|`Object.freeze(obj)`|property 추가/삭제/수정이 제한, 모든 property에 대해 `configurable: false, writable: false`가 적용됨<br>`obj` 리턴|
-|`Object.isExtensible(obj)`|새로운 property 추가가 제한되었는지 판별|
-|`Object.isSealed(obj)`|property 추가/삭제가 제한, 모든 property에 `configurable: false`가 적용되었는지 판별|
-|`Object.isFrozen(obj)`|property 추가/삭제/수정이 제한, 모든 property에 `configurable: false, writable: false`가 적용되었는지 판별|
+| code                                                   | description                                                                                                        |
+| :----------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| `Object.getOwnPropertyDescriptor(obj, propertyName)`   | `obj`의 `propertyName`의 descriptor를 리턴                                                                         |
+| `Object.defineProperty(obj, propertyName, descriptor)` | `obj`의 `propertyName`에 `descriptor`를 적용함<br>`obj` 리턴                                                       |
+| `Object.defineProperties(obj, descriptors)`            | `obj`의 properties에 descriptors 적용<br>`obj` 리턴                                                                |
+| `Object.getOwnPropertyDescriptors(obj)`                | `obj`의 모든 property의 descriptor 리턴                                                                            |
+| `Object.preventExtensions(obj)`                        | `obj`에 새로운 property가 추가되는 것을 제한함                                                                     |
+| `Object.seal(obj)`                                     | property 추가/삭제가 제한, 모든 property에 대해 `configurable: false`가 적용됨<br>`obj` 리턴                       |
+| `Object.freeze(obj)`                                   | property 추가/삭제/수정이 제한, 모든 property에 대해 `configurable: false, writable: false`가 적용됨<br>`obj` 리턴 |
+| `Object.isExtensible(obj)`                             | 새로운 property 추가가 제한되었는지 판별                                                                           |
+| `Object.isSealed(obj)`                                 | property 추가/삭제가 제한, 모든 property에 `configurable: false`가 적용되었는지 판별                               |
+| `Object.isFrozen(obj)`                                 | property 추가/삭제/수정이 제한, 모든 property에 `configurable: false, writable: false`가 적용되었는지 판별         |
 
 - `writable`, `enumerable`, `configurable` 총 3개의 flag가 존재함
 
