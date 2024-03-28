@@ -28,7 +28,7 @@ Node.js와 같은 서버 환경에서는 `node my.js`와 같은 command로 scrip
 ## The "script" tag
 HTML 문서 안에는 `<script>` tag를 이용해서 어디든 JS program을 삽입할 수 있음
 
-#### Example
+**Example**  
 ```html
 <script>
   alert('Hello, world!');
@@ -60,7 +60,7 @@ HTML 문서 안에는 `<script>` tag를 이용해서 어디든 JS program을 삽
 ## External scripts
 `src` attribute를 이용해서 script files를 넣을 수도 있음
 
-#### Example
+**Example**  
 ```html
 <script src="/path/to/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
@@ -110,7 +110,7 @@ alert(3+
 - `6`이 출력됨
 - statement가 완전하지 않기 때문에 semicolon을 넣지 않음
 
-#### Example
+**Example**  
 ```javascript
 alert("Hello")
 
@@ -179,7 +179,7 @@ class, module은 자동으로 strict mode를 활성화시키기 때문에 이것
 변수 : 이름을 가진 저장 공간  
 `let` keyword를 이용해서 변수 선언 가능  
 
-#### Example
+**Example**  
 ```javascript
 let message='Hello';
 
@@ -339,7 +339,7 @@ alert(age);
 
 `typeof x`는 type name을 string으로 반환함
 
-#### Example
+**Example**  
 ```javascript
 typeof undefined // "undefined"
 typeof 0 // "number"
@@ -371,7 +371,7 @@ input field, OK, Cancel 두 버튼이 있는 modal window를 띄움
 
 ※ `[...]`는 parameter가 optional하다는 것을 나타냄
 
-#### Example
+**Example**  
 JS:  
 ```javascript
 let age = prompt('How old are you?', 100);
@@ -423,7 +423,7 @@ Numeric conversion rules:
 | `true` and `false` | `1` and `0`                                                                                        |
 | `string`           | Trim 후 남아있는 string이 없으면 `0`, 아니면 숫자를 읽음, string에 숫자만 있는게 아니면 `NaN` 리턴 |
 
-#### Example
+**Example**  
 ```javascript
 alert(Number("   123   ")); // 123
 alert(Number("123z")); // NaN
@@ -524,7 +524,7 @@ string도 비교가 가능함(사전 순으로)
 ## Comparison of different types
 비교하는 값들의 type이 다를 경우 값들을 `number`로 변환해서 비교함  
 
-#### Example
+**Example**  
 ```javascript
 alert('2'>1); // true;
 alert('01'==1); // true;
@@ -675,7 +675,7 @@ result = value1 && value2 && value3;
 	- 만약 모든 operand가 계산되면(모든 결과가 `true`면), 마지막 operand를 반환
 - 마찬가지로 논리연산자로 사용 가능(애초에 falsy가 반환되면 조건문 실행이 안됨)
 
-#### Example
+**Example**  
 ```javascript
 alert( 1 && 2 && null && 3 ); // null
 alert( 1 && 2 && 3 ); // 3, the last one
@@ -741,7 +741,7 @@ alert(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder
 	- `null/undefined`를 다른 falsy value와 구별함  
 		=> 값이 진짜로 비어있거나 설정되지 않았는지 판단 가능
 
-#### Example
+**Example**  
 ```javascript
 let height = 0;
 
@@ -923,7 +923,7 @@ sayHi(); // Hello    //     this still works too (why wouldn't it)
 함수 b, c가 함수 a에서 필요시 실행될 수 있음  
 이 때 함수 b, c를 함수 a의 *callback functions* 또는 *callbacks*라고 함
 
-#### Example
+**Example**  
 ```javascript
 function ask(question, yes, no) {
   if (confirm(question)) yes()

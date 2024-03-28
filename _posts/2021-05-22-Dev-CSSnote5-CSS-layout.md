@@ -70,7 +70,7 @@ Flexbox(Flexible Box) : 1차원으로 elements를 편하게 layout하기 위해 
 `display: flex;`를 parent element에 적용  
 => parent element를 flexbox, child elements를 flex item으로 layout
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .wrapper {
@@ -127,7 +127,7 @@ HTML:
 Grid : 2차원으로 elements를 layout하기 위해 만들어짐  
 `display: grid;`를 parent element에 적용
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .wrapper {
@@ -203,7 +203,7 @@ possible values:
 - `none`
 - `inherit`
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .box {
@@ -386,7 +386,7 @@ table에 관한 CSS properties는 table이 아닌 elements에도 적용가능함
 
 `display`에 `table`, `table-row`, `table-cell`, `table-caption` 등의 값을 넣어서 구현
 
-#### Example
+**Example**  
 CSS:  
 ```css
 html {
@@ -457,7 +457,7 @@ Multi-column은 `column-count`, `column-width` 등의 properties로 구현 가�
 - `column-count` : 열 개수를 지정
 - `column-width` : 열 너비를 지정해서 viewport에서 가능한한 많은 열 배치
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .container {
@@ -589,7 +589,7 @@ article {
 flex container로 만들 element에 `display: flex;`를 적용시켜서 flex container를 구현  
 => 자동으로 child elements가 flex items가 됨
 
-#### Example
+**Example**  
 `style.css`에 아래 rule을 추가하고 유지:  
 ```css
 section {
@@ -619,7 +619,7 @@ section {
 possible value : `row`, `column`, `row-reverse`, `column-reverse` (default : `row`)  
 main axis가 명시된 후 flex item들이 나열되는 방향은 browser's default language의 방향에 따름(rl or lr)
 
-#### Example
+**Example**  
 `style.css`의 `section` rule에 아래 declaration을 임시로 추가하면:  
 ```css
 flex-direction: column;
@@ -657,7 +657,7 @@ flex: 200px;
 ## flex-flow shorthand
 `flex-direction`, `flex-wrap` properties를 `flex-flow` shorthand property로 줄여쓸 수 있음
 
-#### Example
+**Example**  
 ```css
 flex-direction: row;
 flex-wrap: wrap;
@@ -795,7 +795,7 @@ Source order(HTML에서 순서)를 건드리지 않고 flex items의 layout orde
 flex item에 `order` property를 적용해서 순서를 정함  
 accessibility가 떨어질 수 있음
 
-#### Example
+**Example**  
 `style.css`에 아래 rule을 추가:  
 ```css
 button:first-child {
@@ -1030,7 +1030,7 @@ Use `fr` unit to flexibly size grid rows and columns
 `fr` represents *one* fraction of the available space in the grid container  
 => `flex-grow`의 proportional value와 비슷하게, grid container의 남은 공간을 `fr`끼리 나눠가짐
 
-#### Example
+**Example**  
 `style.css`의 `.container` rule을 변경:  
 ```css
 .container {
@@ -1050,7 +1050,7 @@ Use `fr` unit to flexibly size grid rows and columns
 ### Gaps between tracks
 `column-gap`, `row-gap`, `gap` properties를 사용해서 gutter 설정 가능
 
-#### Example
+**Example**  
 `style.css`의 `.container` rule을 변경:  
 ```css
 .container {
@@ -1080,7 +1080,7 @@ e.g. `repeat(3, 1fr 2fr)` is equal to `1fr 2fr 1fr 2fr 1fr 2fr`
 	- `auto`로 sizing됨 : content를 채울 만큼 커짐
 	- `grid-auto-rows`, `grid-auto-columns`를 사용해서 implicit grid에 size를 선언 가능<br>implicit grid는 몇 개로 선언될 지 모르기 때문에 size를 한 번에 정의해야 함
 
-#### Example
+**Example**  
 `style.css`의 `.container` rule을 변경:  
 ```css
 .container {
@@ -1097,7 +1097,7 @@ e.g. `repeat(3, 1fr 2fr)` is equal to `1fr 2fr 1fr 2fr 1fr 2fr`
 
 - explicit grid, implicit grid을 둘 다 사용할 수 있음
 
-#### Example
+**Example**  
 ```css
 .container {
   grid-template-columns: 50px;
@@ -1131,7 +1131,7 @@ e.g. `grid-auto-rows: minmax(100px, auto);`
 `grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));`  
 와 같이 사용 가능
 
-#### Example
+**Example**  
 `style.css`의 `.container` rule을 변경:  
 ```css
 .container {
@@ -1161,7 +1161,7 @@ grid의 line은 1에서 시작하고, writing mode에 의해서 방향이 결정
 `grid-column`, `grid-row` shorthand properties 사용 가능  
 (`/`를 이용해서 구분)
 
-#### Example
+**Example**  
 CSS:  
 ```css
 header {
@@ -1196,7 +1196,7 @@ footer {
 ## Positioning with grid-template-areas
 `grid-template-areas` property를 이용해서 items를 배치할 수 있음
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .container {
@@ -1242,7 +1242,7 @@ footer {
 ## A CSS Grid, grid framework
 Grid frameworks는 12-16 column grids임
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .container {
@@ -1452,7 +1452,7 @@ possible values:
 - `right` : 오른쪽에 floated item이 없게 배치됨
 - `both` : 양쪽에 floated item이 없게 배치됨
 
-#### Example
+**Example**  
 두 번째 `<p>`에 아래 CSS 추가:  
 ```css
 .cleared {
@@ -1597,7 +1597,7 @@ span {
 `position` property의 default value  
 element를 normal flow에서의 위치에 배치
 
-#### Example
+**Example**  
 두 번째 p에 `positioned` class 추가하고 rule 선언:  
 HTML:  
 ```html
@@ -1625,7 +1625,7 @@ element가 normal flow에 의해 배치된 다음 `top`, `bottom`, `left`, `righ
 ### Introducing top, bottom, left, and right
 위에 4개의 properties(`top`, `bottom`, `left`, `right`)는 positioned element를 옮기기 위해 `position`과 함께 사용됨
 
-#### Example
+**Example**  
 `.positioned` rule을 변경:  
 ```css
 .positioned {
@@ -1647,7 +1647,7 @@ element가 normal flow에 의해 배치된 다음 `top`, `bottom`, `left`, `righ
 absolute positioned element는 normal document layout flow에서 제외되고, 자신만의 layer에 배치되어 다른 elements와 간섭하지 않음  
 absolute positioning에서는 `top`, `bottom`, `left`, `right`가 normal flow에서의 relative position 기준이 아니라 containing block을 기준으로 거리를 벌림
 
-#### Example
+**Example**  
 `.positioned` rule을 변경:  
 ```css
 position: absolute;
@@ -1714,7 +1714,7 @@ Fixed positioning은 absolute와 동일하게 작동하지만, 기준이 다름
 - 보통 viewport에 relative함
 - ancestor 중에 `transform` property를 이용해서 회전하는 등의 조건을 충족하는 element가 있으면 그 element의 padding box에 relative함
 
-#### Example
+**Example**  
 `p:nth-of-type(1)`, `.positioned` rule 지우고 아래 CSS를 추가:  
 ```css
 body {
@@ -1778,7 +1778,7 @@ i.e. 한 열만 넓게 하거나 배경을 바꾸는 등의 작업 불가
 	- `column-rule-color` `column-rule-style` `column-rule-width`의 shorthand property임
 	- `border` property와 비슷하게 설정
 
-#### Example
+**Example**  
 ```css
 .container {
   column-width: 200px;
@@ -1798,7 +1798,7 @@ values available:
 - `none` : default, span하지 않음
 - `all` : 모든 열을 가로질러 span함
 
-#### Example
+**Example**  
 ![css-multicol-ex2](https://github.com/siriyaoff/MDN-note/blob/master/images/css-multicol-ex2.PNG?raw=true)
 
 ## Columns and fragmentation
@@ -1862,7 +1862,7 @@ Modern CSS layout methods are inherently responsive
 반응형 디자인은 media query 덕분에 구현될 수 있었음  
 Media Queries는 user's screen에 관한 조건에 따라서 CSS를 선택적으로 적용할 수 있게 해줌
 
-#### Example
+**Example**  
 ```css
 @media screen and (min-width: 800px) {
   .container {
@@ -1925,7 +1925,7 @@ srcset, sizes로 media query 같은 효과를 낼 수 있음 + srcset으로 화�
 화면에 따라서 글자 크기를 조절하는 것  
 media query를 이용
 
-#### Example
+**Example**  
 ```css
 h1 {
   font-size: 2rem;
@@ -1998,7 +1998,7 @@ The possible types of media:
 - `screen`
 - `speech`
 
-#### Example
+**Example**  
 ```css
 @media print {
     body {
@@ -2600,7 +2600,7 @@ float와 관련된 `clear` property는 적용된 item이 grid item이 되면 효
 simpler layout based on older and well-supported techniques를 적용한 다음, 대부분의 사용자를 위해 newer CSS를 적용하는 것이 나음  
 하지만, 저렇게 서로 간섭을 막을 수 없는 경우도 존재함
 
-#### Example
+**Example**  
 percentage widths를 floated item에 적용해서 grid처럼 보이게 했을 때임
 
 HTML:  
@@ -2644,7 +2644,7 @@ CSS:
 feature queries를 이용해서 browser가 특정한 CSS feature를 지원하는지 테스트할 수 있음  
 => 위에서의 percentage width같은 문제를 해결할 수 있음
 
-#### Example
+**Example**  
 위 예제에서 아래 feature query만 추가:  
 ```css
 @supports (display: grid) {

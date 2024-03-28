@@ -57,7 +57,7 @@ Some CSS property values in the parent elements are inherited by their child ele
 These three concepts(cascade, specificity, and inheritance) together control which CSS applies to what element
 
 ## Understanding inheritance
-#### Example
+**Example**  
 CSS:  
 ```css
 .main {
@@ -115,7 +115,7 @@ There are four special universal property values for controlling inheritance. Ev
 	- property가 `color`같은거면 `inherit`, `width`같은거면 `initial`과 같이 취급, shorthand로 다 같이 정의할 때 omitting으로 문제 일어나지 않도록 쓰는 용도인듯
 - `revert` : newer value, limited browser support
 
-#### Example
+**Example**  
 CSS:  
 ```css
 body {
@@ -154,7 +154,7 @@ HTML:
 ### Resetting all property values
 The CSS shorthand property `all` represents all properties. So we can use it usefully when we debug. If we apply `all: unset;` declaration, all rules applied will be initialized except the inherited properties.
 
-#### Example
+**Example**  
 CSS:  
 ```css
 blockquote {
@@ -210,7 +210,7 @@ The amount of specificity is measured using four different values(thousands, hun
 
 **Note**: The universal selector(`*`), combinators(`+`, `>`, `~`, `' '`), and negation pseudo-class(`:not`) have no effect on specificity
 
-#### Example
+**Example**  
 ```css
 /* specificity: 0101 */
 #outer a {
@@ -253,7 +253,7 @@ div div .nav:nth-child(2) a:hover {
 ### !important
 `!important` makes a declaration the most specific thing.
 
-#### Example
+**Example**  
 CSS:  
 ```css
 
@@ -419,7 +419,7 @@ Some early pseudo-elements used the single colon syntax, modern browsers support
 ### Generating content with ::before and ::after
 These(`::before`, `::after`) are used along with the `content` property to insert content into your document using CSS. This use is referred to as "**Generated Content**" in CSS.
 
-#### Example
+**Example**  
 ```css
 .box::before {
   content: "This should show before the other content.";
@@ -436,7 +436,7 @@ The combinators combine other selectors in order to target elements within our d
 The descendant combinator(`' '`) combines two selectors(`A B`) such that `B` is selected if `B` has `A` as its ancestor.  
 Selectors that utilize a descendant combinator are called *descendant selectors*.
 
-#### Example
+**Example**  
 `body article p` selects `<p>` inside `<article>` which is inside `<body>`.
 
 ### Child combinator
@@ -454,13 +454,13 @@ article > p {}
 The adjacent sibling selector(+) is placed between two CSS selectors(`A + B`). It matches only those elements matched by the `B` that are the next sibling element of the `A`.  
 A common use case is to do something with a paragraph that follows a heading, such as *abstract*.
 
-#### Example
+**Example**  
 `h1 + p` selects paragraphs after `<h1>`
 
 ### General sibling combinator
 The general sibling combinator(`~`) combines two selectors(`A ~ B`). It selects all the B that are siblings of A, even not directly adjacent.
 
-#### Example
+**Example**  
 `p ~ img` selects all `<img>` elements that come anywhere **after** `<p>` elements.
 
 ### Using combinators
@@ -601,7 +601,7 @@ Layers in the block box:
 ### The standard CSS box model
 In the standard box model, `width` and `height` defines the width and height of the *content box*. Then any padding and border is added.
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .box {
@@ -623,7 +623,7 @@ The space taken up by the box using the standard box model will be 410px(350+25+
 ### The alternative CSS box model
 In the alternative box model, `width` is the width of the visible box(width to the border). Therefore the content area width is `width` minus the width for the padding and border.  
 
-#### Example
+**Example**  
 The same CSS as used above would give the below result.  
 ![alternative box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/alternate-box-model.png)
 
@@ -655,7 +655,7 @@ If there are two elements whose margins touch,
 ### Borders
 There are four borders(*top*, *right*, *bottom*, *left*), and each border has a *style*, *width* and *color* that we might want to manipulate.
 
-#### Example
+**Example**  
 ```css
 border: 1px groove grey;
 border-top: 1px double grey;
@@ -677,7 +677,7 @@ As we mentioned above at the **Inline boxes**,
 - vertical margin and padding are respected but don't change the relationship of other content to our inline box
 - horizontal margin and padding are respected and cause other content to move away from the box
 
-#### Example
+**Example**  
 CSS:  
 ```css
 span {
@@ -707,7 +707,7 @@ HTML:
 - `padding`, `margin`, and `border` will cause other elements to be pushed away from the box  
 => avoid the overlapping like above, but inline
 
-#### Example
+**Example**  
 CSS:  
 ```css
 span {
@@ -777,7 +777,7 @@ The most common `background-position` values take two individual values(a horizo
 It can take lengths, percentages, and keywords(`top`, `bottom`, `right`, `left`, `center`).  
 `background-position` 은 `background-position-x`, `background-position-y`의 shorthand임에 유의
 
-#### Example
+**Example**  
 ```css
 background-position: top center;
 background-position: 20px 10%;
@@ -792,7 +792,7 @@ background-position: top 20px right 10px;
 ### Gradient backgrounds
 A gradient - when used for a background - acts just like an image and is also set by using the `background-image` property.
 
-#### Example
+**Example**  
 ```css
 background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
 
@@ -804,7 +804,7 @@ background-size: 100px 100px;
 ### Multiple background images
 It is possible to have multiple background images in a single property value, by separating with commas.
 
-#### Example
+**Example**  
 ```css
 background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
@@ -828,7 +828,7 @@ A few rules to use shorthand values:
 - `background-color`(solid background) may only be specified after the final comma
 - the value of `background-size` must be included immediately after `background-position`, separated with the `/` character, such as `center / 80%`
 
-#### Example
+**Example**  
 ```css
 .box {
   background:   
@@ -877,7 +877,7 @@ Arabic과 같이 horizontal하지만 right-to-left로 읽고 쓰는 언어도 �
 ## Logical properties and values
 A lot of properties are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.  
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .box {
@@ -1127,7 +1127,7 @@ When you set margin and padding in percentages, the value is calculated from the
 `min-height` property makes the box to be always at least the height.  
 A common use of `max-width` is to cause images to scale down if there is not enough space to display them at their intrinsic width while making sure they don't become larger than that width.
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .box {
@@ -1186,7 +1186,7 @@ box에 `width: 100px;`를 적용하고 img를 넣으면 overflow할 수도 있�
 - `object-fit: cover;`를 img에 적용시키면 img가 box를 꽉 채움(aspect ratio를 유지)
 - `object-fit: contain;`를 img에 적용시키면 img가 box안에 들어감(aspect ratio를 유지하면서 들어가기 때문에 box에 빈 공간이 남음)
 
-#### Example
+**Example**  
 CSS:  
 ```css
 .box {
@@ -1664,7 +1664,7 @@ Element : e.g. list item, title that is tied to the block it is in
 Modifier : flag on a block or element that changes the styling or behavior  
 extensive use of dashes and underscores in the CSS classes가 특징임
 
-#### Example
+**Example**  
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
@@ -1691,7 +1691,7 @@ Sass : the most popular pre-processor
 지금은 CSS에도 custom properties를 이용해서 변수를 선언 가능  
 Sass에서는 `$`를 prefix로 붙여서 변수 선언 가능
 
-#### Example
+**Example**  
 ```css
 $base-color: #c6538c;
 
@@ -1789,7 +1789,7 @@ blend mode가 적용된 element는 다른 element와 겹쳐지면 blend됨
 - `shape-outside`로 이미지가 실제론 직사각형이어도 한글에서 글에 둘러싸이는 것처럼 만들 수 있음
 - floated elements에 대해서만 적용 가능함
 
-#### Example
+**Example**  
 CSS:  
 ```css
 img {
@@ -1814,7 +1814,7 @@ HTML:
 - `circle(<percentage>)`은 이미지의 중심에서부터 `<percentage>*이미지의 width`만큼 원을 그려서 shape으로 활용하는 듯
 
 ## -webkit-background-clip: text
-#### Example
+**Example**  
 CSS:  
 ```css
 h2 {

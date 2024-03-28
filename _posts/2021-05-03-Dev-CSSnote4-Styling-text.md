@@ -162,7 +162,7 @@ Use `url()` to link the image
 근데 이 property는 bullet의 position, size 등을 조절하기 어려움  
 오히려 `<li>`에 `background`를 이용하는게 더 편함
 
-#### Example
+**Example**  
 CSS:  
 ```css
 ul {
@@ -187,7 +187,7 @@ default : `disc`, `none`, `outside`
 순서는 상관없음  
 만약 `type`, `image`가 둘 다 명시된 경우 type이 fallback으로 사용됨
 
-#### Example
+**Example**  
 ```css
 ul {
   list-style-type: square;
@@ -291,7 +291,7 @@ a[href*="http"] {
 ## Styling links as buttons
 `<li>`에 `display: inline;`을 적용하여 navigation bar를 구현할 수 있음
 
-#### Example
+**Example**  
 CSS:  
 ```css
 body,html {
@@ -359,7 +359,7 @@ Web fonts를 사용하면 download해야 하는 font files를 지정할 수 있�
 CSS의 가장 윗부분에 `@font-face` block을 정의해야 `@font-face`의 font family를 사용 가능  
 
 
-#### Example
+**Example**  
 CSS:  
 ```css
 @font-face {
