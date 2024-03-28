@@ -100,7 +100,7 @@ user.name = "Pete"; // Error: Cannot assign to read only property 'name'
 - `user.name`이 `"Pete"`로 바뀌지 않음  
 	∵ non-writable하기 때문
 
-> #### non-writable한 property를 수정할 때 에러는 strict mode에서만 발생함  
+> **non-writable한 property를 수정할 때 에러는 strict mode에서만 발생함**  
 > non-strict mode에서 flag에 위반하는 코드는 그냥 무시되고 에러를 발생시키진 않음
 
 ## Non-enumerable
@@ -263,7 +263,7 @@ accessor property의 descriptor에는 `value`와 `writable` 대신 `get`과 `set
 - `enumerable` : data property의 그것과 같음
 - `configurable` : data property의 그것과 같음
 
-#### Example
+**Example**  
 ```javascript
 let user = {
   name: "John",

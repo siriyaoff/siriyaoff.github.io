@@ -42,7 +42,8 @@ primitive를 method와 함께 사용하기 위해 아래와 같은 방법을 사
 object wrapper는 각각의 primitive type에 따라 다르며, primitive의 이름과 같음(`String`, `Number`, `Boolean`, `Symbol`)  
 각각 다른 methods를 제공함
 
-#### Example
+**Example**
+
 string method `str.toUpperCase()`는 `str`를 capitalize한 것을 반환함:  
 ```javascript
 let str = "Hello";
@@ -371,7 +372,8 @@ ASCII를 이용하지 않고 UTF-16을 이용!
 `str.codePointAt(pos)` : `str`의 `pos` 번째 문자의 코드 반환  
 `String.fromCodePoint(code)` : `code`에 해당하는 문자 반환
 
-#### Example
+**Example**
+
 ```javascript
 alert( "z".codePointAt(0) ); // 122
 alert( "Z".codePointAt(0) ); // 90
@@ -664,7 +666,8 @@ arr.splice(start[, deleteCount, elem1, ..., elemN]);
 - `arr`의 `start` 번째부터 `deleteCount`만큼 지운 다음 `elem1, ..., elemN`을 삽입하고,  
 	지운 원소들의 배열을 반환함
 
-#### Example
+**Example**
+
 ```javascript
 let arr = ["I", "study", "JavaScript", "right", "now"];
 
@@ -743,7 +746,8 @@ arr.forEach(function(item, index, array) { ... });
 - `item`, `index`, `array`는 필요하면 함수의 parameter로 사용 가능
 - parameter name은 `item/index/array`로 고정된게 아니고 순서대로 저렇게 들어가는 듯
 
-#### Example
+**Example**
+
 ```javascript
 // for each element call alert
 ["Bilbo", "Gandalf", "Nazgul"].forEach(alert);
@@ -781,7 +785,8 @@ let result = arr.findIndex(function(item, index, array) { ... });
 - argument로 들어가는 함수가 `true`를 반환할 경우 탐색을 멈추고 그 `item/index`을 반환  
 	만족하는 `item/index`가 없을 경우 `undefined/-1` 반환
 
-#### Example
+**Example**
+
 ```javascript
 let users = [
   {id: 1, name: "John"},
@@ -802,7 +807,8 @@ let results = arr.filter(function(item, index, array) { ... });
 	반복이 끝난 후 result를 반환(만족하는 item이 없었다면 empty array가 반환됨)
 - `find`와 유사하지만, `find`는 만족하는 item 하나만 찾아주는 반면 `filter`는 만족하는 모든 item을 찾아줌
 
-#### Example
+**Example**
+
 ```javascript
 let users = [
   {id: 1, name: "John"},
@@ -940,7 +946,8 @@ arr.map(func, thisArg);
 - `thisArg`는 optional last argument임
 - `thisArg`의 값은 `func`의 `this`가 됨
 
-#### Example
+**Example**
+
 ```javascript
 let army = {
   minAge: 18,
@@ -1253,7 +1260,8 @@ cf. 일반 객체는 객체를 key로 사용하면 모든 객체가 `"[object Ob
 - `map.entries()` : `[key, value]`의 iterable을 리턴
 	- `Map`을 `for...of`를 사용하여 순회할 때 default로 호출됨
 
-#### Example
+**Example**
+
 ```javascript
 let recipeMap = new Map([
   ['cucumber', 500],
@@ -1436,7 +1444,8 @@ john = null; // overwrite the reference
 third-party library에 속하거나 다른 이유로 객체 안에 property를 추가하는게 적합하지 않은 상황에서, 객체가 살아있는 동안에만 유효한 데이터를 저장하고 싶을 때 `WeakMap`이 적합한 자료구조임  
 `WeakMap`에 데이터를 넣으면 key인 object가 garbage collect될 때 데이터도 자동으로 삭제되기 때문
 
-#### Example
+**Example**
+
 ```javascript
 // 📁 visitsCount.js using Map
 let visitsCountMap = new Map(); // map: user => visits count
@@ -1930,7 +1939,8 @@ function diffGetTime(date1, date2) {
 - `Z` : timezone(`+-hh:mm`)
 	- `Z`만 사용하면 UTC+0을 나타냄
 
-#### Example
+**Example**
+
 ```javascript
 let ms = Date.parse('2012-01-26T13:51:50.417-07:00');
 alert(ms); // 1327611110417  (timestamp)
@@ -1983,7 +1993,8 @@ JS는 아래 메소드들을 지원함:
 - `JSON.stringify(obj)` : `obj`를 JSON으로 변환
 - `JSON.parse` : JSON을 객체로 변환
 
-#### Example
+**Example**
+
 ```javascript
 let student = {
   name: 'John',
@@ -2059,7 +2070,8 @@ let json = JSON.stringify(value[, replacer[, space]]);
 	- mapping function은 인코딩하지 않을 property에 대해서 `undefined`를 리턴하면 됨
 - `space` : indent 설정
 
-#### Example
+**Example**
+
 ```javascript
 let room = {
   number: 23
@@ -2120,7 +2132,8 @@ occupiedBy: [object Object]
 `toString`을 구현해서 객체가 `String`으로 변환되는 것을 조절하는 것처럼,  
 `toJSON`을 구현해서 객체가 JSON으로 변환되는 것을 조절함(`toJSON`이 존재하면 `JSON.stringify`가 자동적으로 `toJSON`을 호출함)
 
-#### Example
+**Example**
+
 ```javascript
 let room = {
   number: 23,

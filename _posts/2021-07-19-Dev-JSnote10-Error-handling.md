@@ -42,7 +42,8 @@ try {
 	
 즉, `try {...}`에서 에러가 발생해도 스크립트가 멈추지 않고 `catch`에서 그것을 해결할 수 있는 기회가 주어지는 것임
 
-#### Example
+**Example**
+
 errorless example:  
 ```javascript
 try {
@@ -67,7 +68,7 @@ try {
 ```
 - `(1)`, `(3)`만 출력됨
 
-> #### `try...catch`는 runtime error에 대해서만 작동함!
+> **`try...catch`는 runtime error에 대해서만 작동함!**  
 > `try...catch`가 작동하기 위해서는 스크립트가 실행 가능해야 함  
 > 즉, 문법적으로 올바른 스크립트여야 함
 > 
@@ -76,7 +77,7 @@ try {
 >
 > 따라서 `try...catch`는 올바르게 쓰여진 코드에서 발생하는 runtime error(또는 exception)에 대해서만 작동함
 
-> #### `try...catch`는 동기적으로 작동함
+> **`try...catch`는 동기적으로 작동함**  
 > `setTimeout`과 같은 scheduled code에서 일어나는 exception은 `try...catch`에서 잡을 수 없음:  
 > ```javascript
 > try {
@@ -110,7 +111,8 @@ try {
 - `stack` : 현재 call stack  
 	비표준이지만, 대부분의 환경에서 지원됨
 
-#### Example
+**Example**
+
 ```javascript
 try {
   lalala; // error, variable is not defined!
@@ -326,7 +328,8 @@ try {
 - 에러가 발생하지 않으면 `try` 다음 실행됨
 - 에러가 발생하면 `catch` 다음 실행됨
 
-#### Example
+**Example**
+
 ```javascript
 try {
   alert( 'try' );
@@ -369,7 +372,7 @@ alert( `execution took ${diff}ms` );
 - 추가로, `finally`를 사용하면 에러 유무에 상관없이 시간 측정을 제대로 할 수 있음
 - 함수는 `return`이나 `throw`를 만나면 종료됨!
 
-> #### `finally` and `return`
+> **`finally` and `return`**  
 > `try...catch` 안에 `return`이 있어도 `finally`가 작동함:  
 > ```javascript
 > function func() {
@@ -388,7 +391,7 @@ alert( `execution took ${diff}ms` );
 > - `"finally"`가 출력된 다음 `1`이 출력됨
 > - `return`이 실행되기 전에 `finally`가 먼저 실행됨
 
-> #### `try...finally`
+> **`try...finally`**  
 > `try...finally`는 에러를 처리하지 않고 넘길 때 유용함:  
 > ```javascript
 > function func() {
@@ -404,7 +407,7 @@ alert( `execution took ${diff}ms` );
 > 	에러가 발생하지 않으면 `finally`가 끝난 다음 함수의 나머지 코드도 실행됨
 
 ## Global catch
-> #### Environment-specific
+> **Environment-specific**  
 > 이 내용은 core JS의 내용이 아님
 
 `try...catch` 밖에서 에러가 나는 상황에 대비해서, specification에는 없지만 대부분의 환경에서 지원하는 것이 있음  
@@ -420,7 +423,8 @@ window.onerror = function(message, url, line, col, error) {
 - `line`, `col` : 에러가 발생한 위치
 - `error` : 에러 객체
 
-#### Example
+**Example**
+
 ```javascript
 <script>
   window.onerror = function(message, url, line, col, error) {
@@ -622,7 +626,8 @@ try {
 이렇게 되면 `readUser`를 호출한 이후에는 `ReadError`가 발생했는지만 확인하면 됨  
 모든 에러들을 일일히 확인할 필요가 없음!
 
-#### Example
+**Example**
+
 ```javascript
 class ReadError extends Error {
   constructor(message, cause) {

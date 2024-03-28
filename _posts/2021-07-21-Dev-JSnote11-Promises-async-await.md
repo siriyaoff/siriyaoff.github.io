@@ -23,7 +23,7 @@ tags:
 
 Promises, async/await
 # Introduction: callbacks
-> #### 이 article에서는 browser method를 사용함
+> **이 article에서는 browser method를 사용함**  
 > callback, promise와 다른 추상적인 개념을 소개하기 위해 스크립트 로딩, 페이지 조작과 같은 browser method를 사용함  
 
 많은 함수들은 호스트의 JS에서 제공되는데, 이 함수들을 이용해서 비동기적(asynchronous) 동작을 schedule할 수 있음  
@@ -190,7 +190,8 @@ let promise = new Promise(function(resolve, reject) {
 	- `result` : `undefined`로 초기화됨  
 		`resolve(value)`가 호출되었을 때는 `value`, `reject(error)`가 호출되었을 때는 `error`로 바뀜
 
-#### Example
+**Example**
+
 ```javascript
 // (1)
 let promise = new Promise(function(resolve, reject) {
@@ -210,7 +211,7 @@ let promise = new Promise(function(resolve, reject) {
 executor는 작업을 수행하고 `resolve`나 `reject`를 호출해서 현재 promise 객체의 state를 바꿈  
 `state`가 `"fulfilled"` 또는 `"rejected"`인 객체는 "settled"라 하고, 아직 callback이 실행되지 않은 객체는 "pending" promise라고 함
 
-> #### 단 하나의 callback만 실행할 수 있음
+> **단 하나의 callback만 실행할 수 있음**  
 > executor에서는 `resolve`나 `reject` 중 하나를 한 번만 호출할 수 있음  
 > 그 이후의 `resolve`나 `reject`는 무시됨:  
 > ```javascript
@@ -226,10 +227,10 @@ executor는 작업을 수행하고 `resolve`나 `reject`를 호출해서 현재 
 > 또한 `resolve`나 `reject`는 단 하나의 argument(또는 생략)만을 가짐  
 > (나머지는 무시됨)
 
-> #### Reject with `Error` objects
+> **Reject with `Error` objects**  
 > `reject`도 `resolve`처럼 argument로 어떤 것이든 가능하지만, 웬만하면 `Error` 객체를 넣는게 좋음
 
-> #### The `state` and `result` are internal
+> **The `state` and `result` are internal**  
 > `state`와 `result`는 Promise 객체의 내부 property이기 때문에 우리가 직접 접근할 수 없음  
 > `.then`, `.catch`, `.finally` method를 사용해서 접근해야 함
 
@@ -318,7 +319,7 @@ new Promise((resolve, reject) => {
 	  .catch(err => alert(err));  // <-- .catch handles the error object
 	```
 
-> #### We can attach handlers to settled promises
+> **We can attach handlers to settled promises**  
 > promise가 pending 상태이면 `.then/catch/finally` handler가 기다리지만, settled일 경우 바로 실행됨:  
 > ```javascript
 > let promise = new Promise(resolve => resolve("done!"));
@@ -417,7 +418,7 @@ new Promise(function(resolve, reject) {
 - `promise.then`은 promise를 리턴하기 때문에 chaining이 가능함  
 	handler가 값을 리턴하면 그것은 promise의 result가 됨  
 
-> #### chaining 중간에 error를 반환해서 catch하는 것도 가능한가?
+> **chaining 중간에 error를 반환해서 catch하는 것도 가능한가?**  
 > handler 안에서 에러를 reject하면 됨
 
 하나의 promise에 여러 개의 `then`을 추가하는 것은 chaining이 아님:  
@@ -506,7 +507,7 @@ loadScript("/article/promise-chaining/one.js").then(script1 => {
 - 하지만 이렇게 구현하면 오른쪽으로 자라기 때문에 중첩이 많아지면 "pyramid of doom"이 발생함  
 	arrow function을 사용하면 `.then`이 닫히기 전에 chaining을 해야 하기 때문에 이렇게 됨
 
-> #### Thenables
+> **Thenables**  
 > 엄밀히 말하면, handler는 promise를 리턴하는게 아니라, "thenable" object를 리턴함  
 > thenable object는 `.then` method를 가지는 객체를 말함  
 > 이 객체는 써드파티가 promise와 호환가능한 객체를 구현하는 것에서부터 시작됨  
@@ -735,7 +736,8 @@ promise에서도 비슷한 것이 가능함
 `.catch` 안에 `throw`를 넣으면 제어 흐름이 그 다음의 가장 가까운 error handler로 넘어감  
 에러를 처리한 다음에는 chain 상 이후의 handler 중 가장 가까운 `.then`으로 넘어감
 
-#### Example
+**Example**
+
 ```javascript
 new Promise((resolve, reject) => {
   throw new Error("Whoops!");
@@ -860,14 +862,14 @@ Promise.all([
 ]).catch(alert); // Error: Whoops!
 ```
 
-> #### In case of an error, other promises are ignored
+> **In case of an error, other promises are ignored**  
 > 하나의 promise가 reject되면, `Promise.all`은 즉시 reject하고 배열 안의 다른 promise들의 결과는 지움  
 > 여러 개의 `fetch`가 있었고 그 중 하나가 실패했다고 가정하면, 나머지 `fetch`가 그대로 진행되어 완료되지만, `Promise.all`이 그 결과를 무시함
 >
 > promise에는 취소의 개념이 없기 때문에 `Promise.all`이 promise를 취소할 수는 없음  
 > `AbortController`를 통해 취소가 가능하지만, 그것은 Promise의 API가 아님
 
-> #### `Promise.all(iterable)` allows non-promise "regular" values in `iterable`
+> **`Promise.all(iterable)` allows non-promise "regular" values in `iterable`**  
 > `Promise.all`은 보통 promise의 iterable을 인자로 받지만, 다른 객체들도 가능함  
 > 다른 객체들은 그대로 resulting array로 넘겨짐:  
 > ```javascript
@@ -1033,7 +1035,7 @@ let promise = new Promise((resolve, reject) => reject(error));
 	- `rejected` 상태면 `{status:"rejected", reason:error}`
 - `Promise.resolve/reject`는 사실상 거의 사용되지 않고, `Promise.all`이 이 중에서 가장 빈번하게 사용됨
 
-> #### `Promise`의 static method와 handler(`.then/catch/finally`)는 다름
+> **`Promise`의 static method와 handler(`.then/catch/finally`)는 다름**  
 > static method들은 promise가 아닌 promises의 결과를 리턴하고, handler는 thenable을 리턴함!
 
 # Promisification
@@ -1135,7 +1137,7 @@ callback에 `err`이 없는 것과 같이 다른 경우도 많은데, 이럴 경
 좀 더 유연한 promisification을 제공하는 모듈들이 있음  
 e.g. es6-promisify, Node.js의 `util.promisify` 등
 
-> #### Please note:
+> **Please note:**  
 > Promisification은 `async/await`를 사용할 때 좋은 접근이지만, callback을 완전히 대체하지는 않음  
 > promise는 하나의 result를 가질 수 있지만 callback은 여러 번 불릴 수 있음  
 > 따라서 promisification은 callback을 한 번만 호출하는 경우에 사용해야 함  
@@ -1266,7 +1268,7 @@ f();
 
 따라서 `await`는 `promise.then`보다 더 편리하게 promise의 result를 얻을 수 있고 가독성이 좋음
 
-> #### Can't use `await` in regular functions
+> **Can't use `await` in regular functions**  
 > non-async function에서 `await`를 사용하려 하면 syntax error가 발생함:  
 > ```javascript
 > function f() {
@@ -1343,7 +1345,7 @@ showAvatar();
 ```
 - 훨씬 간결해짐
 
-> #### `await` won't work in the top-level code
+> **`await` won't work in the top-level code**  
 > top-level code에서는 `await`를 사용할 수 없음:  
 > ```javascript
 > let response = await fetch('/article/promise-chaining/user.json');
@@ -1362,14 +1364,14 @@ showAvatar();
 > 
 > 8.9버전 이상의 V8 엔진에서는 모듈을 사용하면 top-level에서도 `await`를 사용 가능함
 
-> #### `await` accepts "thenables"
+> **`await` accepts "thenables"**  
 > `promise.then`과 마찬가지로 `await`도 thenable 객체를 인자로 받을 수 있음  
 > 따라서 `.then`을 지원하는 객체는 `await`도 적용할 수 있음
 >
 > `await`가 `.then`을 지원하는 non-promise 객체를 인자로 받으면, `.then`을 내장 함수인 `resolve`, `reject`를 인자로 주고 호출함(executor와 같은 역할)  
 > 그다음 `await`는 `resolve`/`reject` 중 하나가 호출되기까지 기다리고, 나온 결과를 가지고 작동됨
 
-> #### Async class methods
+> **Async class methods**  
 > async class method를 선언하려면 앞에 `async`만 붙이면 됨:  
 > ```javascript
 > class Waiter {
@@ -1425,7 +1427,7 @@ f().catch(alert); // TypeError: failed to fetch
 
 `.catch`마저 사용하지 않아도, 이전에 설명했던 `unhandledrejection` event handler를 사용해서 에러를 잡을 수 있음
 
-> #### `async/await` and `promise.then/catch`
+> **`async/await` and `promise.then/catch`**  
 > `async/await`를 사용하면 `.then`은 거의 사용하지 않음  
 > ∵ `await`로 이미 promise가 settled 되기 때문  
 > `.catch`도 `try...catch`로 대체해서 더 편리하게 사용 가능함
@@ -1433,7 +1435,7 @@ f().catch(alert); // TypeError: failed to fetch
 > 하지만 top-level code에서는 `async` 함수로 감싸지지 않았기 때문에 문법적으로 `await`를 사용할 수 없음  
 > 따라서 `f().catch(alert)`와 같이 `.then/catch`를 사용해서 결과를 처리해야 함
 
-> #### `async/await` works well with `Promise.all`
+> **`async/await` works well with `Promise.all`**  
 > 여러 개의 promise를 모두 기다려야 할 때 `Promise.all`으로 감싼 다음 `await`를 사용할 수 있음:  
 > ```javascript
 > let results = await Promise.all([

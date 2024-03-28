@@ -464,7 +464,8 @@ admin.sayHi(); // TypeError: Cannot read property 'name' of null
 `this`를 method가 아닌 함수에서도 사용 가능함  
 => run-time에 `this`의 값이 계산됨
 
-#### Example
+**Example**
+
 ```javascript
 let user = { name: "John" };
 let admin = { name: "Admin" };
@@ -623,7 +624,8 @@ ladder.up().up().down().showStep(); // 2
 1. 대문자로 시작(common agreement)
 2. `new` operator와 같이 사용되어야 함
 
-#### Example
+**Example**
+
 ```javascript
 function User(name) {
   // this = {};  (implicitly)
@@ -670,7 +672,8 @@ alert(john.name); // John
 - `return`이 object와 같이 사용되면 `this` 대신 그 object를 리턴
 - `return`이 primitive와 같이 사용되거나 혼자 사용되면 무시됨
 
-#### Example
+**Example**
+
 ```javascript
 function BigUser() {
 
@@ -855,7 +858,8 @@ alert(id.description); // id
 `symbol`을 key로 이용해서 숨겨진 property를 생성할 수 있음  
 => `symbol`을 이용하지 않고는 접근할 수 없음
 
-#### Example
+**Example**
+
 ```javascript
 let user = { // belongs to another code
   name: "John"
@@ -1018,7 +1022,8 @@ conversion을 할 때 JS는 아래 순서대로 작동함:
 ## Symbol.toPrimitive
 `Symbol.toPrimitive`는 내장 symbol로, conversion method로 사용됨
 
-#### Example
+**Example**
+
 ```javascript
 let user = {
   name: "John",
@@ -1054,7 +1059,8 @@ alert(user.valueOf() === user); // true
 
 - 재정의하고 사용하기 때문에 큰 의미는 없음
 
-#### Example
+**Example**
+
 ```javascript
 let user = {
   name: "John",
@@ -1089,7 +1095,8 @@ primtivie만 리턴하면 됨
 1. 위 규칙에 따라서 객체가 primitive로 변환됨
 2. 변환된 primitive가 적절한 type이 아니면 변환됨
 
-#### Example
+**Example**
+
 ```javascript
 let obj = {
   // toString handles all conversions in the absence of other methods

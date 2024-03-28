@@ -70,7 +70,8 @@ Debugging pane의 탭에서 여러 가지 정보를 확인 가능
 `console.log` 함수를 이용해서 값의 변화를 볼 수 있음  
 console이 열려있어야 출력됨
 
-#### Example
+**Example**
+
 ```javascript
 for (let i = 0; i < 5; i++) {
   console.log("value,", i);
@@ -241,7 +242,8 @@ describe("pow", function() {
 
 위 라이브러리들은 in-browser과 server-side 모두에서 사용 가능함
 
-#### Example
+**Example**
+
 The full HTML page with these frameworks and `pow` spec:  
 ```javascript
 <!DOCTYPE html>

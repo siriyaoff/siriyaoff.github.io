@@ -47,7 +47,8 @@ generator의 주요 메소드는 `next()`임
 - `value` : yielded value
 - `done` : 함수 코드가 끝났으면 `true`, 아니면 `false`
 
-#### Example
+**Example**
+
 ```javascript
 function* generateSequence() {
   yield 1;
@@ -66,7 +67,7 @@ alert(JSON.stringify(three)); // {value: 3, done: true}
 ```
 - generator가 종료된 후에는 `generator.next()`를 실행하면 `{done: true}` 객체가 계속 반환됨
 
-> #### `function* f(...)` or `function *f(...)`?
+> **`function* f(...)` or `function *f(...)`?**  
 > 둘 다 사용 가능하지만, 전자가 많이 사용됨
 
 ## Generators are iterable
@@ -173,7 +174,7 @@ alert( [...range] ); // 1,2,3,4,5
 - generator 자체가 JS에서 iterator를 쉽게 다루기 위해 만들어진 것임  
 	=> iterable code가 더 간결해짐
 
-> #### Generators may generate values forever
+> **Generators may generate values forever**  
 > 위 예시에서는 유한한 수열을 생성했지만, 무한하게 출력하는 것도 가능함  
 > => generator를 사용하는 반복문에서 종료시켜야 함
 
@@ -435,7 +436,8 @@ iterable을 비동기적으로 만들기 위해서는 아래와 같은 과정을
 	=> `async next()`로 비동기적 반복을 처리함
 3. 이러한 iterable은 `for await (let item of iterable)`를 이용해서 반복을 수행해야 함
 
-#### Example
+**Example**
+
 ```javascript
 let range = {
   from: 1,
@@ -474,7 +476,7 @@ iterator, async iterator의 차이:
 | `next()` return value is          | any value         | `Promise`              |
 | to loop, use                      | `for...of`        | `for await ...of`      |
 
-> #### The spread syntax `...` doesn't work asynchronously
+> **The spread syntax `...` doesn't work asynchronously**  
 > asynchronous iterator에 대해서는 spread syntax를 사용할 수 없음!
 
 ## Recall generators
@@ -519,7 +521,7 @@ async function* generateSequence(start, end) {
 })();
 ```
 
-> #### Under-the-hood difference
+> **Under-the-hood difference**  
 > regular generator의 경우 `result = generator.next()`를 사용해서 값을 받을 수 있음  
 > 하지만 async generator의 경우 `generator.next()`가 비동기적이고, promise를 리턴함  
 > 따라서 아래와 같이 `await`를 추가해야 함:  
@@ -549,7 +551,7 @@ let range = {
 })();
 ```
 
-> #### Please note:
+> **Please note:**  
 > 이론적으로는 `Symbol.iterator`, `Symbol.asyncIterator` 둘 다 object에 추가 가능하기 때문에 한 객체가 동기적(`for...of`), 비동기적(`for await...of`) iterable이 될 수 있음  
 > 하지만 실제로는 그렇게 사용하지 않음
 

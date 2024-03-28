@@ -37,7 +37,8 @@ module은 `export`와 `import`를 사용해서 다른 module의 함수를 호출
 - `export` : 현재 모듈의 외부에서 접근 가능하게 만듦
 - `import` : 다른 모듈의 기능을 불러옴
 
-#### Example
+**Example**
+
 ```javascript
 // 📁 sayHi.js
 export function sayHi(user) {
@@ -63,7 +64,7 @@ browser에서는 `<script type="module">`과 같이 attribute를 사용해서 �
 ```
 - 브라우저가 자동으로 fetch, import해서 script를 실행시킴
 
-> #### Modules work only via HTTP(s), not locally
+> **Modules work only via HTTP(s), not locally**  
 > `file://`를 이용하면 `import/export`가 제대로 실행되지 않음  
 > local web-server를 사용하거나 VS Code의 Live Server Extension을 사용해야 함
 
@@ -129,7 +130,7 @@ document.body.innerHTML = user; // John
 	</script>
 	```
 
-> #### Please note:
+> **Please note:**  
 > `window.user="John"`과 같이 명시적으로 `window` property에 값을 대입하면 window-level global하게 됨  
 > => 모든 script에서 사용 가능  
 > 되도록 사용을 자제해야 함
@@ -285,7 +286,7 @@ export class User {
 }
 ```
 
-> #### No semicolons after export class/function
+> **No semicolons after export class/function**  
 > `export`를 붙였다고 클래스나 함수가 expression이 되진 않으므로 세미콜론을 붙이지 않아도 됨
 
 ## Export apart from declarations
@@ -475,7 +476,8 @@ export {default as User} from './user.js'; // re-export default
 
 배포용 코드에 프로젝트 내부 구조를 건드릴 수 있도록 모듈의 주소를 넣어놓는 것은 위험할 수도 있기 때문에 필요한 것만 export하고 나머지는 숨기는 용도로 사용할 수 있음
 
-#### Example
+**Example**
+
 패키지 구조는 아래와 같음:  
 ```
 auth/
@@ -620,10 +622,10 @@ let say = obj.default;
 say();
 ```
 
-> #### Please note:
+> **Please note:**  
 > dynamic import는 regular script에서 동작하기 때문에, `type="module"` attribute가 필요 없음
 
-> #### Please note:
+> **Please note:**  
 > `import()`가 함수처럼 생겼지만, 이는 `super()`처럼 그냥 괄호를 사용하는 문법임  
 > 따라서 `import`를 다른 변수에 복사하거나 `call/apply`로 call forwarding 할 수 없음
 

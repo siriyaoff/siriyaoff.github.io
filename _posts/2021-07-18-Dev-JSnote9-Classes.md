@@ -63,7 +63,7 @@ user.sayHi();
 	1. 새로운 객체가 생성됨
 	2. `constructor`가 실행됨
 
-> #### class는 method 사이에 `,`가 없음
+> **class는 method 사이에 `,`가 없음**  
 
 ## What is a class?
 JS에서 class는 Function으로 취급됨:  
@@ -347,7 +347,7 @@ clock.start();
 - `(*)`의 함수를 `setInterval(this.render, 1000);`으로 바꾸면 `render`의 reference를 argument로 넘기는데 `this`를 지정해주지 않았기 때문에 `this`는 window scope(`globalThis`)를 가리키게 됨  
 	cf. arrow function으로 넘기면 아예 저 method를 실행하는 wrapper를 넘기는 것이기 때문에 자동으로 context까지 지정됨
 
-> #### `this`와 lexical environment는 서로 다른 개념임!
+> **`this`와 lexical environment는 서로 다른 개념임!**  
 > lexical environment는 JS engine 내부에서 쓰이는 객체고, `this`는 우리가 직접 사용하는 context를 나타냄  
 > lexical environment는 코드에서 변수를 찾아주는 역할을 함(변수의 영역 같은 개념)  
 > `this`는 method나 property를 가져올 **객체**를 지정  
@@ -402,7 +402,7 @@ rabbit.hide(); // White Rabbit hides!
 	
 	=> `rabbit`, `Rabbit.prototype`, `Animal.prototype` 순으로 메소드를 찾음
 
-> #### `extends` 뒤에는 모든 expression이 허용됨
+> **`extends` 뒤에는 모든 expression이 허용됨**  
 > 예를 들어, 클래스를 생성하는 함수를 `extends` 뒤에 호출해도 됨:  
 > ```javascript
 > function f(phrase) {
@@ -425,7 +425,8 @@ rabbit.hide(); // White Rabbit hides!
 - `super.method(...)` : parent method 호출
 - `super(...)` : parent constructor 호출(현재 constructor 안에서만 적용됨)
 
-#### Example
+**Example**
+
 ```javascript
 class Animal {
   constructor(name) {
@@ -461,7 +462,7 @@ rabbit.run(5); // White Rabbit runs with speed 5.
 rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
 ```
 
-> #### arrow function은 `super`가 없음
+> **arrow function은 `super`가 없음**  
 > `super`도 outer function에서부터 가져옴:  
 > ```javascript
 > class Rabbit extends Animal {
@@ -508,7 +509,7 @@ let rabbit = new Rabbit("White Rabbit", 10); // Error: this is not defined.
 - `Rabbit`에 직접 추가한 `constructor`는 에러남  
 	상속받는 클래스의 생성자는 무조건 `super(...)`를 `this`를 쓰기 이전에 호출해야 함!!  
 
-> #### 상속받는 클래스의 생성자가 위와 같은 조건이 있는 이유
+> **상속받는 클래스의 생성자가 위와 같은 조건이 있는 이유**  
 > JS에서 상속받는 클래스의 constructor function(= "derived constructor")은 내부 property `[[ConstructorKind]]:"derived"`를 가짐  
 > 이 property로 인해 `new`와 함께 쓰일 때 아래와 같은 제한 사항이 생김:  
 > 보통의 함수가 `new`와 함께 실행될 때 empty object를 생성하고 그것을 `this`에 넣지만, derived constructor은 parent constructor가 이 작업을 해줄 것이라 가정함  
@@ -622,7 +623,8 @@ longEar.eat(); // Error: Maximum call stack size exceeded
 class나 object의 method는 자신이 명시된 객체를 저장하는 `[[HomeObject]]` property를 가짐  
 `super`는 `[[HomeObject]]`를 사용해서 parent prototype과 method를 찾음
 
-#### Example
+**Example**
+
 ```javascript
 let animal = {
   name: "Animal",
@@ -713,7 +715,8 @@ non-method syntax(`method: function(){...}`)로 정의하면 안됨!
 - arrow function은 `this`, `arguments`, `super`가 없기 때문에 outer context의 그것을 사용함
 
 ## Tasks
-#### Extended clock
+**Extended clock**  
+
 ```javascript
 class Clock {
   constructor({ template }) {
@@ -802,7 +805,8 @@ User.staticMethod = function() {
 - class의 instance에 저장되는게 아니라, class에 저장되지만 class.prototype처럼 모든 instance들이 static method를 사용할 수 있음
 - `ClassName.method=func;`와 같이 클래스 외부에서도 선언 가능
 
-#### Example
+**Example**
+
 ```javascript
 class Article {
   constructor(title, date) {
@@ -951,7 +955,7 @@ alert( rabbit.hasOwnProperty('name') ); // Error
 	e.g. `obj.getOwnPropertyNames`는 `Object.prototype`에 정의되어 있음  
 	=> `class Rabbit`에서는 `Rabbit.getOwnPropertyNames()`로 호출할 수 없지만, `class Rabbit extends Object`에서는 `Rabbit.getOwnPropertyNames()`로 호출 가능
 
-> #### Recap
+> **Recap**  
 > - 클래스의 instance들은 모두 class.prototype을 `[[Prototype]]`으로 가져 상속받음
 > - class들은 모두 class.prototype을 가짐
 > - class method
@@ -1051,7 +1055,7 @@ alert(`Power is: ${coffeeMachine.power}W`); // Power is: 100W
 coffeeMachine.power = 25; // Error (no setter)
 ```
 
-> #### Getter/setter functions
+> **Getter/setter functions**  
 > 위 예시처럼 getter/setter syntax를 사용해도 되지만,  
 > 대부분의 경우 `get.../set...`으로 함수의 이름을 선언해서 사용함:  
 > ```javascript
@@ -1073,7 +1077,7 @@ coffeeMachine.power = 25; // Error (no setter)
 > 
 > 함수로 정의하면 더 많은 argument를 받을 수 있지만, 코드가 길어짐
 
-> #### Protected fields are inherited
+> **Protected fields are inherited**  
 > `class MegaMachine extends CoffeeMachine`과 같이 상속한다면  
 > `this._waterAmount`나 `this._power`과 같이 상속받은 클래스에서 protected field에 접근 가능함
 
@@ -1081,7 +1085,8 @@ coffeeMachine.power = 25; // Error (no setter)
 private property, method는 JS에서 지원하는 문법임  
 private은 `#`으로 시작해야 하고, 클래스 내부에서만 접근 가능함
 
-#### Example
+**Example**
+
 ```javascript
 class CoffeeMachine {
   #waterLimit = 200;
@@ -1120,7 +1125,7 @@ class MegaCoffeeMachine extends CoffeeMachine {
 - `this`가 `MegaCoffeeMachine`이기 때문에 `CoffeeMachine`의 private field에는 접근할 수 없음
 - private는 접근이 너무 제한되기 때문에 `CoffeeMachine`과 같이 protected가 더 적절한 경우가 많음
 
-> #### Private fields are not available at this[name]
+> **Private fields are not available at this[name]**  
 > 보통 `this['name']`과 같이 field를 호출할 수 있지만, private field에 대해서는 `this['#name']`을 사용할 수 없음  
 > ∵ 보안을 위해서 문법이 제한됨
 
@@ -1186,7 +1191,7 @@ alert(filteredArr.isEmpty()); // Error: filteredArr.isEmpty is not a function
 - 위 예시에서는 `PowerArray` 대신 `Array`를 반환하기 위해 `Symbol.species`가 `Array`를 반환함  
 	=> `filteredArr`은 `Array`이기 때문에 `PowerArray`의 method인 `isEmpty()`를 사용할 수 없음
 
-> #### 다른 collection들도 비슷하게 작동함
+> **다른 collection들도 비슷하게 작동함**  
 > `Map`, `Set`과 같은 collection들도 `Symbol.species`를 사용함
 
 ## No static inheritance in built-ins
@@ -1211,7 +1216,7 @@ e.g. `Array`와 `Date`는 `Object`를 상속받기 때문에, 이 클래스들�
 - `Date.prototype`만 `Object.prototype`을 확장함!  
 	`extends`를 사용했을 때와 객체로 상속할 때의 가장 큰 차이점임!
 
-> #### class는 object를 만들기 위한 template임
+> **class는 object를 만들기 위한 template임**  
 > class를 이용해서 만든 인스턴스가 객체임
 
 ## Summary
@@ -1506,7 +1511,7 @@ new User("Dude").sayHi(); // Hello Dude!
 
 ```javascript
 let eventMixin = {
-  /**
+  /**  
    * Subscribe to event, usage:
    *  menu.on('select', function(item) { ... }
   */
@@ -1518,7 +1523,7 @@ let eventMixin = {
     this._eventHandlers[eventName].push(handler);
   },
 
-  /**
+  /**  
    * Cancel the subscription, usage:
    *  menu.off('select', handler)
    */
@@ -1532,7 +1537,7 @@ let eventMixin = {
     }
   },
 
-  /**
+  /**  
    * Generate an event with the given name and data
    *  this.trigger('select', data1, data2);
    */

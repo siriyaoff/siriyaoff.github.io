@@ -43,7 +43,8 @@ tail recursion을 잘 설계해야 함!
 - `return`에서 스택에 메모리를 쓰는 연산자를 사용하면 안됨  
 	ternary operator `?`는 스택 메모리를 사용하지 않는 연산자임
 
-#### Example
+**Example**
+
 ```javascript
 // 1
 let facto = (x, acc = 1) => {
@@ -85,7 +86,8 @@ n 번 재귀 호출이 일어나는 경우 n 개의 context가 필요하지만, 
 재귀가 잘 사용되는 곳 중 하나가 순회임  
 자식이 있을 경우 재귀를 사용하면 됨
 
-#### Example
+**Example**
+
 ```javascript
 let company = { // the same object, compressed for brevity
   sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 1600 }],
@@ -388,7 +390,8 @@ alert( counter() ); // 2
 하지만, 함수의 종료 후에도 reachable한 nested function이 존재한다면 nested function의 `[[Environment]]` property에 원래 함수의 Lexical Environment로의 레퍼런스가 저장됨  
 => 함수가 끝난 후에도 함수의 Lexical Environment가 reachable하기 때문에 살아있게 됨!
 
-#### Example
+**Example**
+
 ```javascript
 function f() {
   let value = 123;
@@ -1078,7 +1081,8 @@ let timerId = setTimeout(function tick() {
 `setTimeout(func,0)`이나 `setTimeout(func)`로 `delay` 없이 사용하면 현재 script가 끝난 직후 `func`을 실행하게 됨  
 browser에서는 zero-delay timeout을 활용해서 event loop를 설정 가능
 
-#### Example
+**Example**
+
 ```javascript
 setTimeout(() => alert("World"));
 alert("Hello");
@@ -1144,7 +1148,8 @@ CPU를 많이 사용하지만, 결과가 stable한(항상 일정한 결과가 �
 이 함수가 자주 호출된다면, 결과를 캐싱하는게 나음  
 하지만 `slow()` 안에 캐시를 추가하는 것보다, wrapper function을 추가하는게 더 좋음
 
-#### Example
+**Example**
+
 ```javascript
 function slow(x) {
   // there can be a heavy CPU-intensive job here
@@ -1191,7 +1196,8 @@ alert( "Again: " + slow(2) ); // slow(2) result returned from cache
 object method는 decorator를 사용하기에 적합하지 않음  
 (∵ method 안에서 `this`를 호출하는 부분이 존재하면, decorator로 옮겨졌을 때 `this`가 `undefined`를 반환하기 때문)
 
-#### Example
+**Example**
+
 ```javascript
 let worker = {
   someMethod() {
@@ -1237,7 +1243,8 @@ alert( worker.slow(2) ); // Whoops! Error: Cannot read property 'someMethod' of 
 => 내장 method인 `func.call([context[, ...args]])`를 사용해서 해결 가능
 - `context` : `thisArg`와 같은 역할로, 함수 내 `this`가 가리키는 것을 지정함
 
-#### Example
+**Example**
+
 ```javascript
 function sayHi() {
   alert(this.name);
@@ -1530,7 +1537,7 @@ function throttle(func, ms) {
 	이후 `isthrottled`를 `false`로 바꾸고 `wrapper`를 다시 호출하는 함수를 `ms` ms 이후에 호출  
 	이 때 `cargs`가 `null`이 아니면 중간에 무시된 호출이 있다는 뜻이기 때문에 가장 마지막 인자들로 `wrapper`를 호출함(`func`를 호출하지 않고 `wrapper`를 호출하는 이유는 이 호출도 `ms` 안에 최대 한 번 실행되어야 하는 제한이 적용되어야 하기 때문)
 
-> #### debounce와 throttle의 차이
+> **debounce와 throttle의 차이**  
 > debounce는 모든 호출을 무시한 뒤 마지막 호출을 `ms` 뒤에 실행되게 만듦  
 > throttle은 `ms` 이내에 최대 한 번 실행되게 만듦
 

@@ -58,7 +58,7 @@ prototypal inheritance의 제한 사항:
 3. `[[Prototype]]`에는 하나의 객체만 들어감  
 	prototype chain이 길어질 수는 있음
 
-> #### `__proto__`는 `[[Prototype]]`을 위한 getter/setter임
+> **`__proto__`는 `[[Prototype]]`을 위한 getter/setter임**  
 > `__proto__`는 `[[Prototype]]`와 동일한게 아니라, `[[Prototype]]`의 getter/setter 역할을 함   
 > `__proto__`는 현재 잘 사용되지 않고, 호환성을 위해서 존재함  
 > 최신의 JS에서는 `Object.getPrototypeOf`/`Object.setPrototypeOf`를 사용하길 권장함  
@@ -130,7 +130,8 @@ method가 object에 선언되든지 prototype에 선언되든지 상관없이, `
 상속 관계가 복잡해도 이로 인해 편리하게 inherited method 실행 가능  
 즉, 상속하면 method는 공유되지만 object state는 공유되지 않음(method 내에서 property를 수정하면 `this`에 해당하는 객체의 상태가 변화함)
 
-#### Example
+**Example**
+
 ```javascript
 let animal = {
   walk() {
@@ -192,7 +193,7 @@ for(let prop in rabbit) {
 	`Object.prototype`은 `[[Prototype]]`이 `null`임
 - `Object.prototype`의 모든 property들은 `enumerable: false`이기 때문에 `for...in`에 나열되지 않음
 
-> #### key나 value를 가져오는 거의 모든 method들은 상속받는 property를 제외함  
+> **key나 value를 가져오는 거의 모든 method들은 상속받는 property를 제외함**  
 > `Object.keys/values`와 같은 method들은 inherited property를 무시함  
 > 즉, 호출된 객체 안의 key에 대해서만 동작하고, prototype의 key들은 가져오지 않음
 
@@ -219,7 +220,8 @@ constructor function을 이용해서 `new F()`와 같이 객체를 생성할 수
 만약 `F.prototype`이 객체라면, `new` operator로 생성되는 새 객체의 `[[Prototype]]`에 `F.prototype`의 reference를 저장함  
 `F.prototype`은 단순히 `F`의 property `prototype`을 의미하는 것이지, 다른 뜻은 없음!!!
 
-#### Example
+**Example**
+
 ```javascript
 let animal = {
   eats: true
@@ -243,7 +245,7 @@ alert( rabbit.eats ); // true
 	
 	가로 화살표는 평범한 property를 뜻하고 세로 화살표는 inheritance를 뜻함
 
-> #### `F.prototype`은 `new F`로 호출될 때만 사용됨
+> **`F.prototype`은 `new F`로 호출될 때만 사용됨**  
 > `new F`로 객체가 하나 생성된 다음 `F.prototype`이 바뀐다해도 생성된 객체의 `[[Prototype]]`은 기존의 것으로 유지됨  
 > reference를 복사하는 것이기 때문
 
@@ -407,7 +409,7 @@ alert(arr.toString === Object.prototype.toString); // false
 위의 과정이 specification에 명시되어 있는 내용이고, 실제로 wrapper object들은 우리가 볼 수 없고, 대부분의 엔진들이 최적화함  
 이 wrapper object들의 method들도 prototype(`String.prototype`, `Number.prototype`, `Boolean.prototype`)에 정의되어 있음
 
-> #### `null`, `undefined`는 wrapper object가 없음
+> **`null`, `undefined`는 wrapper object가 없음**  
 > 따라서 사용할 수 있는 method나 property, prototype도 존재하지 않음
 
 ## Chainging native prototypes
@@ -422,7 +424,7 @@ String.prototype.show = function() {
 ```
 - 수정할 수는 있지만, 좋은 생각이 아님!
 
-> #### 주의해야 할 점
+> **주의해야 할 점**  
 > prototype은 global하기 때문에 충돌이 일어나기 쉬움  
 > 예를 들어 두 라이브러리가 `String.prototype.show`라는 method를 정의하면, 둘 중 하나는 덮어씌워짐  
 > 따라서, 일반적으로 native prototype을 수정하는 것은 좋지 않음
@@ -430,7 +432,8 @@ String.prototype.show = function() {
 최근에는 polyfill을 목적으로 하는 native prototype 수정은 권장됨  
 (Remind: polyfill은 JS specification에는 명시되어 있지만, 특정한 엔진에서 지원되지 않는 내용을 위한 대체제를 만드는 것임)
 
-#### Example
+**Example**
+
 ```javascript
 if (!String.prototype.repeat) {
   String.prototype.repeat = function(n) {
@@ -525,7 +528,8 @@ f.defer(1000)(1, 2); // shows 3 after 1 second
 - `Object.getPrototypeOf(obj)` : `obj`의 `[[Prototype]]` 리턴
 - `Object.setPrototypeOf(obj, proto)` : `obj`의 `[[Prototype]]`을 `proto`로 설정
 
-#### Example
+**Example**
+
 ```javascript
 let animal = {
   eats: true
@@ -563,7 +567,7 @@ let clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescr
 - 2015년에 `Object.setPrototypeOf`, `Object.getPrototypeOf`가 표준에 추가됨  
 	`__proto__`와 같은 역할이지만, 이미 `__proto__`가 사실표준으로 굳어진 상태라 `__proto__`도 표준의 부록에 추가됨
 
-> #### 현재 생성된 객체의 `[[Prototype]]`은 변경하지 않는게 좋음
+> **현재 생성된 객체의 `[[Prototype]]`은 변경하지 않는게 좋음**  
 > `[[Prototype]]`을 언제든지 get/set할 수 있지만, 보통 객체가 생성될 때 한 번만 설정한 후 건드리지 않음  
 > 
 > JS 엔진들은 이렇게 한 번만 설정하는 것에 최적화되어 있음  
