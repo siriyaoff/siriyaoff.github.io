@@ -58,10 +58,10 @@ search_provider: algolia # lunr (default), algolia, google
 lunr:
   search_within_pages: # true, false (default)
 algolia:
-  application_id: 97QP1VO4IL # YOUR_APPLICATION_ID
-  index_name: blog_siriyaoff
+  application_id: A5ADIAWCTQ # YOUR_APPLICATION_ID
+  index_name: posts
   # YOUR_INDEX_NAME
-  search_only_api_key: c8fc9db5033bb067bf88ec2c14b78d2e # YOUR_SEARCH_ONLY_API_KEY
+  search_only_api_key: 6ca458b0f4b3298b692c6d6f865a2afb # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (default), false
 google:
   search_engine_id: # YOUR_SEARCH_ENGINE_ID

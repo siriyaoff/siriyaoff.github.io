@@ -32,6 +32,7 @@ _site
 
 # algolia key
 _algolia_api_key
+create_records.bat
 
 # my templates
 _posts/9999*
