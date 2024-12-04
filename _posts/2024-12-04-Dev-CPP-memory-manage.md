@@ -1,6 +1,9 @@
 ---
 layout: single
 title: "C++의 메모리 관리"
+toc: true
+toc_label: "Index"
+toc_icon: "columns"
 categories:
   - Dev
 tags:
